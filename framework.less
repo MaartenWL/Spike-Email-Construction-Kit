@@ -1,0 +1,326 @@
+/////////////////////////////////////////////////////////////
+/** Config **/
+/////////////////////////////////////////////////////////////
+
+/* Set width of content;*/
+
+@full-width: 600px;
+
+
+/* Set gutter between columns */
+
+@gutter: 20px;
+
+
+/* Setting min-width determines when the two columns of this block will wrap;*/
+
+@min-col-width: 240px;
+
+
+/* Set background colors*/
+
+@body-bg: #888888;
+@content-bg: #ffffff;
+
+
+/* Set base font-size*/
+
+@base-font-size:14px;
+@font-stack:verdana,Arial, Verdana, sans-serif;
+@font-stack-secondary:Verdana, sans-serif;
+
+
+
+/////////////////////////////////////////////////////////////
+/** Calculated **/
+/////////////////////////////////////////////////////////////
+
+/* Calculate column widths */
+@col-1:  (@full-width / 12) - @gutter;
+@col-2:  ((@full-width / 12) * 2) - @gutter;
+@col-3:  ((@full-width / 12) * 3) - @gutter;
+@col-4:  ((@full-width / 12) * 4) - @gutter;
+@col-5:  ((@full-width / 12) * 5) - @gutter;
+@col-6:  ((@full-width / 12) * 6) - @gutter;
+@col-7:  ((@full-width / 12) * 7) - @gutter;
+@col-8:  ((@full-width / 12) * 8) - @gutter;
+@col-9:  ((@full-width / 12) * 9) - @gutter;
+@col-10: ((@full-width / 12) * 10) - @gutter;
+@col-11: ((@full-width / 12) * 11) - @gutter;
+@col-12: ((@full-width / 12) * 12) - @gutter;
+
+
+
+/////////////////////////////////////////////////////////////
+/** Styles **/
+/////////////////////////////////////////////////////////////
+
+BODY {
+    margin: 0;
+    padding: 0;
+    background-color: @body-bg;
+    
+    CENTER {
+        TABLE.band-container {
+            -attr-bgcolor:@body-bg;
+            -attr-width: 100%;
+            background-color: @body-bg;
+            
+            TD.band {
+                -attr-align: center;
+                -attr-valign: top;
+                -attr-width: 100%;
+                
+                TABLE.mso-band-container {
+                    -attr-align: center;
+                    -attr-valign: top;
+                    -attr-width: @full-width;
+                   
+                    TD.mso-band {
+                        -attr-align: left;
+                        -attr-valign: top;
+                        -attr-width: @full-width;
+                        width: @full-width;
+                                                
+                        /* place TABLE.content-container in here */
+                    }
+                }
+                
+                
+                TABLE.content-container {
+                    -attr-align: center;
+                    -attr-bgcolor: @content-bg;
+                    -attr-width: 100%;
+                    max-width: @full-width;
+                    background-color: @content-bg;
+                    TD.content {
+                        -attr-align: center;
+                        -attr-valign: top;
+                        font-size: 0;
+                        text-align:center;
+                        TABLE.mso-column-container {
+                            -attr-align: center;
+                            -attr-width: @full-width;
+                            TD.mso-column {
+                                -attr-align: left;
+                                -attr-valign: top;
+                                &.col-1 {
+                                    -attr-width: @col-1;
+                                }
+                                &.col-2 {
+                                    -attr-width: @col-2;
+                                }
+                                &.col-3 {
+                                    -attr-width: @col-3;
+                                }
+                                &.col-4 {
+                                    -attr-width: @col-4;
+                                }
+                                &.col-5 {
+                                    -attr-width: @col-5;
+                                }
+                                &.col-6 {
+                                    -attr-width: @col-6;
+                                }
+                                &.col-7 {
+                                    -attr-width: @col-7;
+                                }
+                                &.col-8 {
+                                    -attr-width: @col-8;
+                                }
+                                &.col-9 {
+                                    -attr-width: @col-9;
+                                }
+                                &.col-10 {
+                                    -attr-width: @col-10;
+                                }
+                                &.col-11 {
+                                    -attr-width: @col-11;
+                                }
+                                &.col-12 {
+                                    -attr-width: @col-12;
+                                }
+                                                                
+                                 /* place DIV.column in here */
+                                
+                            }
+                        }
+                        DIV.column {
+                            display: inline-block;
+                            max-width: 50%;
+                            min-width: @min-col-width;
+                            vertical-align: top;
+                            width: 100%;
+                            TABLE.column-content-container {
+                                -attr-align: left;
+                                -attr-width: 100%;
+                                &.col-1 {
+                                    max-width: @col-1;
+                                }
+                                &.col-2 {
+                                    max-width: @col-2;
+                                }
+                                &.col-3 {
+                                    max-width: @col-3;
+                                }
+                                &.col-4 {
+                                    max-width: @col-4;
+                                }
+                                &.col-5 {
+                                    max-width: @col-5;
+                                }
+                                &.col-6 {
+                                    max-width: @col-6;
+                                }
+                                &.col-7 {
+                                    max-width: @col-7;
+                                }
+                                &.col-8 {
+                                    max-width: @col-8;
+                                }
+                                &.col-9 {
+                                    max-width: @col-9;
+                                }
+                                &.col-10 {
+                                    max-width: @col-10;
+                                }
+                                &.col-11 {
+                                    max-width: @col-11;
+                                }
+                                &.col-12 {
+                                    max-width: @col-12;
+                                }
+                                TD.column-content {
+                                    -attr-align: center;
+                                    -attr-valign: top;
+                            
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+TABLE {
+    -attr-cellspacing: 0;
+    -attr-cellpadding: 0;
+    -attr-border: 0;
+    
+    TD {
+        &.gutter {
+            padding:0.5 * @gutter;
+        }
+        &.gutter-top {
+            padding-top:0.5 * @gutter;
+        }
+        &.gutter-right {
+            padding-right:0.5 * @gutter;
+        }
+        &.gutter-bottom {
+            padding-bottom:0.5 * @gutter;
+        }
+        &.gutter-left {
+            padding-left:0.5 * @gutter;
+        }
+    }
+}
+
+TABLE.content-part-container {
+    -attr-align:center; 
+    -attr-border:0; 
+    -attr-cellpadding:0;
+    -attr-cellspacing:0; 
+    
+    width:100%; 
+    max-width:@full-width;
+    
+    TD.content-part {
+        -attr-align:left;
+        -attr-valign:top;
+        font-size:0;
+        
+        TABLE.mso-content-container {
+            -attr-align:left;
+            
+            TD.mso-content {
+                -attr-align:left;
+                -attr-valign:top;
+                
+                background-color: red;
+            }
+        }
+        
+        .image-containers {
+            -attr-align:left;
+            -attr-width:100%;
+            
+            max-width:320px;
+        }
+        
+    }
+}
+
+
+/////////////////////////////////////////////////////////////
+/** Responsive typography **/
+/////////////////////////////////////////////////////////////
+.body, .article, p, em, #toc-table td {
+    .mixin-desktop-typography (1, 1.375);
+    font-family:@font-stack;
+    color:'black';
+}
+
+P {
+    /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin*/
+    Margin:0 0 (@base-font-size *1px) 0!important;
+    padding:0;
+}
+
+H1, H1 A, H1 SPAN, H1 FONT {
+    .mixin-desktop-typography (3, 1.05);
+    font-family:@font-stack-secondary;
+    color:#dd0000;
+    margin:0!important;
+    padding:0!important;
+}
+
+H2, H2 A, H2 SPAN, H2 FONT {
+    .mixin-desktop-typography (2.25,1.25);
+    font-family:@font-stack-secondary;
+    color:#dd0000;
+    margin:0!important;
+    padding:0!important;
+}
+
+H3, H3 A, H3 SPAN, H3 FONT {
+    .mixin-desktop-typography (1.75,1.25);
+    font-family:@font-stack-secondary;
+    color:#dd0000;
+    margin:0!important;
+    padding:0!important;
+}
+
+H4, H4 A, H4 SPAN, H4 FONT,
+H5, H5 A, H5 SPAN, H5 FONT {
+    .mixin-desktop-typography (1.125,1.22222);
+    font-family:@font-stack-secondary;
+    color:#dd0000;
+    margin:0!important;
+    padding:0!important;
+}
+
+.mixin-desktop-typography (@font-size,@line-height) {
+    font-size: (@font-size * @base-font-size) * 1px!important;
+    line-height: (@line-height * (@font-size * @base-font-size)) * 1px!important;
+}
+
+.mixin-responsive-typography (@breakpoint,@font-size,@line-height) {
+    @media (max-width: @breakpoint) {
+        font-size: (@font-size * @base-font-size) * 1px!important;
+        line-height: (@line-height * (@font-size * @base-font-size)) * 1px!important;
+    }
+}
+
