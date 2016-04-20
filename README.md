@@ -1,2 +1,4 @@
 # Email-template
-Template for drag &amp; drop editor
+work in progress for email boilertemplate
+- responsive without media queries
+- easy stylable
