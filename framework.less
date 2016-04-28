@@ -7,9 +7,10 @@
 @full-width: 600px;
 @min-width: 320px;
 
-/* Set gutter between columns */
+/* Set column gutter between columns */
 
-@gutter: 40px;
+@surrounding-gutter: 50px;
+@column-gutter: 50px;
 
 
 /* Setting min-width determines when the two columns of this block will wrap;*/
@@ -36,32 +37,22 @@
 /////////////////////////////////////////////////////////////
 
 /* Calculate column widths */
-//@col-1:  (@full-width / 12) - @gutter;
-//@col-2:  ((@full-width / 12) * 2) - @gutter;
-//@col-3:  ((@full-width / 12) * 3) - @gutter;
-//@col-4:  ((@full-width / 12) * 4) - @gutter;
-//@col-5:  ((@full-width / 12) * 5) - @gutter;
-//@col-6:  ((@full-width / 12) * 6) - @gutter;
-//@col-7:  ((@full-width / 12) * 7) - @gutter;
-//@col-8:  ((@full-width / 12) * 8) - @gutter;
-//@col-9:  ((@full-width / 12) * 9) - @gutter;
-//@col-10: ((@full-width / 12) * 10) - @gutter;
-//@col-11: ((@full-width / 12) * 11) - @gutter;
-//@col-12: ((@full-width / 12) * 12) - @gutter;
 
-@col-1:  (@full-width - (2 * @gutter) ) * 0.8333;
-@col-2:  (@full-width - (2 * @gutter) ) * 0.1667;
-@col-3:  (@full-width - (2 * @gutter) ) * 0.25;
-@col-4:  (@full-width - (2 * @gutter) ) * 0.3333;
-@col-5:  (@full-width - (2 * @gutter) ) * 0.4167;
-@col-6:  (@full-width - (2 * @gutter) ) * 0.5;
-@col-7:  (@full-width - (2 * @gutter) ) * 0.5833;
-@col-8:  (@full-width - (2 * @gutter) ) * 0.6667;
-@col-9:  (@full-width - (2 * @gutter) ) * 0.75;
-@col-10: (@full-width - (2 * @gutter) ) * 0.8333;
-@col-11: (@full-width - (2 * @gutter) ) * 0.9167;
-@col-12: (@full-width - (2 * @gutter) ) * 1;
-@col-gutter: @gutter;
+@col-1:   (@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12;
+@col-2:   ((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2;
+@col-3:   ((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3;
+@col-4:   ((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4;
+@col-6:   ((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6;
+@col-12:  (@full-width - ( 2 * @surrounding-gutter ));
+
+@col-5:   ((@full-width / 12) * 5) - @surrounding-gutter;
+@col-7:   ((@full-width / 12) * 7) - @surrounding-gutter;
+@col-8:   ((@full-width / 12) * 8) - @surrounding-gutter;
+@col-9:   ((@full-width / 12) * 9) - @surrounding-gutter;
+@col-10:  ((@full-width / 12) * 10) - @surrounding-gutter;
+@col-11:  ((@full-width / 12) * 11) - @surrounding-gutter;
+
+@col-gutter: @column-gutter;
 
 /////////////////////////////////////////////////////////////
 /** Styles **/
@@ -111,6 +102,8 @@ BODY {
                         -attr-valign: top;
                         font-size: 0;
                         text-align:center;
+                        padding:( 0.5 * @column-gutter) (@surrounding-gutter - (0.5 * @column-gutter));
+                                                
                         TABLE.mso-column-container {
                             -attr-align: center;
                             -attr-width: @full-width;
@@ -215,46 +208,225 @@ BODY {
                                 -attr-width: 100%;
                                 &.col-1 {
                                     max-width: @col-1;
+                                    TD.column-content {
+                                        TABLE.mso-image,
+                                        TD.mso-image {
+                                            -attr-width: @col-1;
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-1;
+                                            IMG.full-slot {
+                                                max-width: @col-1;
+                                                -attr-width: @col-1;
+                                            }
+                                        }
+                                    }
                                 }
+                                
                                 &.col-2 {
                                     max-width: @col-2;
+                                    TD.column-content {
+                                        TABLE.mso-image,
+                                        TD.mso-image {
+                                            -attr-width: @col-2;
+                                        }
+                                        TD.column-content TABLE.image {
+                                            max-width: @col-2;
+                                            IMG.full-slot {
+                                                max-width: @col-2;
+                                                -attr-width: @col-2;
+                                            }
+                                        }
+                                    }
                                 }
+                                
                                 &.col-3 {
                                     max-width: @col-3;
+                                    TD.column-content {
+                                        TABLE.mso-image,
+                                        TD.mso-image {
+                                            -attr-width: @col-3;
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-3;
+                                            IMG.full-slot {
+                                                max-width: @col-3;
+                                                -attr-width: @col-3;
+                                            }
+                                        }
+                                    }
                                 }
+                                
                                 &.col-4 {
                                     max-width: @col-4;
+                                    TD.column-content {
+                                        TABLE.mso-image,
+                                        TD.mso-image {
+                                            -attr-width: @col-4;
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-4;
+                                            IMG.full-slot {
+                                                max-width: @col-4;
+                                                -attr-width: @col-4;
+                                            }
+                                        }
+                                    }
                                 }
+                                
                                 &.col-5 {
                                     max-width: @col-5;
+                                    TD.column-content {
+                                        TABLE.mso-image,
+                                        TD.mso-image {
+                                            -attr-width: @col-2;
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-5;
+                                            IMG.full-slot {
+                                                max-width: @col-5;
+                                                -attr-width: @col-5;
+                                            }
+                                        }
+                                    }
                                 }
+                                
                                 &.col-6 {
                                     max-width: @col-6;
+                                    TD.column-content {
+                                        TABLE.mso-image,
+                                        TD.mso-image {
+                                            -attr-width: (@col-6 - @column-gutter);
+                                        }
+                                        TABLE.image {
+                                            max-width: (@col-6 - @column-gutter);
+                                            
+                                            /*temp*/
+                                            width: (@col-6 - @column-gutter);
+                                            IMG.full-slot {
+                                                max-width: (@col-6 - @column-gutter);
+                                                -attr-width: (@col-6 - @column-gutter);
+                                                /*temp*/
+                                                width: (@col-6 - @column-gutter);
+                                            }
+                                        }
+                                    }
                                 }
+                                
                                 &.col-7 {
                                     max-width: @col-7;
+                                    TD.column-content {
+                                        TABLE.mso-image,
+                                        TD.mso-image {
+                                            -attr-width: @col-2;
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-7;
+                                            IMG.full-slot {
+                                                max-width: @col-7;
+                                                -attr-width: @col-7;
+                                            }
+                                        }
+                                    }
                                 }
+                                
                                 &.col-8 {
                                     max-width: @col-8;
+                                    TD.column-content {
+                                        TABLE.mso-image,
+                                        TD.mso-image {
+                                            -attr-width: @col-2;
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-8;
+                                            IMG.full-slot {
+                                                max-width: @col-8;
+                                                -attr-width: @col-8;
+                                            }
+                                        }
+                                    }
                                 }
+                                
                                 &.col-9 {
                                     max-width: @col-9;
+                                    TD.column-content {
+                                        TABLE.mso-image,
+                                        TD.mso-image {
+                                            -attr-width: @col-2;
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-9;
+                                            IMG.full-slot {
+                                                max-width: @col-9;
+                                                -attr-width: @col-9;
+                                            }
+                                        }
+                                    }
                                 }
+                                
                                 &.col-10 {
                                     max-width: @col-10;
+                                    TD.column-content {
+                                        TABLE.mso-image,
+                                        TD.mso-image {
+                                            -attr-width: @col-2;
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-10;
+                                            IMG.full-slot {
+                                                max-width: @col-10;
+                                                -attr-width: @col-10;
+                                            }
+                                        }
+                                    }
                                 }
+                                
                                 &.col-11 {
                                     max-width: @col-11;
+                                    TD.column-content {
+                                        TABLE.mso-image,
+                                        TD.mso-image {
+                                            -attr-width: @col-2;
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-11;
+                                            IMG.full-slot {
+                                                max-width: @col-11;
+                                                -attr-width: @col-11;
+                                            }
+                                        }
+                                    }
                                 }
+                                
                                 &.col-12 {
                                     max-width: @col-12;
+                                    TD.column-content {
+                                        TABLE.mso-image,
+                                        TD.mso-image {
+                                            -attr-width: (@col-12 - @column-gutter);
+                                        }
+                                        TABLE.image {
+                                            max-width: (@col-12 - @column-gutter);
+                                            /*temp*/
+                                            width: (@col-12 - @column-gutter);
+                                            IMG.full-slot {
+                                                max-width: (@col-12 - @column-gutter);
+                                                -attr-width: (@col-12 - @column-gutter);
+                                                /*temp*/
+                                                width: (@col-12 - @column-gutter);
+                                            }
+                                        }
+                                    }
                                 }
                                
-                                
                                 TD.column-content {
                                     -attr-align: center;
                                     -attr-valign: top;
-                            
+                                    IMG.full-slot {
+                                        border:0; 
+                                        height:auto;  
+                                        width:100%;
+                                    }
                                 }
                             }
                         }
@@ -274,25 +446,31 @@ TABLE {
     
     TD {
         &.gutter {
-            padding:0.5 * @gutter;
+            padding:0.5 * @column-gutter;
         }
         &.gutter-top {
-            padding-top:0.5 * @gutter;
+            padding-top:0.5 * @column-gutter;
         }
         &.gutter-right {
-            padding-right:0.5 * @gutter;
+            padding-right:0.5 * @column-gutter;
+        }
+        &.double-gutter-right {
+            padding-right:@column-gutter;
         }
         &.gutter-bottom {
-            padding-bottom:0.5 * @gutter;
-        }
+            padding-bottom:0.5 * @column-gutter;
+        }        
         &.gutter-left {
-            padding-left:0.5 * @gutter;
+            padding-left:0.5 * @column-gutter;
+        }
+        &.double-gutter-left {
+            padding-left:@column-gutter;
         }
         &.band-gutter {
             padding-top:0;
-            padding-right:0.5 * @gutter;
+            padding-right:0.5 * @column-gutter;
             padding-bottom:0;
-            padding-left:0.5 * @gutter;
+            padding-left:0.5 * @column-gutter;
         }
     }
 }
