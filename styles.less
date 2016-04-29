@@ -1,0 +1,141 @@
+/////////////////////////////////////////////////////////////
+/** Webfonts **/
+/////////////////////////////////////////////////////////////
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
+@import url("http://overpass-30e2.kxcdn.com/overpass.css");
+
+/////////////////////////////////////////////////////////////
+/** Config **/
+/////////////////////////////////////////////////////////////
+
+@heading-font-stack:'Roboto Slab', serif;
+@heading-color:#cc0000;
+
+@base-font-stack:'Overpass', arial;
+@base-font-size:14px;
+@base-font-line-height:1.52;  
+@base-font-color:#666;
+
+@breakpoint-md:600px;
+@breakpoint-sm:500px;
+@breakpoint-xs:420px;
+
+/////////////////////////////////////////////////////////////
+/** container styling **/
+/////////////////////////////////////////////////////////////
+
+TABLE.band-container {
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    border:solid 1px #aa9999;
+}
+
+/////////////////////////////////////////////////////////////
+/** Desktop typography **/
+/////////////////////////////////////////////////////////////
+.body, p, em {
+    .mixin-desktop-typography (1, @base-font-line-height);
+    font-family:@base-font-stack;
+    font-weight:200;
+    color:@base-font-color;
+}
+
+P {
+    /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin*/
+    Margin:0 0 (@base-font-size *1px) 0!important;
+    padding:0;
+}
+
+H1, H1 A, H1 SPAN, H1 FONT {
+    .mixin-desktop-typography (3, 1.05);
+    font-family:@heading-font-stack;
+    color:@heading-color;
+    margin:0 0 @base-font-size 0!important;
+    padding:0!important;
+    color:#f5003f;
+}
+
+H2, H2 A, H2 SPAN, H2 FONT {
+    .mixin-desktop-typography (2.25,1.25);
+    font-family:@heading-font-stack;
+    color:@heading-color;
+    margin:0 0 @base-font-size 0!important;
+    padding:0!important;
+    color:#2fae61;
+}
+
+H3, H3 A, H3 SPAN, H3 FONT {
+    .mixin-desktop-typography (1.75,1.25);
+    font-family:@heading-font-stack;
+    color:@heading-color;
+    margin:0 0 @base-font-size 0!important;
+    padding:0!important;
+    color:#008de6;
+}
+
+H4, H4 A, H4 SPAN, H4 FONT,
+H5, H5 A, H5 SPAN, H5 FONT {
+    .mixin-desktop-typography (1.125,1.22222);
+    font-family:@heading-font-stack;
+    color:@heading-color;
+    margin:0 0 @base-font-size 0!important;
+    padding:0!important;
+    color:#008de6;
+}
+
+/////////////////////////////////////////////////////////////
+/** Responsive typography **/
+/////////////////////////////////////////////////////////////
+.body, .article, p, em, #toc-table td {
+   .mixin-responsive-typography(@breakpoint-md, 1, @base-font-line-height);
+   .mixin-responsive-typography(@breakpoint-sm, 1, 1.25);
+   .mixin-responsive-typography(@breakpoint-xs, 1.1, 1.25);
+    
+    /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin */
+    @media (max-width: @breakpoint-md) {
+        Margin: 0 0 (@base-font-line-height * (1 * @base-font-size) * 1px) 0;
+    }
+    @media (max-width: @breakpoint-sm) {
+         Margin: 0 0 (1.25 * (1 * @base-font-size) * 1px) 0;
+    }
+    @media (max-width: @breakpoint-xs) {
+         Margin: 0 0 (1.25 * (1.2 * @base-font-size) * 1px) 0;
+    }
+}
+
+H1, H1 A, H1 SPAN, H1 FONT {
+    .mixin-responsive-typography (@breakpoint-md, 2.5, 1.125);
+    .mixin-responsive-typography (@breakpoint-sm, 2, 1.25);
+    .mixin-responsive-typography (@breakpoint-xs, 2, 1.25);
+}
+
+H2, H2 A, H2 SPAN, H2 FONT {
+    .mixin-responsive-typography (@breakpoint-md, 2, 1.25);
+    .mixin-responsive-typography (@breakpoint-sm, 1.625, 1.15384615);
+    .mixin-responsive-typography (@breakpoint-xs, 1.625, 1.15384615);
+}
+
+H3, H3 A, H3 SPAN, H3 FONT {
+    .mixin-responsive-typography (@breakpoint-md, 1.5, 1.25);
+    .mixin-responsive-typography (@breakpoint-sm, 1.375, 1.13636364);
+    .mixin-responsive-typography (@breakpoint-xs, 1.375, 1.13636364);
+}
+
+H4, H4 A, H4 SPAN, H4 FONT,
+H5, H5 A, H5 SPAN, H5 FONT {
+    .mixin-responsive-typography (@breakpoint-md, 1.125, 1.11111);
+    .mixin-responsive-typography (@breakpoint-sm, 1.125, 1.11111);
+    .mixin-responsive-typography (@breakpoint-xs, 1.125, 1.22222);
+}
+
+.mixin-desktop-typography (@font-size,@line-height) {
+    font-size: (@font-size * @base-font-size) * 1px;
+    line-height: (@line-height * (@font-size * @base-font-size)) * 1px;
+}
+
+.mixin-responsive-typography (@breakpoint,@font-size,@line-height) {
+    @media (max-width: @breakpoint) {
+        font-size: (@font-size * @base-font-size) * 1px;
+        line-height: (@line-height * (@font-size * @base-font-size)) * 1px;
+    }
+}
