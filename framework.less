@@ -9,7 +9,7 @@
 
 /* Set column gutter between columns */
 
-@surrounding-gutter: 25px;
+@surrounding-gutter: 50px;
 @column-gutter: 25px;
 
 
@@ -43,7 +43,7 @@
 @col-3:   ((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3;
 @col-4:   ((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4;
 @col-6:   ((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6;
-@col-12:  (@full-width - ( @surrounding-gutter ));
+@col-12:  ((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 12;
 
 @col-5:   ((@full-width / 12) * 5) - @surrounding-gutter;
 @col-7:   ((@full-width / 12) * 7) - @surrounding-gutter;
@@ -73,8 +73,9 @@ BODY {
                 -attr-align: center;
                 -attr-valign: top;
                 -attr-width: 100%;
-                background-color: @body-bg;
                 -attr-bgcolor:@body-bg;
+                background-color: @body-bg;
+               
                 TABLE.mso-band-container {
                     -attr-align: center;
                     -attr-valign: top;
@@ -284,7 +285,7 @@ BODY {
                                         TD.mso-image,
                                         TABLE.mso-content,
                                         TD.mso-content {
-                                            -attr-width: unit(@col-12 - @surrounding-gutter );
+                                            -attr-width: unit(@col-12 - @column-gutter );
                                             
                                         }
                                         TABLE.image {
