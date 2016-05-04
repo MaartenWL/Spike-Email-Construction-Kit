@@ -11,11 +11,13 @@
 
 @heading-font-stack:'Roboto Slab', serif;
 @heading-color:#cc0000;
+@heading-font-weight: 400;
 
 @base-font-stack:'Overpass', arial;
 @base-font-size:14px;
 @base-font-line-height:1.52;  
 @base-font-color:#666;
+@base-font-weight:400;
 
 @breakpoint-md:600px;
 @breakpoint-sm:500px;
@@ -27,7 +29,6 @@
 
 TABLE.band-container {
     box-shadow:0 0 15px rgba(0,0,0,0.5);
-    border:solid 1px #aa9999;
 }
 
 /////////////////////////////////////////////////////////////
@@ -36,7 +37,7 @@ TABLE.band-container {
 .body, p, em {
     .mixin-desktop-typography (1, @base-font-line-height);
     font-family:@base-font-stack;
-    font-weight:200;
+    font-weight:@base-font-weight;
     color:@base-font-color;
 }
 
@@ -49,6 +50,7 @@ P {
 H1, H1 A, H1 SPAN, H1 FONT {
     .mixin-desktop-typography (3, 1.05);
     font-family:@heading-font-stack;
+    font-weight:@heading-font-weight;
     color:@heading-color;
     margin:0 0 @base-font-size 0!important;
     padding:0!important;
@@ -58,6 +60,7 @@ H1, H1 A, H1 SPAN, H1 FONT {
 H2, H2 A, H2 SPAN, H2 FONT {
     .mixin-desktop-typography (2.25,1.25);
     font-family:@heading-font-stack;
+    font-weight:@heading-font-weight;
     color:@heading-color;
     margin:0 0 @base-font-size 0!important;
     padding:0!important;
@@ -67,6 +70,7 @@ H2, H2 A, H2 SPAN, H2 FONT {
 H3, H3 A, H3 SPAN, H3 FONT {
     .mixin-desktop-typography (1.75,1.25);
     font-family:@heading-font-stack;
+    font-weight:@heading-font-weight;
     color:@heading-color;
     margin:0 0 @base-font-size 0!important;
     padding:0!important;
@@ -77,6 +81,7 @@ H4, H4 A, H4 SPAN, H4 FONT,
 H5, H5 A, H5 SPAN, H5 FONT {
     .mixin-desktop-typography (1.125,1.22222);
     font-family:@heading-font-stack;
+    font-weight:@heading-font-weight;
     color:@heading-color;
     margin:0 0 @base-font-size 0!important;
     padding:0!important;
