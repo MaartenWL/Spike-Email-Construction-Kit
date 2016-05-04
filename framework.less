@@ -4,13 +4,13 @@
 
 /* Set width of content;*/
 
-@full-width: 600px;
+@full-width: 650px;
 @min-width: 320px;
 
 /* Set column gutter between columns */
 
-@surrounding-gutter: 50px;
-@column-gutter: 50px;
+@surrounding-gutter: 25px;
+@column-gutter: 25px;
 
 
 /* Setting min-width determines when the two columns of this block will wrap;*/
@@ -20,7 +20,7 @@
 
 /* Set background colors*/
 
-@body-bg: #888888;
+@body-bg: #c3bbbb;
 @content-bg: #ffffff;
 
 
@@ -43,7 +43,7 @@
 @col-3:   ((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3;
 @col-4:   ((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4;
 @col-6:   ((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6;
-@col-12:  (@full-width - ( 2 * @surrounding-gutter ));
+@col-12:  (@full-width - ( @surrounding-gutter ));
 
 @col-5:   ((@full-width / 12) * 5) - @surrounding-gutter;
 @col-7:   ((@full-width / 12) * 7) - @surrounding-gutter;
@@ -55,7 +55,7 @@
 @col-gutter: @column-gutter;
 
 /////////////////////////////////////////////////////////////
-/** Styles **/
+/** Layout **/
 /////////////////////////////////////////////////////////////
 
 BODY {
@@ -65,24 +65,25 @@ BODY {
     
     CENTER {
         TABLE.band-container {
-            -attr-bgcolor:@body-bg;
+            
             -attr-width: 100%;
-            background-color: @body-bg;
+            
             
             TD.band {
                 -attr-align: center;
                 -attr-valign: top;
                 -attr-width: 100%;
-                
+                background-color: @body-bg;
+                -attr-bgcolor:@body-bg;
                 TABLE.mso-band-container {
                     -attr-align: center;
                     -attr-valign: top;
-                    -attr-width: @full-width;
+                    -attr-width: unit(@full-width);
                    
                     TD.mso-band {
                         -attr-align: left;
                         -attr-valign: top;
-                        -attr-width: @full-width;
+                        -attr-width: unit(@full-width);
                         width: @full-width;
                                                 
                         /* place TABLE.content-container in here */
@@ -100,51 +101,52 @@ BODY {
                     TD.content {
                         -attr-align: center;
                         -attr-valign: top;
+                        -attr-width: unit(@full-width);
                         font-size: 0;
                         text-align:center;
                         padding:( 0.5 * @column-gutter) (@surrounding-gutter - (0.5 * @column-gutter));
                                                 
                         TABLE.mso-column-container {
                             -attr-align: center;
-                            -attr-width: @full-width;
+                            -attr-width: unit(@col-12);
                             TD.mso-column {
                                 -attr-align: left;
                                 -attr-valign: top;
                                 &.col-1 {
-                                    -attr-width: @col-1;
+                                    -attr-width: unit(@col-1);
                                 }
                                 &.col-2 {
-                                    -attr-width: @col-2;
+                                    -attr-width: unit(@col-2);
                                 }
                                 &.col-3 {
-                                    -attr-width: @col-3;
+                                    -attr-width: unit(@col-3);
                                 }
                                 &.col-4 {
-                                    -attr-width: @col-4;
+                                    -attr-width: unit(@col-4);
                                 }
                                 &.col-5 {
-                                    -attr-width: @col-5;
+                                    -attr-width: unit(@col-5);
                                 }
                                 &.col-6 {
-                                    -attr-width: @col-6;
+                                    -attr-width: unit(@col-6);
                                 }
                                 &.col-7 {
-                                    -attr-width: @col-7;
+                                    -attr-width: unit(@col-7);
                                 }
                                 &.col-8 {
-                                    -attr-width: @col-8;
+                                    -attr-width: unit(@col-8);
                                 }
                                 &.col-9 {
-                                    -attr-width: @col-9;
+                                    -attr-width: unit(@col-9);
                                 }
                                 &.col-10 {
-                                    -attr-width: @col-10;
+                                    -attr-width: unit(@col-10);
                                 }
                                 &.col-11 {
-                                    -attr-width: @col-11;
+                                    -attr-width: unit(@col-11);
                                 }
                                 &.col-12 {
-                                    -attr-width: @col-12;
+                                    -attr-width: unit(@col-12);
                                 }
                                                                 
                                  /* place DIV.column in here */
@@ -173,15 +175,86 @@ BODY {
                             }
                             &.col-3 {
                                 max-width: @col-3;
+                                
+                                TABLE.column-content-container {
+                                    max-width: @col-3;
+                                    
+                                    TD.column-content {
+                                        -attr-width: unit(@col-3);
+                                        
+                                        TABLE.mso-image,
+                                        TD.mso-image,
+                                        TABLE.mso-content,
+                                        TD.mso-content {
+                                            -attr-width: unit(@col-3 - @column-gutter);
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-3 - @column-gutter;
+                                            IMG.full-slot {
+                                                max-width: @col-3 - @column-gutter;
+                                                -attr-width: unit(@col-3 - @column-gutter);
+                                                width:100%;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                             &.col-4 {
                                 max-width: @col-4;
+                                
+                                 TABLE.column-content-container {
+                                    max-width: @col-4;
+                                    
+                                    TD.column-content {
+                                        -attr-width: unit(@col-4);
+                                        
+                                        TABLE.mso-image,
+                                        TD.mso-image,
+                                        TABLE.mso-content,
+                                        TD.mso-content {
+                                            -attr-width:  unit(@col-4 - @column-gutter);
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-4 - @column-gutter;
+                                            
+                                            IMG.full-slot {
+                                                max-width: (@col-4 - @column-gutter);
+                                                -attr-width: unit(@col-4 - @column-gutter);
+                                                width:100%;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                             &.col-5 {
                                 max-width: @col-5;
                             }
                             &.col-6 {
                                 max-width: @col-6;
+                                
+                                TABLE.column-content-container {
+                                    max-width: @col-6;
+                                    
+                                    TD.column-content {
+                                        -attr-width: unit(@col-6);
+                                        
+                                        TABLE.mso-image,
+                                        TD.mso-image,
+                                        TABLE.mso-content,
+                                        TD.mso-content {
+                                            -attr-width: unit(@col-6 - @column-gutter);
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-6 - @column-gutter;
+
+                                            IMG.full-slot {
+                                                max-width: @col-6 - @column-gutter;
+                                                -attr-width: unit(@col-6 - @column-gutter);
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                             &.col-7 {
                                 max-width: @col-7;
@@ -200,6 +273,31 @@ BODY {
                             }
                             &.col-12 {
                                 max-width: @col-12;
+                                
+                                 TABLE.column-content-container {
+                                    max-width: @col-12;
+                                    
+                                    TD.column-content {
+                                        -attr-width: unit(@col-12);
+                                        
+                                        TABLE.mso-image,
+                                        TD.mso-image,
+                                        TABLE.mso-content,
+                                        TD.mso-content {
+                                            -attr-width: unit(@col-12 - @surrounding-gutter );
+                                            
+                                        }
+                                        TABLE.image {
+                                            max-width: @col-12;
+                                            
+                                            IMG.full-slot {
+                                                max-width: (@col-12);
+                                                -attr-width: unit(@col-12);
+                                            }
+                                        }
+                                    }
+                                }
+                                
                             }
                             
                             
@@ -209,8 +307,11 @@ BODY {
                                 &.col-1 {
                                     max-width: @col-1;
                                     TD.column-content {
+                                        -attr-width: @col-1;
                                         TABLE.mso-image,
-                                        TD.mso-image {
+                                        TD.mso-image,
+                                        TABLE.mso-content,
+                                        TD.mso-content {
                                             -attr-width: @col-1;
                                         }
                                         TABLE.image {
@@ -218,16 +319,20 @@ BODY {
                                             IMG.full-slot {
                                                 max-width: @col-1;
                                                 -attr-width: @col-1;
+                                                width:100%;
                                             }
                                         }
                                     }
                                 }
                                 
                                 &.col-2 {
-                                    max-width: @col-2;
+                                    /*max-width: @col-2;
                                     TD.column-content {
+                                        -attr-width: @col-2;
                                         TABLE.mso-image,
-                                        TD.mso-image {
+                                        TD.mso-image,
+                                        TABLE.mso-content,
+                                        TD.mso-content {
                                             -attr-width: @col-2;
                                         }
                                         TD.column-content TABLE.image {
@@ -237,48 +342,17 @@ BODY {
                                                 -attr-width: @col-2;
                                             }
                                         }
-                                    }
+                                    }*/
                                 }
-                                
-                                &.col-3 {
-                                    max-width: @col-3;
-                                    TD.column-content {
-                                        TABLE.mso-image,
-                                        TD.mso-image {
-                                            -attr-width: @col-3;
-                                        }
-                                        TABLE.image {
-                                            max-width: @col-3;
-                                            IMG.full-slot {
-                                                max-width: @col-3;
-                                                -attr-width: @col-3;
-                                            }
-                                        }
-                                    }
-                                }
-                                
-                                &.col-4 {
-                                    max-width: @col-4;
-                                    TD.column-content {
-                                        TABLE.mso-image,
-                                        TD.mso-image {
-                                            -attr-width: @col-4;
-                                        }
-                                        TABLE.image {
-                                            max-width: @col-4;
-                                            IMG.full-slot {
-                                                max-width: @col-4;
-                                                -attr-width: @col-4;
-                                            }
-                                        }
-                                    }
-                                }
-                                
+                                                                
                                 &.col-5 {
-                                    max-width: @col-5;
+                                    /*max-width: @col-5;
                                     TD.column-content {
+                                        -attr-width: @col-5;
                                         TABLE.mso-image,
-                                        TD.mso-image {
+                                        TD.mso-image,
+                                        TABLE.mso-content,
+                                        TD.mso-content {
                                             -attr-width: @col-2;
                                         }
                                         TABLE.image {
@@ -288,36 +362,17 @@ BODY {
                                                 -attr-width: @col-5;
                                             }
                                         }
-                                    }
-                                }
-                                
-                                &.col-6 {
-                                    max-width: @col-6;
-                                    TD.column-content {
-                                        TABLE.mso-image,
-                                        TD.mso-image {
-                                            -attr-width: (@col-6 - @column-gutter);
-                                        }
-                                        TABLE.image {
-                                            max-width: (@col-6 - @column-gutter);
-                                            
-                                            /*temp*/
-                                            width: (@col-6 - @column-gutter);
-                                            IMG.full-slot {
-                                                max-width: (@col-6 - @column-gutter);
-                                                -attr-width: (@col-6 - @column-gutter);
-                                                /*temp*/
-                                                width: (@col-6 - @column-gutter);
-                                            }
-                                        }
-                                    }
+                                    }*/
                                 }
                                 
                                 &.col-7 {
                                     max-width: @col-7;
                                     TD.column-content {
+                                        -attr-width:@col-7;
                                         TABLE.mso-image,
-                                        TD.mso-image {
+                                        TD.mso-image,
+                                        TABLE.mso-content,
+                                        TD.mso-content {
                                             -attr-width: @col-2;
                                         }
                                         TABLE.image {
@@ -333,8 +388,11 @@ BODY {
                                 &.col-8 {
                                     max-width: @col-8;
                                     TD.column-content {
+                                        -attr-width: @col-8;
                                         TABLE.mso-image,
-                                        TD.mso-image {
+                                        TD.mso-image,
+                                        TABLE.mso-content,
+                                        TD.mso-content {
                                             -attr-width: @col-2;
                                         }
                                         TABLE.image {
@@ -350,8 +408,11 @@ BODY {
                                 &.col-9 {
                                     max-width: @col-9;
                                     TD.column-content {
+                                        -attr-width: @col-9;
                                         TABLE.mso-image,
-                                        TD.mso-image {
+                                        TD.mso-image,
+                                        TABLE.mso-content,
+                                        TD.mso-content {
                                             -attr-width: @col-2;
                                         }
                                         TABLE.image {
@@ -367,8 +428,11 @@ BODY {
                                 &.col-10 {
                                     max-width: @col-10;
                                     TD.column-content {
+                                        -attr-width: @col-10;
                                         TABLE.mso-image,
-                                        TD.mso-image {
+                                        TD.mso-image,
+                                        TABLE.mso-content,
+                                        TD.mso-content {
                                             -attr-width: @col-2;
                                         }
                                         TABLE.image {
@@ -384,8 +448,11 @@ BODY {
                                 &.col-11 {
                                     max-width: @col-11;
                                     TD.column-content {
+                                        -attr-width: @col-11;
                                         TABLE.mso-image,
-                                        TD.mso-image {
+                                        TD.mso-image,
+                                        TABLE.mso-content,
+                                        TD.mso-content {
                                             -attr-width: @col-2;
                                         }
                                         TABLE.image {
@@ -398,26 +465,6 @@ BODY {
                                     }
                                 }
                                 
-                                &.col-12 {
-                                    max-width: @col-12;
-                                    TD.column-content {
-                                        TABLE.mso-image,
-                                        TD.mso-image {
-                                            -attr-width: (@col-12 - @column-gutter);
-                                        }
-                                        TABLE.image {
-                                            max-width: (@col-12 - @column-gutter);
-                                            /*temp*/
-                                            width: (@col-12 - @column-gutter);
-                                            IMG.full-slot {
-                                                max-width: (@col-12 - @column-gutter);
-                                                -attr-width: (@col-12 - @column-gutter);
-                                                /*temp*/
-                                                width: (@col-12 - @column-gutter);
-                                            }
-                                        }
-                                    }
-                                }
                                
                                 TD.column-content {
                                     -attr-align: center;
@@ -510,64 +557,16 @@ TABLE.content-part-container {
     }
 }
 
-
 /////////////////////////////////////////////////////////////
-/** Responsive typography **/
+/** Helper classes **/
 /////////////////////////////////////////////////////////////
-.body, .article, p, em, #toc-table td {
-    .mixin-desktop-typography (1, 1.375);
-    font-family:@font-stack;
-    color:'black';
-}
 
-P {
-    /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin*/
-    Margin:0 0 (@base-font-size *1px) 0!important;
-    padding:0;
+.text-center {
+    text-align:center;
 }
-
-H1, H1 A, H1 SPAN, H1 FONT {
-    .mixin-desktop-typography (3, 1.05);
-    font-family:@font-stack-secondary;
-    color:#dd0000;
-    margin:0!important;
-    padding:0!important;
+.text-left {
+    text-align:left;
 }
-
-H2, H2 A, H2 SPAN, H2 FONT {
-    .mixin-desktop-typography (2.25,1.25);
-    font-family:@font-stack-secondary;
-    color:#dd0000;
-    margin:0!important;
-    padding:0!important;
+.text-right {
+    text-align:right;
 }
-
-H3, H3 A, H3 SPAN, H3 FONT {
-    .mixin-desktop-typography (1.75,1.25);
-    font-family:@font-stack-secondary;
-    color:#dd0000;
-    margin:0!important;
-    padding:0!important;
-}
-
-H4, H4 A, H4 SPAN, H4 FONT,
-H5, H5 A, H5 SPAN, H5 FONT {
-    .mixin-desktop-typography (1.125,1.22222);
-    font-family:@font-stack-secondary;
-    color:#dd0000;
-    margin:0!important;
-    padding:0!important;
-}
-
-.mixin-desktop-typography (@font-size,@line-height) {
-    font-size: (@font-size * @base-font-size) * 1px!important;
-    line-height: (@line-height * (@font-size * @base-font-size)) * 1px!important;
-}
-
-.mixin-responsive-typography (@breakpoint,@font-size,@line-height) {
-    @media (max-width: @breakpoint) {
-        font-size: (@font-size * @base-font-size) * 1px!important;
-        line-height: (@line-height * (@font-size * @base-font-size)) * 1px!important;
-    }
-}
-
