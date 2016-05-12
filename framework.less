@@ -279,20 +279,19 @@ TABLE {
     }
 }
 
-TABLE.content-part-container {
+TABLE.content-wrapper {
     -attr-align: center;
     width: 100%;
     max-width: @full-width;
-    TD.content-part {
+    TD.content-wrapper {
         -attr-align: left;
         -attr-valign: top;
         font-size: 0;
-        TABLE.mso-content-container {
+        TABLE.mso-content-wrapper {
             -attr-align: left;
-            TD.mso-content {
+            TD.mso-content-wrapper {
                 -attr-align: left;
                 -attr-valign: top;
-                background-color: red;
             }
         }
     }
@@ -386,17 +385,15 @@ TABLE.content-part-container {
 
 .mixin-grid-column(@col-x) {
     max-width: @col-x;
-    TABLE.column-content-container {
+    TABLE.content-box {
         max-width: @col-x;
-        TD.column-content {
+        TD.content-wrapper {
             -attr-width: unit(@col-x);
-            TABLE.mso-image,
-            TD.mso-image,
-            TABLE.mso-content,
-            TD.mso-content {
+            TABLE.mso-content-wrapper,
+            TD.mso-content-wrapper {
                 -attr-width: unit(@col-x - @column-gutter);
             }
-            TABLE.image {
+            TABLE.content.image {
                 //max-width: @col-x - @column-gutter;
                 IMG.full-slot {
                     max-width: @col-x - @column-gutter;
