@@ -23,13 +23,38 @@
 @breakpoint-sm:500px;
 @breakpoint-xs:420px;
 
+@content-bg: #ffffff;
+
 /////////////////////////////////////////////////////////////
 /** container styling **/
 /////////////////////////////////////////////////////////////
 
-TABLE.band-container {
+TABLE.grid-container {
     box-shadow:0 0 15px rgba(0,0,0,0.5);
 }
+
+/////////////////////////////////////////////////////////////
+/** bg colors **/
+/////////////////////////////////////////////////////////////
+
+
+TABLE.grid-row {
+    attr-bgcolor: @content-bg;
+    background-color: @content-bg;
+
+    &.bg-color-1 {
+        background-color:#fafafa!important;
+        -attr-bg-color:#fafafa;
+    }
+
+    &.bg-color-2 {
+        background-color:#faddd6!important;
+        -attr-bg-color:#faddd6;
+    }
+}
+
+
+
 
 /////////////////////////////////////////////////////////////
 /** Desktop typography **/
