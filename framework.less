@@ -4,35 +4,33 @@
 
 /////////////////////////////////////////////////////////////
 
-/* Set width of content;*/
+/** Set width of content;*/
 
-@full-width: 650px;
-@min-width: 320px;
+@full-width: 650px;             // Sets the width of your content area on desktop devices 
 
-/* Set column gutter between columns */
+/** Set column gutter between columns */
 
-@surrounding-gutter: 50px;
-@column-gutter: 25px;
+@surrounding-gutter: 50px;      // Sets the whitespace around your content
+@column-gutter: 25px;           // Sets the whitespace between collumns
 
-/* Setting min-width determines when the two columns of this block will wrap;*/
+/** Setting breakpoints */
 
-@min-col-width: 240px;
+@breakpoint-md:@full-width;     // Sets the first breakpoint, normally equals the desktop width of your content area
+@breakpoint-sm:480px;           // Sets the breakpoint to target small devices
+@breakpoint-xs:320px;           // Sets the breakpoint to target the smallest devices
 
 /* Set background colors*/
 
-@body-bg: #e3dbdb;
-@content-bg: #ffffff;
-@boxed-content-bg: #f3ebeb;
+@body-bg: #e3dbdb;              // Sets the background color on the body of your document
+@boxed-content-bg: #f3ebeb;     // Sets the background color on boxed content
 
 /* Set base font-size*/
 
-@base-font-size: 14px;
-@font-stack: verdana,
-Arial,
-Verdana,
-sans-serif;
-@font-stack-secondary: Verdana,
-sans-serif;
+@base-font-size: 14px;          // Sets the base font size. All other font sizes are calculated from this size
+@font-stack: verdana,sans-serif;// sets the font stack for normal text
+@font-stack-secondary: Verdana,sans-serif; // sets the font stack for headings
+
+
 /////////////////////////////////////////////////////////////
 
 /** Calculated **/
@@ -73,23 +71,23 @@ BODY {
                 -attr-width: 100%;
                 -attr-bgcolor: @body-bg;
                 background-color: @body-bg;
-                TABLE.band-container {
+                TABLE.grid-container {
                     -attr-width: unit(@full-width);
                     width: 100%;
                      
                     max-width:@full-width;
-                    TD.band {
+                    TD.grid-container {
                         -attr-align: center;
                         -attr-valign: top;
                         -attr-width: unit(@full-width);
                         
                         width: 100%;
                         max-width:@full-width;
-                        TABLE.mso-band-container {
+                        TABLE.mso-grid-row {
                             -attr-align: center;
                             -attr-valign: top;
                             -attr-width: unit(@full-width);
-                            TD.mso-band {
+                            TD.mso-grid-row {
                                 -attr-align: left;
                                 -attr-valign: top;
                                 -attr-width: unit(@full-width);
@@ -97,13 +95,12 @@ BODY {
                                 /* place TABLE.content-container in here */
                             }
                         }
-                        TABLE.content-container {
-                            -attr-align: center;
-                            -attr-bgcolor: @content-bg;
+                        TABLE.grid-row {
+                            -attr-align: center;                            
                             -attr-width: 100%;
                             width: 100%;
                             max-width: @full-width;
-                            background-color: @content-bg;
+                            
                             TD.hero-content {
                                 IMG.full-slot {
                                     -attr-height: auto;
@@ -116,14 +113,14 @@ BODY {
                                     }
                                 }
                             }
-                            TD.content {
+                            TD.grid-row {
                                 -attr-align: center;
                                 -attr-valign: top;
                                 -attr-width: unit(@full-width);
                                 font-size: 0;
                                 text-align: center;
                                 padding: ( 0.5 * @column-gutter) (@surrounding-gutter - (0.5 * @column-gutter));
-                                TABLE.mso-column-container {
+                                TABLE.mso-column-wrapper {
                                     -attr-align: center;
                                     -attr-width: unit(@col-12);
                                     TD.mso-column {
@@ -168,148 +165,67 @@ BODY {
                                         /* place DIV.column in here */
                                     }
                                 }
-                                DIV.gutter-column {
-                                    display: inline-block;
-                                    max-width: @col-gutter;
-                                    width: 100%;
-                                    vertical-align: top;
-                                    TABLE.column-gutter-container {
-                                        &.col-gutter {
-                                            max-width: @col-gutter;
-                                        }
-                                    }
-                                }
                                 DIV.column {
                                     display: inline-block;
                                     vertical-align: top;
+                                    
                                     &.col-1 {
-                                        max-width: @col-1;
+                                        .mixin-grid-column(@col-1); 
                                     }
                                     &.col-2 {
-                                        max-width: @col-2;
+                                        .mixin-grid-column(@col-2); 
                                     }
                                     &.col-3 {
-                                        max-width: @col-3;
-                                        TABLE.column-content-container {
-                                            max-width: @col-3;
-                                            TD.column-content {
-                                                -attr-width: unit(@col-3);
-                                                TABLE.mso-image,
-                                                TD.mso-image,
-                                                TABLE.mso-content,
-                                                TD.mso-content {
-                                                    -attr-width: unit(@col-3 - @column-gutter);
-                                                }
-                                                TABLE.image {
-                                                    max-width: @col-3 - @column-gutter;
-                                                    IMG.full-slot {
-                                                        max-width: @col-3 - @column-gutter;
-                                                        -attr-width: unit(@col-3 - @column-gutter);
-                                                        width: 100%;
-                                                    }
-                                                }
-                                            }
-                                        }
+                                        .mixin-grid-column(@col-3); 
                                     }
                                     &.col-4 {
-                                        max-width: @col-4;
-                                        TABLE.column-content-container {
-                                            max-width: @col-4;
-                                            TD.column-content {
-                                                -attr-width: unit(@col-4);
-                                                TABLE.mso-image,
-                                                TD.mso-image,
-                                                TABLE.mso-content,
-                                                TD.mso-content {
-                                                    -attr-width: unit(@col-4 - @column-gutter);
-                                                }
-                                                TABLE.image {
-                                                    max-width: @col-4 - @column-gutter;
-                                                    IMG.full-slot {
-                                                        max-width: (@col-4 - @column-gutter);
-                                                        -attr-width: unit(@col-4 - @column-gutter);
-                                                        width: 100%;
-                                                    }
-                                                }
-                                            }
-                                        }
+                                        .mixin-grid-column(@col-4); 
                                     }
                                     &.col-5 {
-                                        max-width: @col-5;
+                                        .mixin-grid-column(@col-5); 
                                     }
                                     &.col-6 {
-                                        max-width: @col-6;
-                                        TABLE.column-content-container {
-                                            max-width: @col-6;
-                                            TD.column-content {
-                                                -attr-width: unit(@col-6);
-                                                TABLE.mso-image,
-                                                TD.mso-image,
-                                                TABLE.mso-content,
-                                                TD.mso-content {
-                                                    -attr-width: unit(@col-6 - @column-gutter);
-                                                }
-                                                TABLE.image {
-                                                    max-width: @col-6 - @column-gutter;
-                                                    IMG.full-slot {
-                                                        max-width: @col-6 - @column-gutter;
-                                                        -attr-width: unit(@col-6 - @column-gutter);
-                                                        width: 100%;
-                                                    }
-                                                }
-                                            }
-                                        }
+                                        .mixin-grid-column(@col-6);
+                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
                                     }
                                     &.col-7 {
-                                        max-width: @col-7;
+                                        .mixin-grid-column(@col-7);
+                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
                                     }
                                     &.col-8 {
-                                        max-width: @col-8;
+                                        .mixin-grid-column(@col-8);
+                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
                                     }
                                     &.col-9 {
-                                        max-width: @col-9;
+                                        .mixin-grid-column(@col-9);
+                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
                                     }
                                     &.col-10 {
-                                        max-width: @col-10;
+                                        .mixin-grid-column(@col-10);
+                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
                                     }
                                     &.col-11 {
-                                        max-width: @col-11;
+                                        .mixin-grid-column(@col-11);
+                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
                                     }
                                     &.col-12 {
-                                        max-width: @col-12;
-                                        TABLE.column-content-container {
-                                            max-width: @col-12;
-                                            TD.column-content {
-                                                -attr-width: unit(@col-12);
-                                                TABLE.mso-image,
-                                                TD.mso-image,
-                                                TABLE.mso-content,
-                                                TD.mso-content {
-                                                    -attr-width: unit(@col-12 - @column-gutter );
-                                                }
-                                                TABLE.image {
-                                                    max-width: @col-12;
-                                                    IMG.full-slot {
-                                                        max-width: (@col-12);
-                                                        -attr-width: unit(@col-12);
-                                                    }
-                                                }
-                                            }
-                                        }
+                                        .mixin-grid-column(@col-12);
+                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
                                     }
-                                    TABLE.column-content-container {
+                                    
+                                    TABLE.content-box {
                                         -attr-align: left;
                                         -attr-width: 100%;
-                                        TD.column-content {
+                                        TD.content-box {
                                             -attr-align: center;
                                             -attr-valign: top;
-                                            &.column-content-box {
+                                            /*&.column-content-box {
                                                 background-color: @boxed-content-bg;
                                                 border-radius: (0.5 * @column-gutter);
                                                 &.color-invert {
                                                     text-color: white;
                                                 }
-                                            }
+                                            }*/
                                             IMG.full-slot {
                                                 border: 0;
                                                 height: auto;
@@ -379,29 +295,7 @@ TABLE.content-part-container {
                 background-color: red;
             }
         }
-        .image-containers {
-            -attr-align: left;
-            -attr-width: 100%;
-            max-width: 320px;
-        }
     }
-}
-
-/////////////////////////////////////////////////////////////
-
-/** Helper classes **/
-
-/////////////////////////////////////////////////////////////
-.text-center {
-    text-align: center;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
 }
 
 /////////////////////////////////////////////////////////////
@@ -409,10 +303,114 @@ TABLE.content-part-container {
 /** Responsive Helper classes **/
 
 /////////////////////////////////////////////////////////////
-// full-width-xs
-// full-width-sm
-// full-width-md
-// 
-// hidden-xs
-// hidden-sm
-// hidden-md
+
+// These helper classes can be used to responsive behavior of content 
+
+.text-center { 
+    .mixin-text-center;
+    &-xs {@media (max-width: @breakpoint-xs) {.mixin-text-center;}}
+    &-sm {@media (max-width: @breakpoint-sm) {.mixin-text-center;}}
+    &-md {@media (max-width: @breakpoint-md) {.mixin-text-center;}}
+}
+
+.text-left {
+    .mixin-text-left;
+    &-xs {@media (max-width: @breakpoint-xs) {.mixin-text-left;}}
+    &-sm {@media (max-width: @breakpoint-sm) {.mixin-text-left;}}
+    &-md {@media (max-width: @breakpoint-md) {.mixin-text-left;}}
+}
+
+.text-right {
+    .mixin-text-right;
+    &-xs {@media (max-width: @breakpoint-xs) {.mixin-text-right;}}
+    &-sm {@media (max-width: @breakpoint-sm) {.mixin-text-right;}}
+    &-md {@media (max-width: @breakpoint-md) {.mixin-text-right;}}
+}
+
+.text-justify {
+    .mixin-text-justify;
+    &-xs {@media (max-width: @breakpoint-xs) {.mixin-text-justify;}}
+    &-sm {@media (max-width: @breakpoint-sm) {.mixin-text-justify;}}
+    &-md {@media (max-width: @breakpoint-md) {.mixin-text-justify;}}
+}
+
+.full-width {
+    .mixin-full-width;
+    &-xs {@media (max-width: @breakpoint-xs) {.mixin-full-width;}}
+    &-sm {@media (max-width: @breakpoint-sm) {.mixin-full-width;}}
+    &-md {@media (max-width: @breakpoint-md) {.mixin-full-width;}}
+}
+
+.hidden {
+    .mixin-hidden;
+    &-xs {@media (max-width: @breakpoint-xs) {.mixin-hidden;}}
+    &-sm {@media (max-width: @breakpoint-sm) {.mixin-hidden;}}
+    &-md {@media (max-width: @breakpoint-md) {.mixin-hidden;}}
+}
+
+
+/////////////////////////////////////////////////////////////
+
+/** Mixins **/
+
+/////////////////////////////////////////////////////////////
+
+// These mixin functions are meant simplify the code in this LESS file. Do not use them directly in your HTML.
+
+.mixin-text-center {
+    text-align: center;
+}
+
+.mixin-text-left {
+    text-align: left;
+}
+
+.mixin-text-right {
+    text-align: right;
+}
+
+.mixin-text-justify {
+    text-align: justify;
+}
+
+.mixin-full-width {    
+    &, .column-content-container {
+        width:100%!important;
+        max-width:100%!important;
+    }
+}
+
+.mixin-hidden {
+    display: none!important;
+}
+
+.mixin-grid-column(@col-x) {
+    max-width: @col-x;
+    TABLE.column-content-container {
+        max-width: @col-x;
+        TD.column-content {
+            -attr-width: unit(@col-x);
+            TABLE.mso-image,
+            TD.mso-image,
+            TABLE.mso-content,
+            TD.mso-content {
+                -attr-width: unit(@col-x - @column-gutter);
+            }
+            TABLE.image {
+                //max-width: @col-x - @column-gutter;
+                IMG.full-slot {
+                    max-width: @col-x - @column-gutter;
+                    -attr-width: unit(@col-x - @column-gutter);
+                    width: 100%;
+                }
+            }
+            
+            TABLE.text {
+                //max-width: @col-x - @column-gutter;
+                &, TD {
+                    @media (max-width: @breakpoint-md) {.mixin-text-center;}
+                }
+            }
+        }
+    }
+}
