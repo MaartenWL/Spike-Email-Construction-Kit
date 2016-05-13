@@ -30,6 +30,18 @@
 @font-stack: verdana,sans-serif;// sets the font stack for normal text
 @font-stack-secondary: Verdana,sans-serif; // sets the font stack for headings
 
+@heading-font-stack:'Roboto Slab', serif;
+@heading-color:#cc0000;
+@heading-font-weight: 400;
+
+@base-font-stack:'Overpass', arial;
+@base-font-size:14px;
+@base-font-line-height:1.52;  
+@base-font-color:#666;
+@base-font-weight:400;
+
+@content-bg: #ffffff;
+
 
 /////////////////////////////////////////////////////////////
 
@@ -39,19 +51,19 @@
 
 /* Calculate column widths */
 
-@col-1: floor(@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12;
-@col-2: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2;
-@col-3: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3;
-@col-4: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4;
-@col-6: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6;
-@col-12: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 12;
+@col-1:     floor(@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12;
+@col-2:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2;
+@col-3:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3;
+@col-4:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4;
+@col-5:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 5;
+@col-6:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6;
+@col-7:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 7;
+@col-8:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 8;
+@col-9:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 9;
+@col-10:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 10;
+@col-11:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 11;
+@col-12:    floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 12;
 
-@col-5: ((@full-width / 12) * 5) - @surrounding-gutter;
-@col-7: ((@full-width / 12) * 7) - @surrounding-gutter;
-@col-8: ((@full-width / 12) * 8) - @surrounding-gutter;
-@col-9: ((@full-width / 12) * 9) - @surrounding-gutter;
-@col-10: ((@full-width / 12) * 10) - @surrounding-gutter;
-@col-11: ((@full-width / 12) * 11) - @surrounding-gutter;
 @col-gutter: @column-gutter;
 /////////////////////////////////////////////////////////////
 
@@ -226,10 +238,36 @@ BODY {
                                                     text-color: white;
                                                 }
                                             }*/
-                                            IMG.full-slot {
-                                                border: 0;
-                                                height: auto;
+                                            
+                                            TABLE.content-wrapper {
+                                                -attr-align: center;
                                                 width: 100%;
+                                                max-width: @full-width;
+                                                TD.content-wrapper {
+                                                    -attr-align: left;
+                                                    -attr-valign: top;
+                                                    font-size: 0;
+                                                    TABLE.mso-content-wrapper {
+                                                        -attr-align: left;
+                                                        TD.mso-content-wrapper {
+                                                            -attr-align: left;
+                                                            -attr-valign: top;
+                                                        }
+                                                    }
+                                                    
+                                                    .content {
+                                                        &.text {
+                                                            
+                                                        }
+                                                        &.image{
+                                                             IMG.full-slot {
+                                                                border: 0;
+                                                                height: auto;
+                                                                width: 100%;
+                                                            }
+                                                        }
+                                                    }                                                    
+                                                }
                                             }
                                         }
                                     }
@@ -279,23 +317,96 @@ TABLE {
     }
 }
 
-TABLE.content-wrapper {
-    -attr-align: center;
-    width: 100%;
-    max-width: @full-width;
-    TD.content-wrapper {
-        -attr-align: left;
-        -attr-valign: top;
-        font-size: 0;
-        TABLE.mso-content-wrapper {
-            -attr-align: left;
-            TD.mso-content-wrapper {
-                -attr-align: left;
-                -attr-valign: top;
-            }
-        }
+
+/////////////////////////////////////////////////////////////
+/** Desktop typography **/
+/////////////////////////////////////////////////////////////
+.body, p, em {
+    .mixin-desktop-typography (1, @base-font-line-height);
+    font-family:@base-font-stack;
+    font-weight:@base-font-weight;
+    color:@base-font-color;
+}
+
+P {
+    /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin*/
+    Margin:0 0 (@base-font-size *1px) 0!important;
+    padding:0;
+}
+
+H1, H1 A, H1 SPAN, H1 FONT {
+    .mixin-desktop-typography (3, 1.05);
+    font-family:@heading-font-stack;
+    font-weight:@heading-font-weight;
+    color:@heading-color;
+    margin:0 0 @base-font-size 0!important;
+    padding:0!important;
+
+    .mixin-responsive-typography (@breakpoint-md, 2.5, 1.125);
+    .mixin-responsive-typography (@breakpoint-sm, 2, 1.25);
+    .mixin-responsive-typography (@breakpoint-xs, 2, 1.25);
+}
+
+H2, H2 A, H2 SPAN, H2 FONT {
+    .mixin-desktop-typography (2.25,1.25);
+    font-family:@heading-font-stack;
+    font-weight:@heading-font-weight;
+    color:@heading-color;
+    margin:0 0 @base-font-size 0!important;
+    padding:0!important;
+
+    .mixin-responsive-typography (@breakpoint-md, 2, 1.25);
+    .mixin-responsive-typography (@breakpoint-sm, 1.625, 1.15384615);
+    .mixin-responsive-typography (@breakpoint-xs, 1.625, 1.15384615);
+}
+
+H3, H3 A, H3 SPAN, H3 FONT {
+    .mixin-desktop-typography (1.75,1.25);
+    font-family:@heading-font-stack;
+    font-weight:@heading-font-weight;
+    color:@heading-color;
+    margin:0 0 @base-font-size 0!important;
+    padding:0!important;
+
+    .mixin-responsive-typography (@breakpoint-md, 1.5, 1.25);
+    .mixin-responsive-typography (@breakpoint-sm, 1.375, 1.13636364);
+    .mixin-responsive-typography (@breakpoint-xs, 1.375, 1.13636364);
+}
+
+H4, H4 A, H4 SPAN, H4 FONT,
+H5, H5 A, H5 SPAN, H5 FONT {
+    .mixin-desktop-typography (1.125,1.22222);
+    font-family:@heading-font-stack;
+    font-weight:@heading-font-weight;
+    color:@heading-color;
+    margin:0 0 @base-font-size 0!important;
+    padding:0!important;
+
+    .mixin-responsive-typography (@breakpoint-md, 1.125, 1.11111);
+    .mixin-responsive-typography (@breakpoint-sm, 1.125, 1.11111);
+    .mixin-responsive-typography (@breakpoint-xs, 1.125, 1.22222);
+}
+
+/////////////////////////////////////////////////////////////
+/** Responsive typography **/
+/////////////////////////////////////////////////////////////
+.body, .article, p, em, #toc-table td {
+   .mixin-responsive-typography(@breakpoint-md, 1, @base-font-line-height);
+   .mixin-responsive-typography(@breakpoint-sm, 1, 1.25);
+   .mixin-responsive-typography(@breakpoint-xs, 1.1, 1.25);
+    
+    /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin */
+    @media (max-width: @breakpoint-md) {
+        Margin: 0 0 (@base-font-line-height * (1 * @base-font-size) * 1px) 0;
+    }
+    @media (max-width: @breakpoint-sm) {
+         Margin: 0 0 (1.25 * (1 * @base-font-size) * 1px) 0;
+    }
+    @media (max-width: @breakpoint-xs) {
+         Margin: 0 0 (1.25 * (1.2 * @base-font-size) * 1px) 0;
     }
 }
+
 
 /////////////////////////////////////////////////////////////
 
@@ -394,7 +505,6 @@ TABLE.content-wrapper {
                 -attr-width: unit(@col-x - @column-gutter);
             }
             TABLE.content.image {
-                //max-width: @col-x - @column-gutter;
                 IMG.full-slot {
                     max-width: @col-x - @column-gutter;
                     -attr-width: unit(@col-x - @column-gutter);
@@ -402,12 +512,23 @@ TABLE.content-wrapper {
                 }
             }
             
-            TABLE.text {
-                //max-width: @col-x - @column-gutter;
+            TABLE.content.text {
                 &, TD {
                     @media (max-width: @breakpoint-md) {.mixin-text-center;}
                 }
             }
         }
+    }
+}
+
+.mixin-desktop-typography (@font-size,@line-height) {
+    font-size: (@font-size * @base-font-size) * 1px;
+    line-height: (@line-height * (@font-size * @base-font-size)) * 1px;
+}
+
+.mixin-responsive-typography (@breakpoint,@font-size,@line-height) {
+    @media (max-width: @breakpoint) {
+        font-size: (@font-size * @base-font-size) * 1px;
+        line-height: (@line-height * (@font-size * @base-font-size)) * 1px;
     }
 }
