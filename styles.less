@@ -9,21 +9,49 @@
 /** Config **/
 /////////////////////////////////////////////////////////////
 
-@heading-font-stack:'Roboto Slab', serif;
-@heading-color:#cc0000;
-@heading-font-weight: 400;
-
-@base-font-stack:'Overpass', arial;
-@base-font-size:14px;
-@base-font-line-height:1.52;  
-@base-font-color:#666;
-@base-font-weight:400;
-
-@breakpoint-md:600px;
-@breakpoint-sm:500px;
-@breakpoint-xs:420px;
-
 @content-bg: #ffffff;
+
+@color-1-light:#fa7c7a;
+@color-1-dark:#f8504d;
+
+@color-2-light:#fe9867;
+@color-2-dark:#fd7634;
+
+@color-3-light:#ffd453;
+@color-3-dark:#ffc61d;
+
+@color-4-light:#e4e539;
+@color-4-dark:#dbdc03;
+
+@color-5-light:#a6db36;
+@color-5-dark:#88cf00;
+
+@color-6-light:#63c289;
+@color-6-dark:#2fae61;
+
+@color-7-light:#37c9c2;
+@color-7-dark:#01b7ad;
+
+@color-8-light:#38c1f6;
+@color-8-dark:#02acf3;
+
+@color-9-light:#36aaec;
+@color-9-dark:#008de6;
+
+@color-10-light:#6f70b4;
+@color-10-dark:#4e46ff;
+
+@color-11-light:#a45aff;
+@color-11-dark:#8524ff;
+
+@color-12-light:#c958ee;
+@color-12-dark:#b722e8;
+
+@color-13-light:#e636aa;
+@color-13-dark:#de008d;
+
+@color-14-light:#f8366f;
+@color-14-dark:#f5003f;
 
 /////////////////////////////////////////////////////////////
 /** container styling **/
@@ -53,119 +81,118 @@ TABLE.grid-row {
     }
 }
 
-
-
-
-/////////////////////////////////////////////////////////////
-/** Desktop typography **/
-/////////////////////////////////////////////////////////////
-.body, p, em {
-    .mixin-desktop-typography (1, @base-font-line-height);
-    font-family:@base-font-stack;
-    font-weight:@base-font-weight;
-    color:@base-font-color;
-}
-
-P {
-    /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin*/
-    Margin:0 0 (@base-font-size *1px) 0!important;
-    padding:0;
-}
-
-H1, H1 A, H1 SPAN, H1 FONT {
-    .mixin-desktop-typography (3, 1.05);
-    font-family:@heading-font-stack;
-    font-weight:@heading-font-weight;
-    color:@heading-color;
-    margin:0 0 @base-font-size 0!important;
-    padding:0!important;
-    color:#f5003f;
-}
-
-H2, H2 A, H2 SPAN, H2 FONT {
-    .mixin-desktop-typography (2.25,1.25);
-    font-family:@heading-font-stack;
-    font-weight:@heading-font-weight;
-    color:@heading-color;
-    margin:0 0 @base-font-size 0!important;
-    padding:0!important;
-    color:#2fae61;
-}
-
-H3, H3 A, H3 SPAN, H3 FONT {
-    .mixin-desktop-typography (1.75,1.25);
-    font-family:@heading-font-stack;
-    font-weight:@heading-font-weight;
-    color:@heading-color;
-    margin:0 0 @base-font-size 0!important;
-    padding:0!important;
-    color:#008de6;
-}
-
-H4, H4 A, H4 SPAN, H4 FONT,
-H5, H5 A, H5 SPAN, H5 FONT {
-    .mixin-desktop-typography (1.125,1.22222);
-    font-family:@heading-font-stack;
-    font-weight:@heading-font-weight;
-    color:@heading-color;
-    margin:0 0 @base-font-size 0!important;
-    padding:0!important;
-    color:#008de6;
-}
-
-/////////////////////////////////////////////////////////////
-/** Responsive typography **/
-/////////////////////////////////////////////////////////////
-.body, .article, p, em, #toc-table td {
-   .mixin-responsive-typography(@breakpoint-md, 1, @base-font-line-height);
-   .mixin-responsive-typography(@breakpoint-sm, 1, 1.25);
-   .mixin-responsive-typography(@breakpoint-xs, 1.1, 1.25);
+td.color {
+    &-1 {
+        background-color:@color-1-dark;
+        -attr-bgcolor:@color-1-dark;
+        
+        &a {
+            background-color:@color-1-light;
+            -attr-bgcolor:@color-1-light;
+        }
+    }
     
-    /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin */
-    @media (max-width: @breakpoint-md) {
-        Margin: 0 0 (@base-font-line-height * (1 * @base-font-size) * 1px) 0;
+    &-2 {
+        background-color:@color-2-dark;
+        -attr-bgcolor:@color-2-dark;
+        
+         &a {
+            background-color:@color-2-light;
+            -attr-bgcolor:@color-2-light;
+        }
     }
-    @media (max-width: @breakpoint-sm) {
-         Margin: 0 0 (1.25 * (1 * @base-font-size) * 1px) 0;
+    
+    &-3 {
+        background-color:@color-3-dark;
+        -attr-bgcolor:@color-3-dark;
+        
+        &a {
+            background-color:@color-3-light;
+            -attr-bgcolor:@color-3-light;
+        }
     }
-    @media (max-width: @breakpoint-xs) {
-         Margin: 0 0 (1.25 * (1.2 * @base-font-size) * 1px) 0;
+    
+    &-4 {
+        background-color:@color-4-dark;
+        -attr-bgcolor:@color-4-dark;
+        
+        &a {
+            background-color:@color-4-light;
+            -attr-bgcolor:@color-4-light;
+        }
     }
-}
-
-H1, H1 A, H1 SPAN, H1 FONT {
-    .mixin-responsive-typography (@breakpoint-md, 2.5, 1.125);
-    .mixin-responsive-typography (@breakpoint-sm, 2, 1.25);
-    .mixin-responsive-typography (@breakpoint-xs, 2, 1.25);
-}
-
-H2, H2 A, H2 SPAN, H2 FONT {
-    .mixin-responsive-typography (@breakpoint-md, 2, 1.25);
-    .mixin-responsive-typography (@breakpoint-sm, 1.625, 1.15384615);
-    .mixin-responsive-typography (@breakpoint-xs, 1.625, 1.15384615);
-}
-
-H3, H3 A, H3 SPAN, H3 FONT {
-    .mixin-responsive-typography (@breakpoint-md, 1.5, 1.25);
-    .mixin-responsive-typography (@breakpoint-sm, 1.375, 1.13636364);
-    .mixin-responsive-typography (@breakpoint-xs, 1.375, 1.13636364);
-}
-
-H4, H4 A, H4 SPAN, H4 FONT,
-H5, H5 A, H5 SPAN, H5 FONT {
-    .mixin-responsive-typography (@breakpoint-md, 1.125, 1.11111);
-    .mixin-responsive-typography (@breakpoint-sm, 1.125, 1.11111);
-    .mixin-responsive-typography (@breakpoint-xs, 1.125, 1.22222);
-}
-
-.mixin-desktop-typography (@font-size,@line-height) {
-    font-size: (@font-size * @base-font-size) * 1px;
-    line-height: (@line-height * (@font-size * @base-font-size)) * 1px;
-}
-
-.mixin-responsive-typography (@breakpoint,@font-size,@line-height) {
-    @media (max-width: @breakpoint) {
-        font-size: (@font-size * @base-font-size) * 1px;
-        line-height: (@line-height * (@font-size * @base-font-size)) * 1px;
+    
+    &-5 {
+        background-color:@color-5-dark;
+        -attr-bgcolor:@color-5-dark;
+        
+         &a {
+            background-color:@color-5-light;
+            -attr-bgcolor:@color-5-light;
+        }
     }
+    
+    &-6 {
+        background-color:@color-6-dark;
+        -attr-bgcolor:@color-6-dark;
+         &a {
+            background-color:@color-6-light;
+            -attr-bgcolor:@color-6-light;
+        }
+    }
+    
+    &-7 {
+        background-color:@color-7-dark;
+        -attr-bgcolor:@color-7-dark;
+         &a {
+            background-color:@color-7-light;
+            -attr-bgcolor:@color-7-light;
+        }
+    }
+    
+    &-8 {
+        background-color:@color-8-dark;
+        -attr-bgcolor:@color-8-dark;
+         &a {
+            background-color:@color-8-light;
+            -attr-bgcolor:@color-8-light;
+        }
+    }
+    
+    &-9 {
+        background-color:@color-9-dark;
+        -attr-bgcolor:@color-9-dark;
+         &a {
+            background-color:@color-9-light;
+            -attr-bgcolor:@color-9-light;
+        }
+    }
+    
+    &-10 {
+        background-color:@color-10-dark;
+        -attr-bgcolor:@color-10-dark;
+         &a {
+            background-color:@color-10-light;
+            -attr-bgcolor:@color-10-light;
+        }
+    }
+    
+    &-11 {
+        background-color:@color-11-dark;
+        -attr-bgcolor:@color-11-dark;
+         &a {
+            background-color:@color-11-light;
+            -attr-bgcolor:@color-11-light;
+        }
+    }
+    
+    &-12 {
+        background-color:@color-12-dark;
+        -attr-bgcolor:@color-12-dark;
+         &a {
+            background-color:@color-12-light;
+            -attr-bgcolor:@color-12-light;
+        }
+    }
+    
 }
