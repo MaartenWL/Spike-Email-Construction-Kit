@@ -6,43 +6,42 @@
 
 /** Set width of content;*/
 
-@full-width: 650px;             // Sets the width of your content area on desktop devices 
+@full-width: 650px; // Sets the width of your content area on desktop devices 
 
 /** Set column gutter between columns */
 
-@surrounding-gutter: 50px;      // Sets the whitespace around your content
-@column-gutter: 25px;           // Sets the whitespace between collumns
+@surrounding-gutter: 50px; // Sets the whitespace around your content
+@column-gutter: 25px; // Sets the whitespace between collumns
 
 /** Setting breakpoints */
 
-@breakpoint-md:@full-width;     // Sets the first breakpoint, normally equals the desktop width of your content area
-@breakpoint-sm:480px;           // Sets the breakpoint to target small devices
-@breakpoint-xs:320px;           // Sets the breakpoint to target the smallest devices
+@breakpoint-md: @full-width; // Sets the first breakpoint, normally equals the desktop width of your content area
+@breakpoint-sm: 480px; // Sets the breakpoint to target small devices
+@breakpoint-xs: 320px; // Sets the breakpoint to target the smallest devices
 
 /* Set background colors*/
 
-@body-bg: #e3dbdb;              // Sets the background color on the body of your document
-@boxed-content-bg: #f3ebeb;     // Sets the background color on boxed content
+@body-bg: #e3dbdb; // Sets the background color on the body of your document
+@boxed-content-bg: #f3ebeb; // Sets the background color on boxed content
 
 /* Set base font-size*/
 
-@base-font-size: 14px;          // Sets the base font size. All other font sizes are calculated from this size
-@font-stack: verdana,sans-serif;// sets the font stack for normal text
-@font-stack-secondary: Verdana,sans-serif; // sets the font stack for headings
-
-@heading-font-stack:'Roboto Slab', serif;
-@heading-color:#cc0000;
+@base-font-size: 14px; // Sets the base font size. All other font sizes are calculated from this size
+@font-stack: verdana,
+sans-serif; // sets the font stack for normal text
+@font-stack-secondary: Verdana,
+sans-serif; // sets the font stack for headings
+@heading-font-stack: 'Roboto Slab',
+serif;
+@heading-color: #cc0000;
 @heading-font-weight: 400;
-
-@base-font-stack:'Overpass', arial;
-@base-font-size:14px;
-@base-font-line-height:1.52;  
-@base-font-color:#666;
-@base-font-weight:400;
-
+@base-font-stack: 'Overpass',
+arial;
+@base-font-size: 14px;
+@base-font-line-height: 1.52;
+@base-font-color: #666;
+@base-font-weight: 400;
 @content-bg: #ffffff;
-
-
 /////////////////////////////////////////////////////////////
 
 /** Calculated **/
@@ -51,19 +50,18 @@
 
 /* Calculate column widths */
 
-@col-1:     floor(@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12;
-@col-2:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2;
-@col-3:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3;
-@col-4:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4;
-@col-5:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 5;
-@col-6:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6;
-@col-7:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 7;
-@col-8:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 8;
-@col-9:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 9;
-@col-10:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 10;
-@col-11:     floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 11;
-@col-12:    floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 12;
-
+@col-1: floor(@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12;
+@col-2: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2;
+@col-3: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3;
+@col-4: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4;
+@col-5: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 5;
+@col-6: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6;
+@col-7: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 7;
+@col-8: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 8;
+@col-9: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 9;
+@col-10: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 10;
+@col-11: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 11;
+@col-12: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 12;
 @col-gutter: @column-gutter;
 /////////////////////////////////////////////////////////////
 
@@ -74,199 +72,225 @@ BODY {
     margin: 0;
     padding: 0;
     background-color: @body-bg;
-    CENTER {
-        TABLE.wrapper {
+    TABLE.body {
+        width: 100%;
+        -attr-width: 100%;
+        TD.body-band {
+            width: 100%;
             -attr-width: 100%;
-            TD.wrapper {
-                -attr-align: center;
-                -attr-valign: top;
-                -attr-width: 100%;
+            
+            &.preheader-band {
+                -attr-bgcolor: black;
+                background-color: black;
+            }
+            &.default-band {
                 -attr-bgcolor: @body-bg;
                 background-color: @body-bg;
-                TABLE.grid-container {
-                    -attr-width: unit(@full-width);
-                    width: 100%;
-                     
-                    max-width:@full-width;
-                    TD.grid-container {
+            }
+            
+            &.blue-band {
+                -attr-bgcolor: aliceblue;
+                background-color: aliceblue;
+            }
+            
+            CENTER {
+                width: 100%;
+                TABLE.wrapper {
+                    -attr-width: 100%;
+                    TD.wrapper {
                         -attr-align: center;
                         -attr-valign: top;
-                        -attr-width: unit(@full-width);
-                        
-                        width: 100%;
-                        max-width:@full-width;
-                        TABLE.mso-grid-row {
-                            -attr-align: center;
-                            -attr-valign: top;
+                        -attr-width: 100%;
+                        TABLE.grid-container {
                             -attr-width: unit(@full-width);
-                            TD.mso-grid-row {
-                                -attr-align: left;
-                                -attr-valign: top;
-                                -attr-width: unit(@full-width);
-                                width: @full-width;
-                                /* place TABLE.content-container in here */
-                            }
-                        }
-                        TABLE.grid-row {
-                            -attr-align: center;                            
-                            -attr-width: 100%;
                             width: 100%;
                             max-width: @full-width;
-                            
-                            TD.hero-content {
-                                IMG.full-slot {
-                                    -attr-height: auto;
-                                    -attr-width:unit(@full-width);
-                                    max-width: unit(@full-width);
-                                    width: 100%;
-                                    
-                                    @media screen {
-                                        width: 100%;
-                                    }
-                                }
-                            }
-                            TD.grid-row {
+                            TD.grid-container {
                                 -attr-align: center;
                                 -attr-valign: top;
                                 -attr-width: unit(@full-width);
-                                font-size: 0;
-                                text-align: center;
-                                padding: ( 0.5 * @column-gutter) (@surrounding-gutter - (0.5 * @column-gutter));
-                                TABLE.mso-column-wrapper {
+                                width: 100%;
+                                max-width: @full-width;
+                                TABLE.mso-grid-row {
                                     -attr-align: center;
-                                    -attr-width: unit(@col-12);
-                                    TD.mso-column {
+                                    -attr-valign: top;
+                                    -attr-width: unit(@full-width);
+                                    TD.mso-grid-row {
                                         -attr-align: left;
                                         -attr-valign: top;
-                                        &.col-1 {
-                                            -attr-width: unit(@col-1);
-                                        }
-                                        &.col-2 {
-                                            -attr-width: unit(@col-2);
-                                        }
-                                        &.col-3 {
-                                            -attr-width: unit(@col-3);
-                                        }
-                                        &.col-4 {
-                                            -attr-width: unit(@col-4);
-                                        }
-                                        &.col-5 {
-                                            -attr-width: unit(@col-5);
-                                        }
-                                        &.col-6 {
-                                            -attr-width: unit(@col-6);
-                                        }
-                                        &.col-7 {
-                                            -attr-width: unit(@col-7);
-                                        }
-                                        &.col-8 {
-                                            -attr-width: unit(@col-8);
-                                        }
-                                        &.col-9 {
-                                            -attr-width: unit(@col-9);
-                                        }
-                                        &.col-10 {
-                                            -attr-width: unit(@col-10);
-                                        }
-                                        &.col-11 {
-                                            -attr-width: unit(@col-11);
-                                        }
-                                        &.col-12 {
-                                            -attr-width: unit(@col-12);
-                                        }
-                                        /* place DIV.column in here */
+                                        -attr-width: unit(@full-width);
+                                        width: @full-width;
+                                        /* place TABLE.content-container in here */
                                     }
                                 }
-                                DIV.column {
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    
-                                    &.col-1 {
-                                        .mixin-grid-column(@col-1); 
+                                TABLE.grid-row {
+                                    -attr-align: center;
+                                    -attr-width: 100%;
+                                    width: 100%;
+                                    max-width: @full-width;
+                                    TD.hero-content {
+                                        IMG.full-slot {
+                                            -attr-height: auto;
+                                            -attr-width: unit(@full-width);
+                                            max-width: unit(@full-width);
+                                            width: 100%;
+                                            @media screen {
+                                                width: 100%;
+                                            }
+                                        }
                                     }
-                                    &.col-2 {
-                                        .mixin-grid-column(@col-2); 
-                                    }
-                                    &.col-3 {
-                                        .mixin-grid-column(@col-3); 
-                                    }
-                                    &.col-4 {
-                                        .mixin-grid-column(@col-4); 
-                                    }
-                                    &.col-5 {
-                                        .mixin-grid-column(@col-5); 
-                                    }
-                                    &.col-6 {
-                                        .mixin-grid-column(@col-6);
-                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
-                                    }
-                                    &.col-7 {
-                                        .mixin-grid-column(@col-7);
-                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
-                                    }
-                                    &.col-8 {
-                                        .mixin-grid-column(@col-8);
-                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
-                                    }
-                                    &.col-9 {
-                                        .mixin-grid-column(@col-9);
-                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
-                                    }
-                                    &.col-10 {
-                                        .mixin-grid-column(@col-10);
-                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
-                                    }
-                                    &.col-11 {
-                                        .mixin-grid-column(@col-11);
-                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
-                                    }
-                                    &.col-12 {
-                                        .mixin-grid-column(@col-12);
-                                        @media (max-width: @breakpoint-md) {.mixin-full-width;}
-                                    }
-                                    
-                                    TABLE.content-box {
-                                        -attr-align: left;
-                                        -attr-width: 100%;
-                                        TD.content-box {
+                                    TD.grid-row {
+                                        -attr-align: center;
+                                        -attr-valign: top;
+                                        -attr-width: unit(@full-width);
+                                        font-size: 0;
+                                        text-align: center;
+                                        padding: ( 0.5 * @column-gutter) (@surrounding-gutter - (0.5 * @column-gutter));
+                                        TABLE.mso-column-wrapper {
                                             -attr-align: center;
-                                            -attr-valign: top;
-                                            /*&.column-content-box {
+                                            -attr-width: unit(@col-12);
+                                            TD.mso-column {
+                                                -attr-align: left;
+                                                -attr-valign: top;
+                                                &.col-1 {
+                                                    -attr-width: unit(@col-1);
+                                                }
+                                                &.col-2 {
+                                                    -attr-width: unit(@col-2);
+                                                }
+                                                &.col-3 {
+                                                    -attr-width: unit(@col-3);
+                                                }
+                                                &.col-4 {
+                                                    -attr-width: unit(@col-4);
+                                                }
+                                                &.col-5 {
+                                                    -attr-width: unit(@col-5);
+                                                }
+                                                &.col-6 {
+                                                    -attr-width: unit(@col-6);
+                                                }
+                                                &.col-7 {
+                                                    -attr-width: unit(@col-7);
+                                                }
+                                                &.col-8 {
+                                                    -attr-width: unit(@col-8);
+                                                }
+                                                &.col-9 {
+                                                    -attr-width: unit(@col-9);
+                                                }
+                                                &.col-10 {
+                                                    -attr-width: unit(@col-10);
+                                                }
+                                                &.col-11 {
+                                                    -attr-width: unit(@col-11);
+                                                }
+                                                &.col-12 {
+                                                    -attr-width: unit(@col-12);
+                                                }
+                                                /* place DIV.column in here */
+                                            }
+                                        }
+                                        DIV.column {
+                                            display: inline-block;
+                                            vertical-align: top;
+                                            &.col-1 {
+                                                .mixin-grid-column(@col-1);
+                                            }
+                                            &.col-2 {
+                                                .mixin-grid-column(@col-2);
+                                            }
+                                            &.col-3 {
+                                                .mixin-grid-column(@col-3);
+                                            }
+                                            &.col-4 {
+                                                .mixin-grid-column(@col-4);
+                                            }
+                                            &.col-5 {
+                                                .mixin-grid-column(@col-5);
+                                            }
+                                            &.col-6 {
+                                                .mixin-grid-column(@col-6);
+                                                @media (max-width: @breakpoint-md) {
+                                                    .mixin-full-width;
+                                                }
+                                            }
+                                            &.col-7 {
+                                                .mixin-grid-column(@col-7);
+                                                @media (max-width: @breakpoint-md) {
+                                                    .mixin-full-width;
+                                                }
+                                            }
+                                            &.col-8 {
+                                                .mixin-grid-column(@col-8);
+                                                @media (max-width: @breakpoint-md) {
+                                                    .mixin-full-width;
+                                                }
+                                            }
+                                            &.col-9 {
+                                                .mixin-grid-column(@col-9);
+                                                @media (max-width: @breakpoint-md) {
+                                                    .mixin-full-width;
+                                                }
+                                            }
+                                            &.col-10 {
+                                                .mixin-grid-column(@col-10);
+                                                @media (max-width: @breakpoint-md) {
+                                                    .mixin-full-width;
+                                                }
+                                            }
+                                            &.col-11 {
+                                                .mixin-grid-column(@col-11);
+                                                @media (max-width: @breakpoint-md) {
+                                                    .mixin-full-width;
+                                                }
+                                            }
+                                            &.col-12 {
+                                                .mixin-grid-column(@col-12);
+                                                @media (max-width: @breakpoint-md) {
+                                                    .mixin-full-width;
+                                                }
+                                            }
+                                            TABLE.content-box {
+                                                -attr-align: left;
+                                                -attr-width: 100%;
+                                                TD.content-box {
+                                                    -attr-align: center;
+                                                    -attr-valign: top;
+                                                    /*&.column-content-box {
                                                 background-color: @boxed-content-bg;
                                                 border-radius: (0.5 * @column-gutter);
                                                 &.color-invert {
                                                     text-color: white;
                                                 }
                                             }*/
-                                            
-                                            TABLE.content-wrapper {
-                                                -attr-align: center;
-                                                width: 100%;
-                                                max-width: @full-width;
-                                                TD.content-wrapper {
-                                                    -attr-align: left;
-                                                    -attr-valign: top;
-                                                    font-size: 0;
-                                                    TABLE.mso-content-wrapper {
-                                                        -attr-align: left;
-                                                        TD.mso-content-wrapper {
+                                                    TABLE.content-wrapper {
+                                                        -attr-align: center;
+                                                        width: 100%;
+                                                        max-width: @full-width;
+                                                        TD.content-wrapper {
                                                             -attr-align: left;
                                                             -attr-valign: top;
-                                                        }
-                                                    }
-                                                    
-                                                    .content {
-                                                        &.text {
-                                                            
-                                                        }
-                                                        &.image{
-                                                             IMG.full-slot {
-                                                                border: 0;
-                                                                height: auto;
-                                                                width: 100%;
+                                                            font-size: 0;
+                                                            TABLE.mso-content-wrapper {
+                                                                -attr-align: left;
+                                                                TD.mso-content-wrapper {
+                                                                    -attr-align: left;
+                                                                    -attr-valign: top;
+                                                                }
+                                                            }
+                                                            .content {
+                                                                &.text {}
+                                                                &.image {
+                                                                    IMG.full-slot {
+                                                                        border: 0;
+                                                                        height: auto;
+                                                                        width: 100%;
+                                                                    }
+                                                                }
                                                             }
                                                         }
-                                                    }                                                    
+                                                    }
                                                 }
                                             }
                                         }
@@ -317,156 +341,243 @@ TABLE {
     }
 }
 
+img {display:block;}
 
 /////////////////////////////////////////////////////////////
+
 /** Desktop typography **/
+
 /////////////////////////////////////////////////////////////
-.body, p, em {
+.body,
+p,
+em {
     .mixin-desktop-typography (1, @base-font-line-height);
-    font-family:@base-font-stack;
-    font-weight:@base-font-weight;
-    color:@base-font-color;
+    font-family: @base-font-stack;
+    font-weight: @base-font-weight;
+    color: @base-font-color;
 }
 
 P {
     /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin*/
-    Margin:0 0 (@base-font-size *1px) 0!important;
-    padding:0;
+    Margin: 0 0 (@base-font-size *1px) 0!important;
+    padding: 0;
 }
 
-H1, H1 A, H1 SPAN, H1 FONT {
+H1,
+H1 A,
+H1 SPAN,
+H1 FONT {
     .mixin-desktop-typography (3, 1.05);
-    font-family:@heading-font-stack;
-    font-weight:@heading-font-weight;
-    color:@heading-color;
-    margin:0 0 @base-font-size 0!important;
-    padding:0!important;
-
+    font-family: @heading-font-stack;
+    font-weight: @heading-font-weight;
+    color: @heading-color;
+    margin: 0 0 @base-font-size 0!important;
+    padding: 0!important;
     .mixin-responsive-typography (@breakpoint-md, 2.5, 1.125);
     .mixin-responsive-typography (@breakpoint-sm, 2, 1.25);
     .mixin-responsive-typography (@breakpoint-xs, 2, 1.25);
 }
 
-H2, H2 A, H2 SPAN, H2 FONT {
-    .mixin-desktop-typography (2.25,1.25);
-    font-family:@heading-font-stack;
-    font-weight:@heading-font-weight;
-    color:@heading-color;
-    margin:0 0 @base-font-size 0!important;
-    padding:0!important;
-
+H2,
+H2 A,
+H2 SPAN,
+H2 FONT {
+    .mixin-desktop-typography (2.25, 1.25);
+    font-family: @heading-font-stack;
+    font-weight: @heading-font-weight;
+    color: @heading-color;
+    margin: 0 0 @base-font-size 0!important;
+    padding: 0!important;
     .mixin-responsive-typography (@breakpoint-md, 2, 1.25);
     .mixin-responsive-typography (@breakpoint-sm, 1.625, 1.15384615);
     .mixin-responsive-typography (@breakpoint-xs, 1.625, 1.15384615);
 }
 
-H3, H3 A, H3 SPAN, H3 FONT {
-    .mixin-desktop-typography (1.75,1.25);
-    font-family:@heading-font-stack;
-    font-weight:@heading-font-weight;
-    color:@heading-color;
-    margin:0 0 @base-font-size 0!important;
-    padding:0!important;
-
+H3,
+H3 A,
+H3 SPAN,
+H3 FONT {
+    .mixin-desktop-typography (1.75, 1.25);
+    font-family: @heading-font-stack;
+    font-weight: @heading-font-weight;
+    color: @heading-color;
+    margin: 0 0 @base-font-size 0!important;
+    padding: 0!important;
     .mixin-responsive-typography (@breakpoint-md, 1.5, 1.25);
     .mixin-responsive-typography (@breakpoint-sm, 1.375, 1.13636364);
     .mixin-responsive-typography (@breakpoint-xs, 1.375, 1.13636364);
 }
 
-H4, H4 A, H4 SPAN, H4 FONT,
-H5, H5 A, H5 SPAN, H5 FONT {
-    .mixin-desktop-typography (1.125,1.22222);
-    font-family:@heading-font-stack;
-    font-weight:@heading-font-weight;
-    color:@heading-color;
-    margin:0 0 @base-font-size 0!important;
-    padding:0!important;
-
+H4,
+H4 A,
+H4 SPAN,
+H4 FONT,
+H5,
+H5 A,
+H5 SPAN,
+H5 FONT {
+    .mixin-desktop-typography (1.125, 1.22222);
+    font-family: @heading-font-stack;
+    font-weight: @heading-font-weight;
+    color: @heading-color;
+    margin: 0 0 @base-font-size 0!important;
+    padding: 0!important;
     .mixin-responsive-typography (@breakpoint-md, 1.125, 1.11111);
     .mixin-responsive-typography (@breakpoint-sm, 1.125, 1.11111);
     .mixin-responsive-typography (@breakpoint-xs, 1.125, 1.22222);
 }
 
 /////////////////////////////////////////////////////////////
+
 /** Responsive typography **/
+
 /////////////////////////////////////////////////////////////
-.body, .article, p, em, #toc-table td {
-   .mixin-responsive-typography(@breakpoint-md, 1, @base-font-line-height);
-   .mixin-responsive-typography(@breakpoint-sm, 1, 1.25);
-   .mixin-responsive-typography(@breakpoint-xs, 1.1, 1.25);
-    
+.body,
+.article,
+p,
+em,
+#toc-table td {
+    .mixin-responsive-typography(@breakpoint-md, 1, @base-font-line-height);
+    .mixin-responsive-typography(@breakpoint-sm, 1, 1.25);
+    .mixin-responsive-typography(@breakpoint-xs, 1.1, 1.25);
     /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin */
     @media (max-width: @breakpoint-md) {
         Margin: 0 0 (@base-font-line-height * (1 * @base-font-size) * 1px) 0;
     }
     @media (max-width: @breakpoint-sm) {
-         Margin: 0 0 (1.25 * (1 * @base-font-size) * 1px) 0;
+        Margin: 0 0 (1.25 * (1 * @base-font-size) * 1px) 0;
     }
     @media (max-width: @breakpoint-xs) {
-         Margin: 0 0 (1.25 * (1.2 * @base-font-size) * 1px) 0;
+        Margin: 0 0 (1.25 * (1.2 * @base-font-size) * 1px) 0;
     }
 }
-
 
 /////////////////////////////////////////////////////////////
 
 /** Responsive Helper classes **/
 
 /////////////////////////////////////////////////////////////
-
 // These helper classes can be used to responsive behavior of content 
-
-.text-center { 
+.text-center {
     .mixin-text-center;
-    &-xs {@media (max-width: @breakpoint-xs) {.mixin-text-center;}}
-    &-sm {@media (max-width: @breakpoint-sm) {.mixin-text-center;}}
-    &-md {@media (max-width: @breakpoint-md) {.mixin-text-center;}}
+    &-xs {
+        @media (max-width: @breakpoint-xs) {
+            .mixin-text-center;
+        }
+    }
+    &-sm {
+        @media (max-width: @breakpoint-sm) {
+            .mixin-text-center;
+        }
+    }
+    &-md {
+        @media (max-width: @breakpoint-md) {
+            .mixin-text-center;
+        }
+    }
 }
 
 .text-left {
     .mixin-text-left;
-    &-xs {@media (max-width: @breakpoint-xs) {.mixin-text-left;}}
-    &-sm {@media (max-width: @breakpoint-sm) {.mixin-text-left;}}
-    &-md {@media (max-width: @breakpoint-md) {.mixin-text-left;}}
+    &-xs {
+        @media (max-width: @breakpoint-xs) {
+            .mixin-text-left;
+        }
+    }
+    &-sm {
+        @media (max-width: @breakpoint-sm) {
+            .mixin-text-left;
+        }
+    }
+    &-md {
+        @media (max-width: @breakpoint-md) {
+            .mixin-text-left;
+        }
+    }
 }
 
 .text-right {
     .mixin-text-right;
-    &-xs {@media (max-width: @breakpoint-xs) {.mixin-text-right;}}
-    &-sm {@media (max-width: @breakpoint-sm) {.mixin-text-right;}}
-    &-md {@media (max-width: @breakpoint-md) {.mixin-text-right;}}
+    &-xs {
+        @media (max-width: @breakpoint-xs) {
+            .mixin-text-right;
+        }
+    }
+    &-sm {
+        @media (max-width: @breakpoint-sm) {
+            .mixin-text-right;
+        }
+    }
+    &-md {
+        @media (max-width: @breakpoint-md) {
+            .mixin-text-right;
+        }
+    }
 }
 
 .text-justify {
     .mixin-text-justify;
-    &-xs {@media (max-width: @breakpoint-xs) {.mixin-text-justify;}}
-    &-sm {@media (max-width: @breakpoint-sm) {.mixin-text-justify;}}
-    &-md {@media (max-width: @breakpoint-md) {.mixin-text-justify;}}
+    &-xs {
+        @media (max-width: @breakpoint-xs) {
+            .mixin-text-justify;
+        }
+    }
+    &-sm {
+        @media (max-width: @breakpoint-sm) {
+            .mixin-text-justify;
+        }
+    }
+    &-md {
+        @media (max-width: @breakpoint-md) {
+            .mixin-text-justify;
+        }
+    }
 }
 
 .full-width {
     .mixin-full-width;
-    &-xs {@media (max-width: @breakpoint-xs) {.mixin-full-width;}}
-    &-sm {@media (max-width: @breakpoint-sm) {.mixin-full-width;}}
-    &-md {@media (max-width: @breakpoint-md) {.mixin-full-width;}}
+    &-xs {
+        @media (max-width: @breakpoint-xs) {
+            .mixin-full-width;
+        }
+    }
+    &-sm {
+        @media (max-width: @breakpoint-sm) {
+            .mixin-full-width;
+        }
+    }
+    &-md {
+        @media (max-width: @breakpoint-md) {
+            .mixin-full-width;
+        }
+    }
 }
 
 .hidden {
     .mixin-hidden;
-    &-xs {@media (max-width: @breakpoint-xs) {.mixin-hidden;}}
-    &-sm {@media (max-width: @breakpoint-sm) {.mixin-hidden;}}
-    &-md {@media (max-width: @breakpoint-md) {.mixin-hidden;}}
+    &-xs {
+        @media (max-width: @breakpoint-xs) {
+            .mixin-hidden;
+        }
+    }
+    &-sm {
+        @media (max-width: @breakpoint-sm) {
+            .mixin-hidden;
+        }
+    }
+    &-md {
+        @media (max-width: @breakpoint-md) {
+            .mixin-hidden;
+        }
+    }
 }
-
 
 /////////////////////////////////////////////////////////////
 
 /** Mixins **/
 
 /////////////////////////////////////////////////////////////
-
 // These mixin functions are meant simplify the code in this LESS file. Do not use them directly in your HTML.
-
 .mixin-text-center {
     text-align: center;
 }
@@ -483,10 +594,11 @@ H5, H5 A, H5 SPAN, H5 FONT {
     text-align: justify;
 }
 
-.mixin-full-width {    
-    &, .column-content-container {
-        width:100%!important;
-        max-width:100%!important;
+.mixin-full-width {
+    &,
+    .column-content-container {
+        width: 100%!important;
+        max-width: 100%!important;
     }
 }
 
@@ -511,22 +623,24 @@ H5, H5 A, H5 SPAN, H5 FONT {
                     width: 100%;
                 }
             }
-            
             TABLE.content.text {
-                &, TD {
-                    @media (max-width: @breakpoint-md) {.mixin-text-center;}
+                &,
+                TD {
+                    @media (max-width: @breakpoint-md) {
+                        .mixin-text-center;
+                    }
                 }
             }
         }
     }
 }
 
-.mixin-desktop-typography (@font-size,@line-height) {
+.mixin-desktop-typography (@font-size, @line-height) {
     font-size: (@font-size * @base-font-size) * 1px;
     line-height: (@line-height * (@font-size * @base-font-size)) * 1px;
 }
 
-.mixin-responsive-typography (@breakpoint,@font-size,@line-height) {
+.mixin-responsive-typography (@breakpoint, @font-size, @line-height) {
     @media (max-width: @breakpoint) {
         font-size: (@font-size * @base-font-size) * 1px;
         line-height: (@line-height * (@font-size * @base-font-size)) * 1px;
