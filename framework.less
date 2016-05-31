@@ -12,7 +12,7 @@
 /** Set column gutter between columns */
 
 @surrounding-gutter: 25px; // Sets the whitespace around your content
-@column-gutter: 12px; // Sets the whitespace between collumns
+@column-gutter: 25px; // Sets the whitespace between collumns
 
 
 /** Setting breakpoints */
@@ -34,6 +34,7 @@
 @base-font-size: 14px; // Sets the base font size. All other font sizes are calculated from this size
 @base-font-stack: 'Overpass',arial;
 @base-font-line-height: 1.52;
+@base-whitespace: (@base-font-size * @base-font-line-height);
 @base-font-color: #666;
 @base-font-weight: 400;
 
@@ -152,7 +153,7 @@ BODY {
                                         -attr-width: unit(@grid-width);
                                         font-size: 0;
                                         text-align: center;
-                                        padding: ( 0.5 * @column-gutter) (@surrounding-gutter - (0.5 * @column-gutter));
+                                        padding: (0.5 * @base-whitespace) (@surrounding-gutter - (0.5 * @column-gutter));
                                         TABLE.mso-column-wrapper {
                                             -attr-align: center;
                                             -attr-width: unit(@col-12);
@@ -202,45 +203,38 @@ BODY {
                                         DIV.column {
                                             display: inline-block;
                                             vertical-align: top;
-                                            &.col-1 {
-                                                .mixin-grid-column(@col-1);
-                                            }
-                                            &.col-2 {
-                                                .mixin-grid-column(@col-2);
-                                            }
-                                            &.col-3 {
-                                                .mixin-grid-column(@col-3);
-                                            }
-                                            &.col-4 {
-                                                .mixin-grid-column(@col-4);
-                                            }
-                                            &.col-5 {
-                                                .mixin-grid-column(@col-5);
-                                            }
-                                            &.col-6 {
-                                                .mixin-grid-column(@col-6);
-                                            }
-                                            &.col-7 {
-                                                .mixin-grid-column(@col-7);
-                                            }
-                                            &.col-8 {
-                                                .mixin-grid-column(@col-8);
-                                            }
-                                            &.col-9 {
-                                                .mixin-grid-column(@col-9);
-                                            }
-                                            &.col-10 {
-                                                .mixin-grid-column(@col-10);
-                                            }
-                                            &.col-11 {
-                                                .mixin-grid-column(@col-11);
-                                            }
-                                            &.col-12 {
-                                                .mixin-grid-column(@col-12);
-                                            }
+                                            
                                             
                                             &.col {
-                                                                                               
+
+                                                &.-1 {.mixin-grid-column(@col-1);}
+                                                &.-2 {.mixin-grid-column(@col-2);}
+                                                &.-3 {.mixin-grid-column(@col-3);}
+                                                &.-4 {.mixin-grid-column(@col-4);}
+                                                &.-5 {.mixin-grid-column(@col-5);}
+                                                &.-6 {.mixin-grid-column(@col-6);}
+                                                &.-7 {.mixin-grid-column(@col-7);}
+                                                &.-8 {.mixin-grid-column(@col-8);}
+                                                &.-9 {.mixin-grid-column(@col-9);}
+                                                &.-10 {.mixin-grid-column(@col-10);}
+                                                &.-11 {.mixin-grid-column(@col-11);}
+                                                &.-12 {.mixin-grid-column(@col-12);}
+                                                
+                                                &-md {
+                                                    &-1 {.mixin-responsive-grid-column(1,@breakpoint-md);}
+                                                    &-2 {.mixin-responsive-grid-column(2,@breakpoint-md);}
+                                                    &-3 {.mixin-responsive-grid-column(3,@breakpoint-md);}
+                                                    &-4 {.mixin-responsive-grid-column(4,@breakpoint-md);}
+                                                    &-5 {.mixin-responsive-grid-column(5,@breakpoint-md);}
+                                                    &-6 {.mixin-responsive-grid-column(6,@breakpoint-md);}
+                                                    &-7 {.mixin-responsive-grid-column(7,@breakpoint-md);}
+                                                    &-8 {.mixin-responsive-grid-column(8,@breakpoint-md);}
+                                                    &-9 {.mixin-responsive-grid-column(9,@breakpoint-md);}
+                                                    &-10 {.mixin-responsive-grid-column(10,@breakpoint-md);}
+                                                    &-11 {.mixin-responsive-grid-column(11,@breakpoint-md);}
+                                                    &-12 {.mixin-responsive-grid-column(12,@breakpoint-md);}
+                                                }
+                                                
                                                 &-sm {
                                                     &-1 {.mixin-responsive-grid-column(1,@breakpoint-sm);}
                                                     &-2 {.mixin-responsive-grid-column(2,@breakpoint-sm);}
@@ -272,8 +266,6 @@ BODY {
                                                 }
                                                 
                                             }
-                                            &.col-sm-12 {}
-                                            &.col-xs-12 {}
                                             
                                             TABLE.content-box {
                                                 -attr-align: left;
@@ -384,7 +376,7 @@ em {
 
 P {
     /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin*/
-    Margin: 0 0 (@base-font-size *1px) 0!important;
+    Margin: @base-whitespace 0 0 0!important;
     padding: 0;
 }
 
@@ -396,7 +388,7 @@ H1 FONT {
     font-family: @heading-font-stack;
     font-weight: @heading-font-weight;
     color: @heading-color;
-    margin: 0 0 @base-font-size 0!important;
+    margin: 0 0 @base-whitespace 0!important;
     padding: 0!important;
     .mixin-responsive-typography (@breakpoint-md, 2.5, 1.125);
     .mixin-responsive-typography (@breakpoint-sm, 2, 1.25);
@@ -411,7 +403,7 @@ H2 FONT {
     font-family: @heading-font-stack;
     font-weight: @heading-font-weight;
     color: @heading-color;
-    margin: 0 0 @base-font-size 0!important;
+    margin: 0 0 @base-whitespace 0!important;
     padding: 0!important;
     .mixin-responsive-typography (@breakpoint-md, 2, 1.25);
     .mixin-responsive-typography (@breakpoint-sm, 1.625, 1.15384615);
@@ -426,7 +418,7 @@ H3 FONT {
     font-family: @heading-font-stack;
     font-weight: @heading-font-weight;
     color: @heading-color;
-    margin: 0 0 @base-font-size 0!important;
+    margin: 0 0 @base-whitespace 0!important;
     padding: 0!important;
     .mixin-responsive-typography (@breakpoint-md, 1.5, 1.25);
     .mixin-responsive-typography (@breakpoint-sm, 1.375, 1.13636364);
@@ -445,7 +437,7 @@ H5 FONT {
     font-family: @heading-font-stack;
     font-weight: @heading-font-weight;
     color: @heading-color;
-    margin: 0 0 @base-font-size 0!important;
+    margin: 0 0 @base-whitespace 0!important;
     padding: 0!important;
     .mixin-responsive-typography (@breakpoint-md, 1.125, 1.11111);
     .mixin-responsive-typography (@breakpoint-sm, 1.125, 1.11111);
@@ -465,7 +457,7 @@ em {
     .mixin-responsive-typography(@breakpoint-xs, 1.1, 1.25);
     /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin */
     @media (max-width: @breakpoint-md) {
-        Margin: 0 0 (@base-font-line-height * (1 * @base-font-size) * 1px) 0;
+        Margin: 0 0 @base-whitespace 0!important;
     }
     @media (max-width: @breakpoint-sm) {
         Margin: 0 0 (1.25 * (1 * @base-font-size) * 1px) 0;
@@ -576,6 +568,27 @@ em {
     }
 }
 
+IMG.whitespace {
+    Margin: (0.5 * @base-whitespace) 0;
+    &-xs {
+        @media (max-width: @breakpoint-xs) {
+            Margin: (0.5 * @base-whitespace) 0!important;
+        }
+    }
+    &-sm {
+        @media (max-width: @breakpoint-sm) {
+            Margin: (0.5 * @base-whitespace) 0!important;
+        }
+    }
+    &-md {
+        @media (max-width: @breakpoint-md) {
+            Margin: (0.5 * @base-whitespace) 0!important;
+        }
+    }
+}
+
+
+
 /////////////////////////////////////////////////////////////
 
 /** Mixins **/
@@ -643,8 +656,10 @@ em {
             TD.content-wrapper {
                 TABLE.content.image {
                     IMG.full-slot {
-                        max-width: 100%!important;
-                        width: 100%!important;
+                        //max-width: 100%!important;
+                        width: auto!important;
+                        margin:auto;
+                        position:relative;
                     }
                 }                
             }
@@ -661,5 +676,6 @@ em {
     @media (max-width: @breakpoint) {
         font-size: (@font-size * @base-font-size) * 1px;
         line-height: (@line-height * (@font-size * @base-font-size)) * 1px;
+        //margin-top: @base-whitespace!important;
     }
 }
