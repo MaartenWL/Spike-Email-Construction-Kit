@@ -6,42 +6,49 @@
 
 /** Set width of content;*/
 
-@full-width: 650px; // Sets the width of your content area on desktop devices 
+@grid-width: 550px; // Sets the width of your content area on desktop devices 
+
 
 /** Set column gutter between columns */
 
-@surrounding-gutter: 50px; // Sets the whitespace around your content
-@column-gutter: 25px; // Sets the whitespace between collumns
+@surrounding-gutter: 25px; // Sets the whitespace around your content
+@column-gutter: 12px; // Sets the whitespace between collumns
+
 
 /** Setting breakpoints */
 
-@breakpoint-md: @full-width; // Sets the first breakpoint, normally equals the desktop width of your content area
+@breakpoint-md: @grid-width; // Sets the first breakpoint, normally equals the desktop width of your content area
 @breakpoint-sm: 480px; // Sets the breakpoint to target small devices
 @breakpoint-xs: 320px; // Sets the breakpoint to target the smallest devices
 
+
 /* Set background colors*/
 
-@body-bg: #e3dbdb; // Sets the background color on the body of your document
+@body-bg: #ffffff; // Sets the background color on the body of your document
 @boxed-content-bg: #f3ebeb; // Sets the background color on boxed content
+@grid-bg: #ff0000;
+
 
 /* Set base font-size*/
 
 @base-font-size: 14px; // Sets the base font size. All other font sizes are calculated from this size
-@font-stack: verdana,
-sans-serif; // sets the font stack for normal text
-@font-stack-secondary: Verdana,
-sans-serif; // sets the font stack for headings
-@heading-font-stack: 'Roboto Slab',
-serif;
-@heading-color: #cc0000;
-@heading-font-weight: 400;
-@base-font-stack: 'Overpass',
-arial;
-@base-font-size: 14px;
+@base-font-stack: 'Overpass',arial;
 @base-font-line-height: 1.52;
 @base-font-color: #666;
 @base-font-weight: 400;
-@content-bg: #ffffff;
+
+@font-stack-secondary: Verdana,sans-serif; // sets the font stack for headings
+@heading-font-stack: 'Roboto Slab',serif;
+@heading-color: #cc0000;
+@heading-font-weight: 400;
+
+
+
+
+
+
+
+
 /////////////////////////////////////////////////////////////
 
 /** Calculated **/
@@ -50,18 +57,18 @@ arial;
 
 /* Calculate column widths */
 
-@col-1: floor(@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12;
-@col-2: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2;
-@col-3: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3;
-@col-4: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4;
-@col-5: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 5;
-@col-6: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6;
-@col-7: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 7;
-@col-8: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 8;
-@col-9: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 9;
-@col-10: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 10;
-@col-11: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 11;
-@col-12: floor((@full-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 12;
+@col-1: floor(@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12;
+@col-2: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2;
+@col-3: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3;
+@col-4: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4;
+@col-5: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 5;
+@col-6: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6;
+@col-7: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 7;
+@col-8: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 8;
+@col-9: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 9;
+@col-10: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 10;
+@col-11: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 11;
+@col-12: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 12;
 @col-gutter: @column-gutter;
 /////////////////////////////////////////////////////////////
 
@@ -102,24 +109,24 @@ BODY {
                         -attr-valign: top;
                         -attr-width: 100%;
                         TABLE.grid-container {
-                            -attr-width: unit(@full-width);
+                            -attr-width: unit(@grid-width);
                             width: 100%;
-                            max-width: @full-width;
+                            max-width: @grid-width;
                             TD.grid-container {
                                 -attr-align: center;
                                 -attr-valign: top;
-                                -attr-width: unit(@full-width);
+                                -attr-width: unit(@grid-width);
                                 width: 100%;
-                                max-width: @full-width;
+                                max-width: @grid-width;
                                 TABLE.mso-grid-row {
                                     -attr-align: center;
                                     -attr-valign: top;
-                                    -attr-width: unit(@full-width);
+                                    -attr-width: unit(@grid-width);
                                     TD.mso-grid-row {
                                         -attr-align: left;
                                         -attr-valign: top;
-                                        -attr-width: unit(@full-width);
-                                        width: @full-width;
+                                        -attr-width: unit(@grid-width);
+                                        width: @grid-width;
                                         /* place TABLE.content-container in here */
                                     }
                                 }
@@ -127,12 +134,12 @@ BODY {
                                     -attr-align: center;
                                     -attr-width: 100%;
                                     width: 100%;
-                                    max-width: @full-width;
+                                    max-width: @grid-width;
                                     TD.hero-content {
                                         IMG.full-slot {
                                             -attr-height: auto;
-                                            -attr-width: unit(@full-width);
-                                            max-width: unit(@full-width);
+                                            -attr-width: unit(@grid-width);
+                                            max-width: unit(@grid-width);
                                             width: 100%;
                                             @media screen {
                                                 width: 100%;
@@ -142,7 +149,7 @@ BODY {
                                     TD.grid-row {
                                         -attr-align: center;
                                         -attr-valign: top;
-                                        -attr-width: unit(@full-width);
+                                        -attr-width: unit(@grid-width);
                                         font-size: 0;
                                         text-align: center;
                                         padding: ( 0.5 * @column-gutter) (@surrounding-gutter - (0.5 * @column-gutter));
@@ -189,6 +196,7 @@ BODY {
                                                     -attr-width: unit(@col-12);
                                                 }
                                                 /* place DIV.column in here */
+                                                
                                             }
                                         }
                                         DIV.column {
@@ -211,63 +219,79 @@ BODY {
                                             }
                                             &.col-6 {
                                                 .mixin-grid-column(@col-6);
-                                                @media (max-width: @breakpoint-md) {
-                                                    .mixin-full-width;
-                                                }
                                             }
                                             &.col-7 {
                                                 .mixin-grid-column(@col-7);
-                                                @media (max-width: @breakpoint-md) {
-                                                    .mixin-full-width;
-                                                }
                                             }
                                             &.col-8 {
                                                 .mixin-grid-column(@col-8);
-                                                @media (max-width: @breakpoint-md) {
-                                                    .mixin-full-width;
-                                                }
                                             }
                                             &.col-9 {
                                                 .mixin-grid-column(@col-9);
-                                                @media (max-width: @breakpoint-md) {
-                                                    .mixin-full-width;
-                                                }
                                             }
                                             &.col-10 {
                                                 .mixin-grid-column(@col-10);
-                                                @media (max-width: @breakpoint-md) {
-                                                    .mixin-full-width;
-                                                }
                                             }
                                             &.col-11 {
                                                 .mixin-grid-column(@col-11);
-                                                @media (max-width: @breakpoint-md) {
-                                                    .mixin-full-width;
-                                                }
                                             }
                                             &.col-12 {
                                                 .mixin-grid-column(@col-12);
-                                                @media (max-width: @breakpoint-md) {
-                                                    .mixin-full-width;
-                                                }
                                             }
+                                            
+                                            &.col {
+                                                                                               
+                                                &-sm {
+                                                    &-1 {.mixin-responsive-grid-column(1,@breakpoint-sm);}
+                                                    &-2 {.mixin-responsive-grid-column(2,@breakpoint-sm);}
+                                                    &-3 {.mixin-responsive-grid-column(3,@breakpoint-sm);}
+                                                    &-4 {.mixin-responsive-grid-column(4,@breakpoint-sm);}
+                                                    &-5 {.mixin-responsive-grid-column(5,@breakpoint-sm);}
+                                                    &-6 {.mixin-responsive-grid-column(6,@breakpoint-sm);}
+                                                    &-7 {.mixin-responsive-grid-column(7,@breakpoint-sm);}
+                                                    &-8 {.mixin-responsive-grid-column(8,@breakpoint-sm);}
+                                                    &-9 {.mixin-responsive-grid-column(9,@breakpoint-sm);}
+                                                    &-10 {.mixin-responsive-grid-column(10,@breakpoint-sm);}
+                                                    &-11 {.mixin-responsive-grid-column(11,@breakpoint-sm);}
+                                                    &-12 {.mixin-responsive-grid-column(12,@breakpoint-sm);}
+                                                }
+                                                
+                                                &-xs {
+                                                    &-1 {.mixin-responsive-grid-column(1,@breakpoint-xs);}
+                                                    &-2 {.mixin-responsive-grid-column(2,@breakpoint-xs);}
+                                                    &-3 {.mixin-responsive-grid-column(3,@breakpoint-xs);}
+                                                    &-4 {.mixin-responsive-grid-column(4,@breakpoint-xs);}
+                                                    &-5 {.mixin-responsive-grid-column(5,@breakpoint-xs);}
+                                                    &-6 {.mixin-responsive-grid-column(6,@breakpoint-xs);}
+                                                    &-7 {.mixin-responsive-grid-column(7,@breakpoint-xs);}
+                                                    &-8 {.mixin-responsive-grid-column(8,@breakpoint-xs);}
+                                                    &-9 {.mixin-responsive-grid-column(9,@breakpoint-xs);}
+                                                    &-10 {.mixin-responsive-grid-column(10,@breakpoint-xs);}
+                                                    &-11 {.mixin-responsive-grid-column(11,@breakpoint-xs);}
+                                                    &-12 {.mixin-responsive-grid-column(12,@breakpoint-xs);}
+                                                }
+                                                
+                                            }
+                                            &.col-sm-12 {}
+                                            &.col-xs-12 {}
+                                            
                                             TABLE.content-box {
                                                 -attr-align: left;
                                                 -attr-width: 100%;
                                                 TD.content-box {
                                                     -attr-align: center;
                                                     -attr-valign: top;
-                                                    /*&.column-content-box {
-                                                background-color: @boxed-content-bg;
-                                                border-radius: (0.5 * @column-gutter);
-                                                &.color-invert {
-                                                    text-color: white;
-                                                }
-                                            }*/
+                                                    &.column-content-box {
+                                                        background-color: @boxed-content-bg;
+                                                        border-radius: (0.5 * @column-gutter);
+                                                        &.color-invert {
+                                                            text-color: white;
+                                                        }
+                                                    }
                                                     TABLE.content-wrapper {
                                                         -attr-align: center;
                                                         width: 100%;
-                                                        max-width: @full-width;
+                                                        max-width: @grid-width;
                                                         TD.content-wrapper {
                                                             -attr-align: left;
                                                             -attr-valign: top;
@@ -286,6 +310,7 @@ BODY {
                                                                         border: 0;
                                                                         height: auto;
                                                                         width: 100%;
+                                                                        display:block;
                                                                     }
                                                                 }
                                                             }
@@ -433,10 +458,8 @@ H5 FONT {
 
 /////////////////////////////////////////////////////////////
 .body,
-.article,
 p,
-em,
-#toc-table td {
+em {
     .mixin-responsive-typography(@breakpoint-md, 1, @base-font-line-height);
     .mixin-responsive-typography(@breakpoint-sm, 1, 1.25);
     .mixin-responsive-typography(@breakpoint-xs, 1.1, 1.25);
@@ -534,25 +557,6 @@ em,
     }
 }
 
-.full-width {
-    .mixin-full-width;
-    &-xs {
-        @media (max-width: @breakpoint-xs) {
-            .mixin-full-width;
-        }
-    }
-    &-sm {
-        @media (max-width: @breakpoint-sm) {
-            .mixin-full-width;
-        }
-    }
-    &-md {
-        @media (max-width: @breakpoint-md) {
-            .mixin-full-width;
-        }
-    }
-}
-
 .hidden {
     .mixin-hidden;
     &-xs {
@@ -594,14 +598,6 @@ em,
     text-align: justify;
 }
 
-.mixin-full-width {
-    &,
-    .column-content-container {
-        width: 100%!important;
-        max-width: 100%!important;
-    }
-}
-
 .mixin-hidden {
     display: none!important;
 }
@@ -630,6 +626,27 @@ em,
                         .mixin-text-center;
                     }
                 }
+            }
+        }
+    }
+}
+
+.mixin-responsive-grid-column (@col-x,@breakpoint){
+    @width: unit( ((@col-x / 12 ) * 100), %);
+    
+    @media (max-width: @breakpoint) {
+        max-width: @width!important;
+        width:@width;
+        TABLE.content-box {
+            max-width:100%;
+            width:100%;
+            TD.content-wrapper {
+                TABLE.content.image {
+                    IMG.full-slot {
+                        max-width: 100%!important;
+                        width: 100%!important;
+                    }
+                }                
             }
         }
     }
