@@ -80,7 +80,7 @@ BODY {
     margin: 0;
     padding: 0;
     background-color: @body-bg;
-    -attr-bgcolor: @body-bg;
+    -attr-bg-color: @body-bg;
     TABLE.body {
         width: 100%;
         -attr-width: 100%;
@@ -707,6 +707,7 @@ IMG.whitespace {
 // These mixin functions are meant simplify the code in this LESS file. Do not use them directly in your HTML.
 .mixin-img-cover {
     object-fit:cover;
+    overflow:hidden;
 }
 .mixin-img-no-scale {
     object-fit:none;
