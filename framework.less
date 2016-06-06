@@ -88,8 +88,17 @@ BODY {
             -attr-width: 100%;
             
             &.preheader-band {
-                -attr-bgcolor: black;
-                background-color: black;
+                -attr-bgcolor: aliceblue;
+                background-color: aliceblue;
+                
+                @media (max-width: @breakpoint-xs) {
+                    .mixin-hidden;
+                }
+
+                @media (max-width: @breakpoint-sm) {
+                    .mixin-hidden;
+                }
+                
             }
             &.default-band {
                 -attr-bgcolor: @body-bg;
@@ -137,14 +146,11 @@ BODY {
                                     width: 100%;
                                     max-width: @grid-width;
                                     TD.hero-content {
-                                        IMG.full-slot {
+                                        IMG {
                                             -attr-height: auto;
-                                            -attr-width: unit(@grid-width);
+                                            -attr-width: unit(@grid-width);                                            
                                             max-width: unit(@grid-width);
                                             width: 100%;
-                                            @media screen {
-                                                width: 100%;
-                                            }
                                         }
                                     }
                                     TD.grid-row {
@@ -207,18 +213,42 @@ BODY {
                                             
                                             &.col {
 
-                                                &-1 {.mixin-grid-column(@col-1);}
-                                                &-2 {.mixin-grid-column(@col-2);}
-                                                &-3 {.mixin-grid-column(@col-3);}
-                                                &-4 {.mixin-grid-column(@col-4);}
-                                                &-5 {.mixin-grid-column(@col-5);}
-                                                &-6 {.mixin-grid-column(@col-6);}
-                                                &-7 {.mixin-grid-column(@col-7);}
-                                                &-8 {.mixin-grid-column(@col-8);}
-                                                &-9 {.mixin-grid-column(@col-9);}
-                                                &-10 {.mixin-grid-column(@col-10);}
-                                                &-11 {.mixin-grid-column(@col-11);}
-                                                &-12 {.mixin-grid-column(@col-12);}
+                                                &-1 {
+                                                    .mixin-grid-column(@col-1);
+                                                    .mixin-responsive-grid-column(1,@breakpoint-md);}
+                                                &-2 {
+                                                    .mixin-grid-column(@col-2);
+                                                    .mixin-responsive-grid-column(2,@breakpoint-md);}
+                                                &-3 {
+                                                    .mixin-grid-column(@col-3);
+                                                    .mixin-responsive-grid-column(3,@breakpoint-md);}
+                                                &-4 {
+                                                    .mixin-grid-column(@col-4);
+                                                    .mixin-responsive-grid-column(4,@breakpoint-md);}
+                                                &-5 {
+                                                    .mixin-grid-column(@col-5);
+                                                    .mixin-responsive-grid-column(5,@breakpoint-md);}
+                                                &-6 {
+                                                    .mixin-grid-column(@col-6);
+                                                    .mixin-responsive-grid-column(6,@breakpoint-md);}
+                                                &-7 {
+                                                    .mixin-grid-column(@col-7);
+                                                    .mixin-responsive-grid-column(7,@breakpoint-md);}
+                                                &-8 {
+                                                    .mixin-grid-column(@col-8);
+                                                    .mixin-responsive-grid-column(8,@breakpoint-md);}
+                                                &-9 {
+                                                    .mixin-grid-column(@col-9);
+                                                    .mixin-responsive-grid-column(9,@breakpoint-md);}
+                                                &-10 {
+                                                    .mixin-grid-column(@col-10);
+                                                    .mixin-responsive-grid-column(10,@breakpoint-md);}
+                                                &-11 {
+                                                    .mixin-grid-column(@col-11);
+                                                    .mixin-responsive-grid-column(11,@breakpoint-md);}
+                                                &-12 {
+                                                    .mixin-grid-column(@col-12);
+                                                    .mixin-responsive-grid-column(12,@breakpoint-md);}
                                                 
                                                 &-md {
                                                     &-1 {.mixin-responsive-grid-column(1,@breakpoint-md);}
@@ -296,14 +326,37 @@ BODY {
                                                                 }
                                                             }
                                                             .content {
-                                                                &.text {}
                                                                 &.image {
-                                                                    IMG.full-slot {
+                                                                    IMG {
                                                                         border: 0;
+                                                                        -attr-border:0;
                                                                         height: auto;
                                                                         width: 100%;
-                                                                        display:block;
                                                                     }
+                                                                }
+                                                                &.preheader {
+                                                                    &, p {
+                                                                        Margin:0;
+                                                                        padding:0;
+                                                                        font-size:(0.8 *  @base-font-size);
+                                                                        font-family: @base-font-stack;
+                                                                    }
+                                                                }
+                                                                &.text {
+                                                                    p,
+                                                                    em {
+                                                                        .mixin-desktop-typography (1, @base-font-line-height);
+                                                                        font-family: @base-font-stack;
+                                                                        font-weight: @base-font-weight;
+                                                                        color: @base-font-color;
+                                                                    }
+                                                                    
+                                                                    P {
+                                                                        /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin*/
+                                                                        Margin: @base-whitespace 0 0 0!important;
+                                                                        padding: 0;
+                                                                    }
+
                                                                 }
                                                             }
                                                         }
@@ -326,8 +379,14 @@ TABLE {
     -attr-cellspacing: 0;
     -attr-cellpadding: 0;
     -attr-border: 0;
+    mso-cellspacing: 0; 
+    mso-padding-alt: 0;
+    mso-table-lspace: 0;
+    mso-table-rspace: 0;
     border: 0;
     TD {
+        mso-table-lspace: 0;
+        mso-table-rspace: 0;
         &.gutter {
             padding: 0.5 * @column-gutter;
         }
@@ -358,32 +417,42 @@ TABLE {
     }
 }
 
-img {display:block;}
+img {
+    display:block;
+    @media screen {
+        &.no-scale {
+            object-fit:none;
+        }
+        &.scale-down {
+            object-fit:scale-down;
+        }
+    }
+}
+
+.assistive{
+    clip:rect(0, 0, 0, 0);
+    width:1px;
+    height:1px;
+    max-height:1px;
+    
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    display:block;
+    position:absolute;
+    
+    mso-hide:all;
+}
 
 /////////////////////////////////////////////////////////////
 
-/** Desktop typography **/
+/** Typography **/
 
 /////////////////////////////////////////////////////////////
-.body,
-p,
-em {
-    .mixin-desktop-typography (1, @base-font-line-height);
-    font-family: @base-font-stack;
-    font-weight: @base-font-weight;
-    color: @base-font-color;
-}
 
-P {
-    /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin*/
-    Margin: @base-whitespace 0 0 0!important;
-    padding: 0;
-}
 
 H1,
-H1 A,
-H1 SPAN,
-H1 FONT {
+H1 A {
     .mixin-desktop-typography (3, 1.05);
     font-family: @heading-font-stack;
     font-weight: @heading-font-weight;
@@ -396,9 +465,7 @@ H1 FONT {
 }
 
 H2,
-H2 A,
-H2 SPAN,
-H2 FONT {
+H2 A {
     .mixin-desktop-typography (2.25, 1.25);
     font-family: @heading-font-stack;
     font-weight: @heading-font-weight;
@@ -411,9 +478,7 @@ H2 FONT {
 }
 
 H3,
-H3 A,
-H3 SPAN,
-H3 FONT {
+H3 A {
     .mixin-desktop-typography (1.75, 1.25);
     font-family: @heading-font-stack;
     font-weight: @heading-font-weight;
@@ -427,12 +492,8 @@ H3 FONT {
 
 H4,
 H4 A,
-H4 SPAN,
-H4 FONT,
 H5,
-H5 A,
-H5 SPAN,
-H5 FONT {
+H5 A {
     .mixin-desktop-typography (1.125, 1.22222);
     font-family: @heading-font-stack;
     font-weight: @heading-font-weight;
@@ -444,14 +505,8 @@ H5 FONT {
     .mixin-responsive-typography (@breakpoint-xs, 1.125, 1.22222);
 }
 
-/////////////////////////////////////////////////////////////
-
-/** Responsive typography **/
-
-/////////////////////////////////////////////////////////////
-.body,
-p,
-em {
+.text p,
+.text em {
     .mixin-responsive-typography(@breakpoint-md, 1, @base-font-line-height);
     .mixin-responsive-typography(@breakpoint-sm, 1, 1.25);
     .mixin-responsive-typography(@breakpoint-xs, 1.1, 1.25);
@@ -473,6 +528,60 @@ em {
 
 /////////////////////////////////////////////////////////////
 // These helper classes can be used to responsive behavior of content 
+.img-cover {
+    &-xs {
+        @media (max-width: @breakpoint-xs) {
+            .mixin-img-cover;
+        }
+    }
+    &-sm {
+        @media (max-width: @breakpoint-sm) {
+            .mixin-img-cover;
+        }
+    }
+    &-md {
+        @media (max-width: @breakpoint-md) {
+            .mixin-img-cover;
+        }
+    }
+}
+
+.img-no-scale {
+    &-xs {
+        @media (max-width: @breakpoint-xs) {
+            .mixin-img-no-scale;
+        }
+    }
+    &-sm {
+        @media (max-width: @breakpoint-sm) {
+            .mixin-img-no-scale;
+        }
+    }
+    &-md {
+        @media (max-width: @breakpoint-md) {
+            .mixin-img-no-scale;
+        }
+    }
+}
+
+.img-down-scale {
+    &-xs {
+        @media (max-width: @breakpoint-xs) {
+            .mixin-img-down-scale;
+        }
+    }
+    &-sm {
+        @media (max-width: @breakpoint-sm) {
+            .mixin-img-down-scale;
+        }
+    }
+    &-md {
+        @media (max-width: @breakpoint-md) {
+            .mixin-img-down-scale;
+        }
+    }
+}
+
 .text-center {
     .mixin-text-center;
     &-xs {
@@ -595,6 +704,16 @@ IMG.whitespace {
 
 /////////////////////////////////////////////////////////////
 // These mixin functions are meant simplify the code in this LESS file. Do not use them directly in your HTML.
+.mixin-img-cover {
+    object-fit:cover;
+}
+.mixin-img-no-scale {
+    object-fit:none;
+}
+.mixin-img-down-scale {
+    object-fit:scale-down;
+}
+
 .mixin-text-center {
     text-align: center;
 }
@@ -617,8 +736,10 @@ IMG.whitespace {
 
 .mixin-grid-column(@col-x) {
     max-width: @col-x;
+    width:100%;
     TABLE.content-box {
         max-width: @col-x;
+        width:100%;
         TD.content-wrapper {
             -attr-width: unit(@col-x);
             TABLE.mso-content-wrapper,
@@ -626,7 +747,7 @@ IMG.whitespace {
                 -attr-width: unit(@col-x - @column-gutter);
             }
             TABLE.content.image {
-                IMG.full-slot {
+                IMG {
                     max-width: @col-x - @column-gutter;
                     -attr-width: unit(@col-x - @column-gutter);
                     width: 100%;
@@ -649,17 +770,16 @@ IMG.whitespace {
     
     @media (max-width: @breakpoint) {
         max-width: @width!important;
-        width:@width;
+        width:@width!important;
         TABLE.content-box {
-            max-width:100%;
-            width:100%;
+            max-width:100%!important;
+            width:100%!important;
             TD.content-wrapper {
                 TABLE.content.image {
-                    IMG.full-slot {
-                        //max-width: 100%!important;
-                        width: auto!important;
-                        margin:auto;
-                        position:relative;
+                    IMG {
+                        max-width:100%!important;
+                        width:100%!important;  
+                        position:relative;                        
                     }
                 }                
             }
@@ -676,6 +796,5 @@ IMG.whitespace {
     @media (max-width: @breakpoint) {
         font-size: (@font-size * @base-font-size) * 1px;
         line-height: (@line-height * (@font-size * @base-font-size)) * 1px;
-        //margin-top: @base-whitespace!important;
     }
 }
