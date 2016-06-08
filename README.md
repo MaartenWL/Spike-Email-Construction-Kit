@@ -1,4 +1,7 @@
 # Email-template
-work in progress for email boilertemplate
-- responsive without media queries
-- easy stylable
+work in progress for a new email boilertemplate
+- responsive/liquid grid layout
+- Helper classes to refine responsive behavior
+- (easy) stylable
+- Template is broken down in snippets
+
