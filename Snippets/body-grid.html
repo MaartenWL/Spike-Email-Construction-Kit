@@ -1,32 +1,19 @@
-<!doctype html>
-<html lang="nl" xml:lang="nl">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta content="width=device-width" name="viewport" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link href="LESS/framework.css" rel="stylesheet" type="text/css" />
-    <link href="LESS/Styling.css" rel="stylesheet" type="text/css" />
-    <style mm-inline="none" mm-minify="false">
-    /*To be tested: fix for windows phone*/
-        @-ms-viewport{
-        width: device-width;
-    }
-    </style>
-    <!--[if gte mso 9]><xml>
-     <o:OfficeDocumentSettings>
-      <o:AllowPNG/>
-      <o:PixelsPerInch>96</o:PixelsPerInch>
-     </o:OfficeDocumentSettings>
-    </xml><![endif]-->
-</head>
-
-<body>
-    <center>
-        <table class="body" cellpadding="0" cellspacing="0" border="0">
-            ${1:band}
-        </table>
-    </center>
-</body>
-
-</html>
+ <tr>
+    <td class="body-band default-band">
+        <center>
+            <table class="wrapper" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td class="wrapper">
+                        <table class="grid-container " cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td class="grid-container">
+                                    ${1:GridRows}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </td>
+</tr>
