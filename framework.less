@@ -12,7 +12,7 @@
 /** Set column gutter between columns */
 
 @surrounding-gutter: 50px; // Sets the whitespace around your content
-@column-gutter: 25px; // Sets the whitespace between collumns
+@column-gutter: 20px; // Sets the whitespace between collumns
 
 
 /** Setting breakpoints */
@@ -98,7 +98,7 @@ TABLE {
             padding-left: @column-gutter;
         }
         &.grid-row-gutter {
-            padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter));
+            padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) floor(@surrounding-gutter - (0.5 * @column-gutter));
         }
     }
 }
@@ -116,19 +116,19 @@ TABLE {
 
 /* Calculate column widths */
 
-@col-1: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12);
-@col-2: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2);
-@col-3: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3);
-@col-4: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4);
+@col-1: ((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12);
+@col-2: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2);
+@col-3: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3);
+@col-4: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4);
 @col-5: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 5);
-@col-6: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6);
+@col-6: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6);
 @col-7: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 7);
 @col-8: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 8);
 @col-9: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 9);
 @col-10: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 10);
 @col-11: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 11);
 @col-12: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 12);
-@col-hero: floor(@grid-width);
+@col-hero: (@grid-width);
 @col-gutter: @column-gutter;
 
 /////////////////////////////////////////////////////////////
@@ -150,7 +150,6 @@ TABLE.body {
             -attr-border: 0;
             border:0;
             background-color:#ffffff;
-            //max-width:(@grid-width - 1);
             
             TD.grid {
                 -attr-align: center;
@@ -162,38 +161,42 @@ TABLE.body {
                         vertical-align: top;
                         font-size: 0;
                         
-                        TD.mso-col {
-                            font-size: 0;
+                        TABLE.mso-col-container {
+                            -attr-width:unit(@col-12);
                             
-                            &.col {
+                            TD.mso-col {
+                                font-size: 0;
 
-                                &-1 {
-                                    .mixin-grid-mso-column(@col-1);}
-                                &-2 {
-                                    .mixin-grid-mso-column(@col-2);}
-                                &-3 {
-                                    .mixin-grid-mso-column(@col-3);}
-                                &-4 {
-                                    .mixin-grid-mso-column(@col-4);}
-                                &-5 {
-                                    .mixin-grid-mso-column(@col-5);}
-                                &-6 {
-                                    .mixin-grid-mso-column(@col-6);}
-                                &-7 {
-                                    .mixin-grid-mso-column(@col-7);}
-                                &-8 {
-                                    .mixin-grid-mso-column(@col-8);}
-                                &-9 {
-                                    .mixin-grid-mso-column(@col-9);}
-                                &-10 {
-                                    .mixin-grid-mso-column(@col-10);}
-                                &-11 {
-                                    .mixin-grid-mso-column(@col-11);}
-                                &-12 {
-                                    .mixin-grid-mso-column(@col-12);}
-                                
-                                &-hero {
-                                    .mixin-grid-mso-column(@col-hero);}
+                                &.col {
+
+                                    &-1 {
+                                        .mixin-grid-mso-column(@col-1);}
+                                    &-2 {
+                                        .mixin-grid-mso-column(@col-2);}
+                                    &-3 {
+                                        .mixin-grid-mso-column(@col-3);}
+                                    &-4 {
+                                        .mixin-grid-mso-column(@col-4);}
+                                    &-5 {
+                                        .mixin-grid-mso-column(@col-5);}
+                                    &-6 {
+                                        .mixin-grid-mso-column(@col-6);}
+                                    &-7 {
+                                        .mixin-grid-mso-column(@col-7);}
+                                    &-8 {
+                                        .mixin-grid-mso-column(@col-8);}
+                                    &-9 {
+                                        .mixin-grid-mso-column(@col-9);}
+                                    &-10 {
+                                        .mixin-grid-mso-column(@col-10);}
+                                    &-11 {
+                                        .mixin-grid-mso-column(@col-11);}
+                                    &-12 {
+                                        .mixin-grid-mso-column(@col-12);}
+
+                                    &-hero {
+                                        .mixin-grid-mso-column(@col-hero);}
+                                }
                             }
                         }
                         
@@ -295,8 +298,7 @@ TABLE.body {
                             TABLE.content-wrapper {
                                 -attr-align: center;
                                 TD.content-wrapper {
-                                    -attr-align: center;
-                                    padding-bottom: 40px;                                    
+                                    -attr-align: center;                                  
                                 }
                                 TD.mso-col {
                                     -attr-align: center;
@@ -311,7 +313,7 @@ TABLE.body {
                                     -attr-align: center;
                                     IMG {
                                         -attr-border: 0;
-                                        width: 100%!important;
+                                        width:100%;
                                         height: auto!important;
                                         display: block;
                                     }
@@ -324,9 +326,8 @@ TABLE.body {
                                     color: #737373;
                                     mso-line-height-rule: exactly;
                                     line-height: 18px;
-                                    padding-top: 20px;
-                                    padding-left: 20px;
-                                    padding-right: 20px;
+                                    padding-top: @base-whitespace; 
+                                     padding-bottom: ( 2 * @base-whitespace); 
                                 }
                             }
                         }
@@ -658,7 +659,7 @@ IMG.whitespace {
             }
             &.image IMG {
                 -attr-width: unit( ceil(@col-x - @gutter) );
-                width: ceil(@col-x - @gutter);
+                max-width: ceil(@col-x - @gutter);
             }   
         }
     }
