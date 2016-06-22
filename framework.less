@@ -98,7 +98,7 @@ TABLE {
             padding-left: @column-gutter;
         }
         &.grid-row-gutter {
-            padding: (0.5 * @base-whitespace) (@surrounding-gutter - (0.5 * @column-gutter));
+            padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter));
         }
     }
 }
@@ -106,7 +106,7 @@ TABLE {
 @-ms-viewport { 
     width: device-width; 
 }
-
+ 
 
 /////////////////////////////////////////////////////////////
 
@@ -121,7 +121,7 @@ TABLE {
 @col-3: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3);
 @col-4: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4);
 @col-5: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 5);
-@col-6: ((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6;
+@col-6: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6);
 @col-7: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 7);
 @col-8: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 8);
 @col-9: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 9);
@@ -150,6 +150,8 @@ TABLE.body {
             -attr-border: 0;
             border:0;
             background-color:#ffffff;
+            //max-width:(@grid-width - 1);
+            
             TD.grid {
                 -attr-align: center;
                 -attr-width: 100%;
@@ -161,35 +163,37 @@ TABLE.body {
                         font-size: 0;
                         
                         TD.mso-col {
+                            font-size: 0;
+                            
                             &.col {
 
                                 &-1 {
-                                    .mixin-grid-column(@col-1,0);}
+                                    .mixin-grid-mso-column(@col-1);}
                                 &-2 {
-                                    .mixin-grid-column(@col-2,0);}
+                                    .mixin-grid-mso-column(@col-2);}
                                 &-3 {
-                                    .mixin-grid-column(@col-3,0);}
+                                    .mixin-grid-mso-column(@col-3);}
                                 &-4 {
-                                    .mixin-grid-column(@col-4,0);}
+                                    .mixin-grid-mso-column(@col-4);}
                                 &-5 {
-                                    .mixin-grid-column(@col-5,0);}
+                                    .mixin-grid-mso-column(@col-5);}
                                 &-6 {
-                                    .mixin-grid-column(@col-6,0);}
+                                    .mixin-grid-mso-column(@col-6);}
                                 &-7 {
-                                    .mixin-grid-column(@col-7,0);}
+                                    .mixin-grid-mso-column(@col-7);}
                                 &-8 {
-                                    .mixin-grid-column(@col-8,0);}
+                                    .mixin-grid-mso-column(@col-8);}
                                 &-9 {
-                                    .mixin-grid-column(@col-9,0);}
+                                    .mixin-grid-mso-column(@col-9);}
                                 &-10 {
-                                    .mixin-grid-column(@col-10,0);}
+                                    .mixin-grid-mso-column(@col-10);}
                                 &-11 {
-                                    .mixin-grid-column(@col-11,0);}
+                                    .mixin-grid-mso-column(@col-11);}
                                 &-12 {
-                                    .mixin-grid-column(@col-12,0);}
+                                    .mixin-grid-mso-column(@col-12);}
                                 
                                 &-hero {
-                                    .mixin-grid-column(@col-hero,0);}
+                                    .mixin-grid-mso-column(@col-hero);}
                             }
                         }
                         
@@ -646,18 +650,22 @@ IMG.whitespace {
     max-width:@col-x;
     TD.content-wrapper {
         -attr-width: unit(@col-x);
-        padding: 0 (0.5 * @gutter);
+        padding: 0 ceil(0.5 * @gutter) 0 floor(0.5 * @gutter);
         TABLE.content {
             width: 100%;
             TD {
-                -attr-width: unit(@col-x - @gutter);                                                             
+                -attr-width: unit( ceil(@col-x - @gutter) );                                                             
             }
             &.image IMG {
-                -attr-width: unit(@col-x - @gutter);
-                width: (@col-x - @gutter);
+                -attr-width: unit( ceil(@col-x - @gutter) );
+                width: ceil(@col-x - @gutter);
             }   
         }
     }
+}
+
+.mixin-grid-mso-column(@col-x){
+    -attr-width: unit(@col-x);
 }
 
 .mixin-responsive-grid-column (@col-x,@breakpoint){
