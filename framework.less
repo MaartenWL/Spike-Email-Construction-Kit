@@ -6,13 +6,13 @@
 
 /** Set width of content;*/
 
-@grid-width: 550px; // Sets the width of your content area on desktop devices 
+@grid-width: 600px; // Sets the width of your content area on desktop devices 
 
 
 /** Set column gutter between columns */
 
-@surrounding-gutter: 25px; // Sets the whitespace around your content
-@column-gutter: 25px; // Sets the whitespace between collumns
+@surrounding-gutter: 50px; // Sets the whitespace around your content
+@column-gutter: 20px; // Sets the whitespace between collumns
 
 
 /** Setting breakpoints */
@@ -32,7 +32,7 @@
 /* Set base font-size*/
 
 @base-font-size: 14px; // Sets the base font size. All other font sizes are calculated from this size
-@base-font-stack: 'Overpass',arial;
+@base-font-stack: 'Overpass','Roboto Slab',arial;
 @base-font-line-height: 1.52;
 @base-whitespace: (@base-font-size * @base-font-line-height);
 @base-font-color: #666;
@@ -43,335 +43,22 @@
 @heading-color: #cc0000;
 @heading-font-weight: 400;
 
+/////////////////////////////////////////////////////////////
 
-
-
-
-
-
+/** Reset styling **/
 
 /////////////////////////////////////////////////////////////
 
-/** Calculated **/
+BODY {margin:0;padding:0;}
 
-/////////////////////////////////////////////////////////////
-
-/* Calculate column widths */
-
-@col-1: floor(@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12;
-@col-2: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2;
-@col-3: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3;
-@col-4: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4;
-@col-5: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 5;
-@col-6: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6;
-@col-7: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 7;
-@col-8: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 8;
-@col-9: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 9;
-@col-10: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 10;
-@col-11: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 11;
-@col-12: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 12;
-@col-gutter: @column-gutter;
-/////////////////////////////////////////////////////////////
-
-/** Layout **/
-
-/////////////////////////////////////////////////////////////
-BODY {
-    margin: 0;
-    padding: 0;
-    background-color: @body-bg;
-    -attr-bg-color: @body-bg;
-    TABLE.body {
-        width: 100%;
-        -attr-width: 100%;
-        TD.body-band {
-            width: 100%;
-            -attr-width: 100%;
-            
-            &.preheader-band {
-                -attr-bgcolor: aliceblue;
-                background-color: aliceblue;
-                
-                @media (max-width: @breakpoint-xs) {
-                    .mixin-hidden;
-                }
-
-                @media (max-width: @breakpoint-sm) {
-                    .mixin-hidden;
-                }
-                
-            }
-            &.default-band {
-                -attr-bgcolor: @body-bg;
-                background-color: @body-bg;
-            }
-            
-            &.blue-band {
-                -attr-bgcolor: aliceblue;
-                background-color: aliceblue;
-            }
-            
-            CENTER {
-                width: 100%;
-                TABLE.wrapper {
-                    -attr-width: 100%;
-                    TD.wrapper {
-                        -attr-align: center;
-                        -attr-valign: top;
-                        -attr-width: 100%;
-                        TABLE.grid-container {
-                            -attr-width: unit(@grid-width);
-                            width: 100%;
-                            max-width: @grid-width;
-                            TD.grid-container {
-                                -attr-align: center;
-                                -attr-valign: top;
-                                -attr-width: unit(@grid-width);
-                                width: 100%;
-                                max-width: @grid-width;
-                                TABLE.mso-grid-row {
-                                    -attr-align: center;
-                                    -attr-valign: top;
-                                    -attr-width: unit(@grid-width);
-                                    TD.mso-grid-row {
-                                        -attr-align: left;
-                                        -attr-valign: top;
-                                        -attr-width: unit(@grid-width);
-                                        width: @grid-width;
-                                        /* place TABLE.content-container in here */
-                                    }
-                                }
-                                TABLE.grid-row {
-                                    -attr-align: center;
-                                    -attr-width: 100%;
-                                    width: 100%;
-                                    max-width: @grid-width;
-                                    TD.hero-content {
-                                        IMG {
-                                            -attr-height: auto;
-                                            -attr-width: unit(@grid-width);                                            
-                                            max-width: unit(@grid-width);
-                                            width: 100%;
-                                        }
-                                    }
-                                    TD.grid-row {
-                                        -attr-align: center;
-                                        -attr-valign: top;
-                                        -attr-width: unit(@grid-width);
-                                        font-size: 0;
-                                        text-align: center;
-                                        padding: (0.5 * @base-whitespace) (@surrounding-gutter - (0.5 * @column-gutter));
-                                        TABLE.mso-column-wrapper {
-                                            -attr-align: center;
-                                            -attr-width: unit(@col-12);
-                                            TD.mso-column {
-                                                -attr-align: left;
-                                                -attr-valign: top;
-                                                &.col-1 {
-                                                    -attr-width: unit(@col-1);
-                                                }
-                                                &.col-2 {
-                                                    -attr-width: unit(@col-2);
-                                                }
-                                                &.col-3 {
-                                                    -attr-width: unit(@col-3);
-                                                }
-                                                &.col-4 {
-                                                    -attr-width: unit(@col-4);
-                                                }
-                                                &.col-5 {
-                                                    -attr-width: unit(@col-5);
-                                                }
-                                                &.col-6 {
-                                                    -attr-width: unit(@col-6);
-                                                }
-                                                &.col-7 {
-                                                    -attr-width: unit(@col-7);
-                                                }
-                                                &.col-8 {
-                                                    -attr-width: unit(@col-8);
-                                                }
-                                                &.col-9 {
-                                                    -attr-width: unit(@col-9);
-                                                }
-                                                &.col-10 {
-                                                    -attr-width: unit(@col-10);
-                                                }
-                                                &.col-11 {
-                                                    -attr-width: unit(@col-11);
-                                                }
-                                                &.col-12 {
-                                                    -attr-width: unit(@col-12);
-                                                }
-                                                /* place DIV.column in here */
-                                                
-                                            }
-                                        }
-                                        DIV.column {
-                                            display: inline-block;
-                                            vertical-align: top;
-                                            
-                                            
-                                            &.col {
-
-                                                &-1 {
-                                                    .mixin-grid-column(@col-1);
-                                                    .mixin-responsive-grid-column(1,@breakpoint-md);}
-                                                &-2 {
-                                                    .mixin-grid-column(@col-2);
-                                                    .mixin-responsive-grid-column(2,@breakpoint-md);}
-                                                &-3 {
-                                                    .mixin-grid-column(@col-3);
-                                                    .mixin-responsive-grid-column(3,@breakpoint-md);}
-                                                &-4 {
-                                                    .mixin-grid-column(@col-4);
-                                                    .mixin-responsive-grid-column(4,@breakpoint-md);}
-                                                &-5 {
-                                                    .mixin-grid-column(@col-5);
-                                                    .mixin-responsive-grid-column(5,@breakpoint-md);}
-                                                &-6 {
-                                                    .mixin-grid-column(@col-6);
-                                                    .mixin-responsive-grid-column(6,@breakpoint-md);}
-                                                &-7 {
-                                                    .mixin-grid-column(@col-7);
-                                                    .mixin-responsive-grid-column(7,@breakpoint-md);}
-                                                &-8 {
-                                                    .mixin-grid-column(@col-8);
-                                                    .mixin-responsive-grid-column(8,@breakpoint-md);}
-                                                &-9 {
-                                                    .mixin-grid-column(@col-9);
-                                                    .mixin-responsive-grid-column(9,@breakpoint-md);}
-                                                &-10 {
-                                                    .mixin-grid-column(@col-10);
-                                                    .mixin-responsive-grid-column(10,@breakpoint-md);}
-                                                &-11 {
-                                                    .mixin-grid-column(@col-11);
-                                                    .mixin-responsive-grid-column(11,@breakpoint-md);}
-                                                &-12 {
-                                                    .mixin-grid-column(@col-12);
-                                                    .mixin-responsive-grid-column(12,@breakpoint-md);}
-                                                
-                                                &-md {
-                                                    &-1 {.mixin-responsive-grid-column(1,@breakpoint-md);}
-                                                    &-2 {.mixin-responsive-grid-column(2,@breakpoint-md);}
-                                                    &-3 {.mixin-responsive-grid-column(3,@breakpoint-md);}
-                                                    &-4 {.mixin-responsive-grid-column(4,@breakpoint-md);}
-                                                    &-5 {.mixin-responsive-grid-column(5,@breakpoint-md);}
-                                                    &-6 {.mixin-responsive-grid-column(6,@breakpoint-md);}
-                                                    &-7 {.mixin-responsive-grid-column(7,@breakpoint-md);}
-                                                    &-8 {.mixin-responsive-grid-column(8,@breakpoint-md);}
-                                                    &-9 {.mixin-responsive-grid-column(9,@breakpoint-md);}
-                                                    &-10 {.mixin-responsive-grid-column(10,@breakpoint-md);}
-                                                    &-11 {.mixin-responsive-grid-column(11,@breakpoint-md);}
-                                                    &-12 {.mixin-responsive-grid-column(12,@breakpoint-md);}
-                                                }
-                                                 
-                                                &-sm {
-                                                    &-1 {.mixin-responsive-grid-column(1,@breakpoint-sm);}
-                                                    &-2 {.mixin-responsive-grid-column(2,@breakpoint-sm);}
-                                                    &-3 {.mixin-responsive-grid-column(3,@breakpoint-sm);}
-                                                    &-4 {.mixin-responsive-grid-column(4,@breakpoint-sm);}
-                                                    &-5 {.mixin-responsive-grid-column(5,@breakpoint-sm);}
-                                                    &-6 {.mixin-responsive-grid-column(6,@breakpoint-sm);}
-                                                    &-7 {.mixin-responsive-grid-column(7,@breakpoint-sm);}
-                                                    &-8 {.mixin-responsive-grid-column(8,@breakpoint-sm);}
-                                                    &-9 {.mixin-responsive-grid-column(9,@breakpoint-sm);}
-                                                    &-10 {.mixin-responsive-grid-column(10,@breakpoint-sm);}
-                                                    &-11 {.mixin-responsive-grid-column(11,@breakpoint-sm);}
-                                                    &-12 {.mixin-responsive-grid-column(12,@breakpoint-sm);}
-                                                }
-                                                
-                                                &-xs {
-                                                    &-1 {.mixin-responsive-grid-column(1,@breakpoint-xs);}
-                                                    &-2 {.mixin-responsive-grid-column(2,@breakpoint-xs);}
-                                                    &-3 {.mixin-responsive-grid-column(3,@breakpoint-xs);}
-                                                    &-4 {.mixin-responsive-grid-column(4,@breakpoint-xs);}
-                                                    &-5 {.mixin-responsive-grid-column(5,@breakpoint-xs);}
-                                                    &-6 {.mixin-responsive-grid-column(6,@breakpoint-xs);}
-                                                    &-7 {.mixin-responsive-grid-column(7,@breakpoint-xs);}
-                                                    &-8 {.mixin-responsive-grid-column(8,@breakpoint-xs);}
-                                                    &-9 {.mixin-responsive-grid-column(9,@breakpoint-xs);}
-                                                    &-10 {.mixin-responsive-grid-column(10,@breakpoint-xs);}
-                                                    &-11 {.mixin-responsive-grid-column(11,@breakpoint-xs);}
-                                                    &-12 {.mixin-responsive-grid-column(12,@breakpoint-xs);}
-                                                }
-                                                
-                                            }
-                                            
-                                            TABLE.content-box {
-                                                -attr-align: left;
-                                                -attr-width: 100%;
-                                                TD.content-box {
-                                                    -attr-align: center;
-                                                    -attr-valign: top;
-                                                    &.column-content-box {
-                                                        background-color: @boxed-content-bg;
-                                                        border-radius: (0.5 * @column-gutter);
-                                                        &.color-invert {
-                                                            text-color: white;
-                                                        }
-                                                    }
-                                                    TABLE.content-wrapper {
-                                                        -attr-align: center;
-                                                        width: 100%;
-                                                        max-width: @grid-width;
-                                                        TD.content-wrapper {
-                                                            -attr-align: left;
-                                                            -attr-valign: top;
-                                                            font-size: 0;
-                                                            TABLE.mso-content-wrapper {
-                                                                -attr-align: left;
-                                                                TD.mso-content-wrapper {
-                                                                    -attr-align: left;
-                                                                    -attr-valign: top;
-                                                                }
-                                                            }
-                                                            .content {
-                                                                &.image {
-                                                                    IMG {
-                                                                        border: 0;
-                                                                        -attr-border:0;
-                                                                        height: auto;
-                                                                        width: 100%;
-                                                                    }
-                                                                }
-                                                                &.preheader {
-                                                                    &, p {
-                                                                        Margin:0;
-                                                                        padding:0;
-                                                                        font-size:(0.8 *  @base-font-size);
-                                                                        font-family: @base-font-stack;
-                                                                    }
-                                                                }
-                                                                &.text {
-                                                                    p,
-                                                                    em {
-                                                                        .mixin-desktop-typography (1, @base-font-line-height);
-                                                                        font-family: @base-font-stack;
-                                                                        font-weight: @base-font-weight;
-                                                                        color: @base-font-color;
-                                                                    }
-                                                                    
-                                                                    P {
-                                                                        /* Set paragraph margins based on font-size, for Outlook .com use Margin not margin*/
-                                                                        Margin: @base-whitespace 0 0 0!important;
-                                                                        padding: 0;
-                                                                    }
-
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+IMG {
+    display:block;
+    @media screen {
+        &.no-scale {
+            object-fit:none;
+        }
+        &.scale-down {
+            object-fit:scale-down;
         }
     }
 }
@@ -388,6 +75,7 @@ TABLE {
     TD {
         mso-table-lspace: 0;
         mso-table-rspace: 0;
+        padding:0;
         &.gutter {
             padding: 0.5 * @column-gutter;
         }
@@ -409,41 +97,256 @@ TABLE {
         &.double-gutter-left {
             padding-left: @column-gutter;
         }
-        &.band-gutter {
-            padding-top: 0;
-            padding-right: 0.5 * @column-gutter;
-            padding-bottom: 0;
-            padding-left: 0.5 * @column-gutter;
+        &.grid-row-gutter {
+            padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) floor(@surrounding-gutter - (0.5 * @column-gutter));
         }
     }
 }
 
-img {
-    display:block;
-    @media screen {
-        &.no-scale {
-            object-fit:none;
-        }
-        &.scale-down {
-            object-fit:scale-down;
+@-ms-viewport { 
+    width: device-width; 
+}
+ 
+
+/////////////////////////////////////////////////////////////
+
+/** Calculated **/
+
+/////////////////////////////////////////////////////////////
+
+/* Calculate column widths */
+
+@col-1: ((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12);
+@col-2: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2);
+@col-3: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3);
+@col-4: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4);
+@col-5: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 5);
+@col-6: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6);
+@col-7: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 7);
+@col-8: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 8);
+@col-9: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 9);
+@col-10: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 10);
+@col-11: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 11);
+@col-12: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 12);
+@col-hero: (@grid-width);
+@col-gutter: @column-gutter;
+
+/////////////////////////////////////////////////////////////
+
+/** Grid **/
+
+/////////////////////////////////////////////////////////////
+
+TABLE.body {
+    -attr-width: 100%;
+    width: 100%;
+    TD.body-band {
+        -attr-align: center;
+        TABLE.grid {
+            -attr-align: center;
+            -attr-bgcolor: #ffffff;
+            -attr-border: 0;
+            border:0;
+            
+            TD.grid {
+                -attr-align: center;
+                -attr-width: 100%;
+                TABLE.grid-row {
+                    -attr-width: 100%;
+                    TD.grid-row {
+                        text-align: center;
+                        vertical-align: top;
+                        font-size: 0;
+                        
+                        TABLE.mso-col-container {
+                            -attr-width:unit(@col-12);
+                            
+                            TD.mso-col {
+                                font-size: 0;
+
+                                &.col {
+
+                                    &-1 {
+                                        .mixin-grid-mso-column(@col-1);}
+                                    &-2 {
+                                        .mixin-grid-mso-column(@col-2);}
+                                    &-3 {
+                                        .mixin-grid-mso-column(@col-3);}
+                                    &-4 {
+                                        .mixin-grid-mso-column(@col-4);}
+                                    &-5 {
+                                        .mixin-grid-mso-column(@col-5);}
+                                    &-6 {
+                                        .mixin-grid-mso-column(@col-6);}
+                                    &-7 {
+                                        .mixin-grid-mso-column(@col-7);}
+                                    &-8 {
+                                        .mixin-grid-mso-column(@col-8);}
+                                    &-9 {
+                                        .mixin-grid-mso-column(@col-9);}
+                                    &-10 {
+                                        .mixin-grid-mso-column(@col-10);}
+                                    &-11 {
+                                        .mixin-grid-mso-column(@col-11);}
+                                    &-12 {
+                                        .mixin-grid-mso-column(@col-12);}
+
+                                    &-hero {
+                                        .mixin-grid-mso-column(@col-hero);}
+                                }
+                            }
+                        }
+                        
+                        DIV.grid-col {
+                            display: inline-block;
+                            vertical-align: top;
+                            
+                            
+                            &.col {
+
+                                &-1 {
+                                    .mixin-grid-column(@col-1,@column-gutter);
+                                    .mixin-responsive-grid-column(1,@breakpoint-md);}
+                                &-2 {
+                                    .mixin-grid-column(@col-2,@column-gutter);
+                                    .mixin-responsive-grid-column(2,@breakpoint-md);}
+                                &-3 {
+                                    .mixin-grid-column(@col-3,@column-gutter);
+                                    .mixin-responsive-grid-column(3,@breakpoint-md);}
+                                &-4 {
+                                    .mixin-grid-column(@col-4,@column-gutter);
+                                    .mixin-responsive-grid-column(4,@breakpoint-md);}
+                                &-5 {
+                                    .mixin-grid-column(@col-5,@column-gutter);
+                                    .mixin-responsive-grid-column(5,@breakpoint-md);}
+                                &-6 {
+                                    .mixin-grid-column(@col-6,@column-gutter);
+                                    .mixin-responsive-grid-column(6,@breakpoint-md);}
+                                &-7 {
+                                    .mixin-grid-column(@col-7,@column-gutter);
+                                    .mixin-responsive-grid-column(7,@breakpoint-md);}
+                                &-8 {
+                                    .mixin-grid-column(@col-8,@column-gutter);
+                                    .mixin-responsive-grid-column(8,@breakpoint-md);}
+                                &-9 {
+                                    .mixin-grid-column(@col-9,@column-gutter);
+                                    .mixin-responsive-grid-column(9,@breakpoint-md);}
+                                &-10 {
+                                    .mixin-grid-column(@col-10,@column-gutter);
+                                    .mixin-responsive-grid-column(10,@breakpoint-md);}
+                                &-11 {
+                                    .mixin-grid-column(@col-11,@column-gutter);
+                                    .mixin-responsive-grid-column(11,@breakpoint-md);}
+                                &-12 {
+                                    .mixin-grid-column(@col-12,@column-gutter);
+                                    .mixin-responsive-grid-column(12,@breakpoint-md);}
+                                
+                                &-hero {
+                                    .mixin-grid-column(@col-hero,0);
+                                    .mixin-responsive-grid-column(12,@breakpoint-md);}
+                                
+
+                                &-md {
+                                    &-1 {.mixin-responsive-grid-column(1,@breakpoint-md);}
+                                    &-2 {.mixin-responsive-grid-column(2,@breakpoint-md);}
+                                    &-3 {.mixin-responsive-grid-column(3,@breakpoint-md);}
+                                    &-4 {.mixin-responsive-grid-column(4,@breakpoint-md);}
+                                    &-5 {.mixin-responsive-grid-column(5,@breakpoint-md);}
+                                    &-6 {.mixin-responsive-grid-column(6,@breakpoint-md);}
+                                    &-7 {.mixin-responsive-grid-column(7,@breakpoint-md);}
+                                    &-8 {.mixin-responsive-grid-column(8,@breakpoint-md);}
+                                    &-9 {.mixin-responsive-grid-column(9,@breakpoint-md);}
+                                    &-10 {.mixin-responsive-grid-column(10,@breakpoint-md);}
+                                    &-11 {.mixin-responsive-grid-column(11,@breakpoint-md);}
+                                    &-12 {.mixin-responsive-grid-column(12,@breakpoint-md);}
+                                }
+
+                                &-sm {
+                                    &-1 {.mixin-responsive-grid-column(1,@breakpoint-sm);}
+                                    &-2 {.mixin-responsive-grid-column(2,@breakpoint-sm);}
+                                    &-3 {.mixin-responsive-grid-column(3,@breakpoint-sm);}
+                                    &-4 {.mixin-responsive-grid-column(4,@breakpoint-sm);}
+                                    &-5 {.mixin-responsive-grid-column(5,@breakpoint-sm);}
+                                    &-6 {.mixin-responsive-grid-column(6,@breakpoint-sm);}
+                                    &-7 {.mixin-responsive-grid-column(7,@breakpoint-sm);}
+                                    &-8 {.mixin-responsive-grid-column(8,@breakpoint-sm);}
+                                    &-9 {.mixin-responsive-grid-column(9,@breakpoint-sm);}
+                                    &-10 {.mixin-responsive-grid-column(10,@breakpoint-sm);}
+                                    &-11 {.mixin-responsive-grid-column(11,@breakpoint-sm);}
+                                    &-12 {.mixin-responsive-grid-column(12,@breakpoint-sm);}
+                                }
+                                                
+                                &-xs {
+                                    &-1 {.mixin-responsive-grid-column(1,@breakpoint-xs);}
+                                    &-2 {.mixin-responsive-grid-column(2,@breakpoint-xs);}
+                                    &-3 {.mixin-responsive-grid-column(3,@breakpoint-xs);}
+                                    &-4 {.mixin-responsive-grid-column(4,@breakpoint-xs);}
+                                    &-5 {.mixin-responsive-grid-column(5,@breakpoint-xs);}
+                                    &-6 {.mixin-responsive-grid-column(6,@breakpoint-xs);}
+                                    &-7 {.mixin-responsive-grid-column(7,@breakpoint-xs);}
+                                    &-8 {.mixin-responsive-grid-column(8,@breakpoint-xs);}
+                                    &-9 {.mixin-responsive-grid-column(9,@breakpoint-xs);}
+                                    &-10 {.mixin-responsive-grid-column(10,@breakpoint-xs);}
+                                    &-11 {.mixin-responsive-grid-column(11,@breakpoint-xs);}
+                                    &-12 {.mixin-responsive-grid-column(12,@breakpoint-xs);}
+                                }
+                            }
+                            
+                            TABLE.content-wrapper {
+                                -attr-align: center;
+                                TD.content-wrapper {
+                                    -attr-align: center;                                  
+                                }
+                                TD.mso-col {
+                                    -attr-align: center;
+                                    text-align: center;
+                                    vertical-align: top;
+                                    font-size: 0;
+                                }
+                            }
+                            
+                            TABLE.content {
+                                &.image TD {
+                                    -attr-align: center;
+                                    IMG {
+                                        -attr-border: 0;
+                                        width:100%;
+                                        height: auto!important;
+                                        display: block;
+                                    }
+                                }
+                                &.text TD {
+                                    -attr-width: 100%;
+                                    -attr-align: center;
+                                    font-family: Arial, Helvetica, sans-serif;
+                                    font-size: 13px;
+                                    color: #737373;
+                                    mso-line-height-rule: exactly;
+                                    line-height: 18px;
+                                    padding-top: @base-whitespace; 
+                                    padding-bottom: ( 1 * @base-whitespace); 
+                                }
+                                &.preheader TD {
+                                    -attr-width: 100%;
+                                    -attr-align: center;
+                                    font-family: Arial, Helvetica, sans-serif;
+                                    font-size: 13px;
+                                    color: #737373;
+                                    mso-line-height-rule: exactly;
+                                    line-height: 18px;
+                                    padding-top: (0.25 * @base-whitespace); 
+                                    padding-bottom: ( 0.25 * @base-whitespace); 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
-.assistive{
-    clip:rect(0, 0, 0, 0);
-    width:1px;
-    height:1px;
-    max-height:1px;
-    
-    padding:0;
-    margin:-1px;
-    overflow:hidden;
-    display:block;
-    position:absolute;
-    
-    mso-hide:all;
-}
+
 
 /////////////////////////////////////////////////////////////
 
@@ -522,6 +425,7 @@ H5 A {
         Margin: 0 0 (1.25 * (1.2 * @base-font-size) * 1px) 0;
     }
 }
+
 
 /////////////////////////////////////////////////////////////
 
@@ -697,6 +601,20 @@ IMG.whitespace {
     }
 }
 
+.assistive{
+    clip:rect(0, 0, 0, 0);
+    width:1px;
+    height:1px;
+    max-height:1px;
+    
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    display:block;
+    position:absolute;
+    
+    mso-hide:all;
+}
 
 
 /////////////////////////////////////////////////////////////
@@ -705,6 +623,7 @@ IMG.whitespace {
 
 /////////////////////////////////////////////////////////////
 // These mixin functions are meant simplify the code in this LESS file. Do not use them directly in your HTML.
+
 .mixin-img-cover {
     object-fit:cover;
     overflow:hidden;
@@ -736,35 +655,26 @@ IMG.whitespace {
     display: none!important;
 }
 
-.mixin-grid-column(@col-x) {
-    max-width: @col-x;
-    width:100%;
-    TABLE.content-box {
-        max-width: @col-x;
-        width:100%;
-        TD.content-wrapper {
-            -attr-width: unit(@col-x);
-            TABLE.mso-content-wrapper,
-            TD.mso-content-wrapper {
-                -attr-width: unit(@col-x - @column-gutter);
+.mixin-grid-column(@col-x, @gutter){
+    max-width:@col-x;
+    TD.content-wrapper {
+        -attr-width: unit(@col-x);
+        padding: 0 ceil(0.5 * @gutter) 0 floor(0.5 * @gutter);
+        TABLE.content {
+            width: 100%;
+            TD {
+                -attr-width: unit( ceil(@col-x - @gutter) );                                                             
             }
-            TABLE.content.image {
-                IMG {
-                    max-width: @col-x - @column-gutter;
-                    -attr-width: unit(@col-x - @column-gutter);
-                    width: 100%;
-                }
-            }
-            TABLE.content.text {
-                &,
-                TD {
-                    @media (max-width: @breakpoint-md) {
-                        .mixin-text-center;
-                    }
-                }
-            }
+            &.image IMG {
+                -attr-width: unit( ceil(@col-x - @gutter) );
+                max-width: ceil(@col-x - @gutter);
+            }   
         }
     }
+}
+
+.mixin-grid-mso-column(@col-x){
+    -attr-width: unit(@col-x);
 }
 
 .mixin-responsive-grid-column (@col-x,@breakpoint){
@@ -773,17 +683,22 @@ IMG.whitespace {
     @media (max-width: @breakpoint) {
         max-width: @width!important;
         width:@width!important;
-        TABLE.content-box {
+        TABLE.content-wrapper {
             max-width:100%!important;
             width:100%!important;
             TD.content-wrapper {
-                TABLE.content.image {
-                    IMG {
-                        max-width:100%!important;
-                        width:100%!important;  
-                        position:relative;                        
+                TABLE.content {
+                    &.image {
+                        IMG {
+                            max-width:100%!important;
+                            width:100%!important;  
+                            position:relative;                        
+                        }
                     }
-                }                
+                    &.text {
+                        width:100%!important;
+                    }
+                }
             }
         }
     }
