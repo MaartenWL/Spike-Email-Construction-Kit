@@ -116,17 +116,17 @@ TABLE {
 
 /* Calculate column widths */
 
-@col-1: ((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12);
+@col-1: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12);
 @col-2: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2);
 @col-3: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 3);
 @col-4: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 4);
-@col-5: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 5);
+@col-5: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 5);
 @col-6: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 6);
-@col-7: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 7);
-@col-8: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 8);
-@col-9: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 9);
-@col-10: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 10);
-@col-11: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 11);
+@col-7: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 7);
+@col-8: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 8);
+@col-9: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 9);
+@col-10: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 10);
+@col-11: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 11);
 @col-12: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 12);
 @col-hero: (@grid-width);
 @col-gutter: @column-gutter;
@@ -158,11 +158,11 @@ TABLE.body {
                         font-size: 0;
                         
                         TABLE.mso-col-container {
-                            -attr-width:unit(@col-12 + 5);
+                            -attr-width:unit(@col-12 + 2);
                             
                             TD.mso-col {
                                 font-size: 0;
-
+                                -attr-valign:top;
                                 &.col {
 
                                     &-1 {
@@ -198,7 +198,7 @@ TABLE.body {
                         DIV.grid-col {
                             display: inline-block;
                             vertical-align: top;                            
-                            
+                            @media screen and (-webkit-min-device-pixel-ratio:0) { float:left; }
                             &.col {
 
                                 &-1 {
