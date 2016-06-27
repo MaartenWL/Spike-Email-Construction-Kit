@@ -35,12 +35,12 @@
 @base-font-stack: 'Overpass','Roboto Slab',arial;
 @base-font-line-height: 1.52;
 @base-whitespace: (@base-font-size * @base-font-line-height);
-@base-font-color: #666;
+@base-font-color: #777;
 @base-font-weight: 400;
 
 @font-stack-secondary: Verdana,sans-serif; // sets the font stack for headings
 @heading-font-stack: 'Roboto Slab',serif;
-@heading-color: #cc0000;
+@heading-color: #f5003f;
 @heading-font-weight: 400;
 
 /////////////////////////////////////////////////////////////
@@ -99,6 +99,9 @@ TABLE {
         }
         &.grid-row-gutter {
             padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) floor(@surrounding-gutter - (0.5 * @column-gutter));
+        }
+        &.double-grid-row-gutter {
+            padding: @base-whitespace ceil(@surrounding-gutter - @column-gutter) @base-whitespace floor(@surrounding-gutter - @column-gutter);
         }
     }
 }
@@ -252,6 +255,7 @@ TABLE.body {
                                         width:100%;
                                         height: auto!important;
                                         display: block;
+                                        .mixin-img-no-scale;
                                     }
                                 }
                                 &.text TD {
@@ -262,8 +266,8 @@ TABLE.body {
                                     color: #737373;
                                     mso-line-height-rule: exactly;
                                     line-height: 18px;
-                                    padding-top: @base-whitespace;
-                                    padding-bottom: ( 1 * @base-whitespace);
+                                    padding-top: 0;
+                                    padding-bottom: ( 0.5 * @base-whitespace);
                                 }
                                 &.preheader TD {
                                     -attr-width: 100%;
@@ -344,6 +348,11 @@ TABLE.body {
 
 /////////////////////////////////////////////////////////////
 
+.text p, .text em {
+    margin:0;
+    Margin:0;
+    padding:0;
+}
 
 H1,
 H1 A {
@@ -542,9 +551,14 @@ H5 A {
 
     max-width: @width!important;
     width:@width!important;
+
     TABLE.content-wrapper {
         max-width:100%!important;
         width:100%!important;
+        TD.content-wrapper {
+            padding-top: @column-gutter!important;
+            padding-bottom: @column-gutter!important;
+        }
     }
 
     .image {

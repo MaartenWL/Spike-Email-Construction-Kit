@@ -60,6 +60,9 @@ TABLE TD.double-gutter-left {
 TABLE TD.grid-row-gutter {
   padding: 10.64px 40px 10.64px 40px;
 }
+TABLE TD.double-grid-row-gutter {
+  padding: 21.28px 30px 21.28px 30px;
+}
 @-ms-viewport {
   width: device-width;
 }
@@ -386,6 +389,7 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   width: 100%;
   height: auto!important;
   display: block;
+  object-fit: none;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content.text TD {
   -attr-width: 100%;
@@ -395,8 +399,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   color: #737373;
   mso-line-height-rule: exactly;
   line-height: 18px;
-  padding-top: 21.28px;
-  padding-bottom: 21.28px;
+  padding-top: 0;
+  padding-bottom: 10.64px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content.preheader TD {
   -attr-width: 100%;
@@ -418,6 +422,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-md-1 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-md-1 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -433,6 +441,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-md-2 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-md-2 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-md-2 .image IMG {
     max-width: 100%!important;
@@ -450,6 +462,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-md-3 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-md-3 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -465,6 +481,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-md-4 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-md-4 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-md-4 .image IMG {
     max-width: 100%!important;
@@ -482,6 +502,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-md-5 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-md-5 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -497,6 +521,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-md-6 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-md-6 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-md-6 .image IMG {
     max-width: 100%!important;
@@ -514,6 +542,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-md-7 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-md-7 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -529,6 +561,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-md-8 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-md-8 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-md-8 .image IMG {
     max-width: 100%!important;
@@ -546,6 +582,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-md-9 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-md-9 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -561,6 +601,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-md-10 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-md-10 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-md-10 .image IMG {
     max-width: 100%!important;
@@ -578,6 +622,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-md-11 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-md-11 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -593,6 +641,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-md-12 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-md-12 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-md-12 .image IMG {
     max-width: 100%!important;
@@ -612,6 +664,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-sm-1 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-sm-1 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -627,6 +683,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-sm-2 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-sm-2 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-sm-2 .image IMG {
     max-width: 100%!important;
@@ -644,6 +704,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-sm-3 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-sm-3 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -659,6 +723,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-sm-4 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-sm-4 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-sm-4 .image IMG {
     max-width: 100%!important;
@@ -676,6 +744,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-sm-5 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-sm-5 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -691,6 +763,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-sm-6 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-sm-6 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-sm-6 .image IMG {
     max-width: 100%!important;
@@ -708,6 +784,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-sm-7 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-sm-7 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -723,6 +803,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-sm-8 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-sm-8 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-sm-8 .image IMG {
     max-width: 100%!important;
@@ -740,6 +824,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-sm-9 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-sm-9 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -755,6 +843,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-sm-10 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-sm-10 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-sm-10 .image IMG {
     max-width: 100%!important;
@@ -772,6 +864,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-sm-11 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-sm-11 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -787,6 +883,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-sm-12 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-sm-12 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-sm-12 .image IMG {
     max-width: 100%!important;
@@ -806,6 +906,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-xs-1 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-xs-1 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -821,6 +925,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-xs-2 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-xs-2 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-xs-2 .image IMG {
     max-width: 100%!important;
@@ -838,6 +946,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-xs-3 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-xs-3 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -853,6 +965,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-xs-4 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-xs-4 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-xs-4 .image IMG {
     max-width: 100%!important;
@@ -870,6 +986,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-xs-5 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-xs-5 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -885,6 +1005,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-xs-6 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-xs-6 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-xs-6 .image IMG {
     max-width: 100%!important;
@@ -902,6 +1026,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-xs-7 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-xs-7 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -917,6 +1045,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-xs-8 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-xs-8 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-xs-8 .image IMG {
     max-width: 100%!important;
@@ -934,6 +1066,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-xs-9 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-xs-9 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -949,6 +1085,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   .col-xs-10 TABLE.content-wrapper {
     max-width: 100%!important;
     width: 100%!important;
+  }
+  .col-xs-10 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .col-xs-10 .image IMG {
     max-width: 100%!important;
@@ -966,6 +1106,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-xs-11 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-xs-11 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -982,6 +1126,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     max-width: 100%!important;
     width: 100%!important;
   }
+  .col-xs-12 TABLE.content-wrapper TD.content-wrapper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
   .col-xs-12 .image IMG {
     max-width: 100%!important;
     width: 100%!important;
@@ -992,13 +1140,19 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   }
 }
 /** Typography **/
+.text p,
+.text em {
+  margin: 0;
+  Margin: 0;
+  padding: 0;
+}
 H1,
 H1 A {
   font-size: 42px;
   line-height: 44.1px;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
-  color: #cc0000;
+  color: #f5003f;
   margin: 0 0 21.28px 0 !important;
   padding: 0!important;
 }
@@ -1008,7 +1162,7 @@ H2 A {
   line-height: 39.375px;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
-  color: #cc0000;
+  color: #f5003f;
   margin: 0 0 21.28px 0 !important;
   padding: 0!important;
 }
@@ -1018,7 +1172,7 @@ H3 A {
   line-height: 30.625px;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
-  color: #cc0000;
+  color: #f5003f;
   margin: 0 0 21.28px 0 !important;
   padding: 0!important;
 }
@@ -1030,7 +1184,7 @@ H5 A {
   line-height: 19.249965px;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
-  color: #cc0000;
+  color: #f5003f;
   margin: 0 0 21.28px 0 !important;
   padding: 0!important;
 }
