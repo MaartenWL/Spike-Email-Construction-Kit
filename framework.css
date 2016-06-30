@@ -37,31 +37,31 @@ TABLE TD {
   padding: 0;
 }
 TABLE TD.gutter {
-  padding: 10px;
+  padding: 10px !important;
 }
 TABLE TD.gutter-top {
-  padding-top: 10px;
+  padding-top: 10px !important;
 }
 TABLE TD.gutter-right {
-  padding-right: 10px;
+  padding-right: 10px !important;
 }
 TABLE TD.double-gutter-right {
-  padding-right: 20px;
+  padding-right: 20px !important;
 }
 TABLE TD.gutter-bottom {
-  padding-bottom: 10px;
+  padding-bottom: 10px !important;
 }
 TABLE TD.gutter-left {
-  padding-left: 10px;
+  padding-left: 10px !important;
 }
 TABLE TD.double-gutter-left {
-  padding-left: 20px;
+  padding-left: 20px !important;
 }
 TABLE TD.grid-row-gutter {
-  padding: 10.64px 40px 10.64px 40px;
+  padding: 10.64px 40px 10.64px 40px !important;
 }
 TABLE TD.double-grid-row-gutter {
-  padding: 21.28px 30px 21.28px 30px;
+  padding: 21.28px 40px 21.28px 40px !important;
 }
 @-ms-viewport {
   width: device-width;
@@ -136,7 +136,14 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-12 {
   -attr-width: 520;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-hero {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-hero-container {
+  -attr-width: 602;
+}
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-hero-container TD.mso-col {
+  font-size: 0;
+  -attr-valign: top;
+}
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-hero-container TD.mso-col.col-hero {
   -attr-width: 600;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col {

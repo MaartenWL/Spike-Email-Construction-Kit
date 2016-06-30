@@ -77,31 +77,31 @@ TABLE {
         mso-table-rspace: 0;
         padding:0;
         &.gutter {
-            padding: 0.5 * @column-gutter;
+            padding: 0.5 * @column-gutter!important;
         }
         &.gutter-top {
-            padding-top: 0.5 * @column-gutter;
+            padding-top: 0.5 * @column-gutter!important;
         }
         &.gutter-right {
-            padding-right: 0.5 * @column-gutter;
+            padding-right: 0.5 * @column-gutter!important;
         }
         &.double-gutter-right {
-            padding-right: @column-gutter;
+            padding-right: @column-gutter!important;
         }
         &.gutter-bottom {
-            padding-bottom: 0.5 * @column-gutter;
+            padding-bottom: 0.5 * @column-gutter!important;
         }
         &.gutter-left {
-            padding-left: 0.5 * @column-gutter;
+            padding-left: 0.5 * @column-gutter!important;
         }
         &.double-gutter-left {
-            padding-left: @column-gutter;
+            padding-left: @column-gutter!important;
         }
         &.grid-row-gutter {
-            padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) floor(@surrounding-gutter - (0.5 * @column-gutter));
+            padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
         }
         &.double-grid-row-gutter {
-            padding: @base-whitespace ceil(@surrounding-gutter - @column-gutter) @base-whitespace floor(@surrounding-gutter - @column-gutter);
+            padding: @base-whitespace ceil(@surrounding-gutter - (0.5 * @column-gutter)) @base-whitespace floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
         }
     }
 }
@@ -192,9 +192,16 @@ TABLE.body {
                                         .mixin-grid-mso-column(@col-11);}
                                     &-12 {
                                         .mixin-grid-mso-column(@col-12);}
-                                    &-hero {
-                                        .mixin-grid-mso-column(@col-hero);}
                                 }
+                            }
+                        }
+
+                        TABLE.mso-hero-container {
+                            -attr-width:unit(@grid-width + 2);
+                             TD.mso-col {
+                                font-size: 0;
+                                -attr-valign:top;
+                                 &.col-hero {.mixin-grid-mso-column(@col-hero);}
                             }
                         }
 
