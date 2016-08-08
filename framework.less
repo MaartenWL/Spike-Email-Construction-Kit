@@ -6,13 +6,13 @@
 
 /** Set width of content;*/
 
-@grid-width: 600px; // Sets the width of your content area on desktop devices
+@grid-width: 550px; // Sets the width of your content area on desktop devices
 
 
 /** Set column gutter between columns */
 
 @surrounding-gutter: 50px; // Sets the whitespace around your content
-@column-gutter: 20px; // Sets the whitespace between collumns
+@column-gutter: 6px; // Sets the whitespace between collumns
 
 
 /** Setting breakpoints */
@@ -53,10 +53,9 @@ BODY {margin:0;padding:0;}
 
 IMG {
     display:block;
+    -attr-border: 0;
+    .mixin-img-no-scale;
     @media screen {
-        &.no-scale {
-            object-fit:none;
-        }
         &.scale-down {
             object-fit:scale-down;
         }
@@ -258,11 +257,8 @@ TABLE.body {
                                 &.image TD {
                                     -attr-align: center;
                                     IMG {
-                                        -attr-border: 0;
                                         width:100%;
                                         height: auto!important;
-                                        display: block;
-                                        .mixin-img-no-scale;
                                     }
                                 }
                                 &.text TD {
@@ -544,6 +540,7 @@ H5 A {
             &.image IMG {
                 -attr-width: unit( ceil(@col-x - @gutter) );
                 max-width: ceil(@col-x - @gutter);
+                width: ceil(@col-x - @gutter);
             }
         }
     }

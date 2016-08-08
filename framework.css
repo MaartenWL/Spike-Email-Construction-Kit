@@ -36,31 +36,31 @@ TABLE TD {
   padding: 0;
 }
 TABLE TD.gutter {
-  padding: 25px !important;
+  padding: 3px !important;
 }
 TABLE TD.gutter-top {
-  padding-top: 25px !important;
+  padding-top: 3px !important;
 }
 TABLE TD.gutter-right {
-  padding-right: 25px !important;
+  padding-right: 3px !important;
 }
 TABLE TD.double-gutter-right {
-  padding-right: 50px !important;
+  padding-right: 6px !important;
 }
 TABLE TD.gutter-bottom {
-  padding-bottom: 25px !important;
+  padding-bottom: 3px !important;
 }
 TABLE TD.gutter-left {
-  padding-left: 25px !important;
+  padding-left: 3px !important;
 }
 TABLE TD.double-gutter-left {
-  padding-left: 50px !important;
+  padding-left: 6px !important;
 }
 TABLE TD.grid-row-gutter {
-  padding: 10.64px 25px 10.64px 25px !important;
+  padding: 10.64px 47px 10.64px 47px !important;
 }
 TABLE TD.double-grid-row-gutter {
-  padding: 21.28px 25px 21.28px 25px !important;
+  padding: 21.28px 47px 21.28px 47px !important;
 }
 @-ms-viewport {
   width: device-width;
@@ -93,57 +93,57 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row {
   font-size: 0;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container {
-  -attr-width: 752;
+  -attr-width: 458;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col {
   font-size: 0;
   -attr-valign: top;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-1 {
-  -attr-width: 62;
+  -attr-width: 38;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-2 {
-  -attr-width: 125;
+  -attr-width: 76;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-3 {
-  -attr-width: 187.5;
+  -attr-width: 114;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-4 {
-  -attr-width: 250;
+  -attr-width: 152;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-5 {
-  -attr-width: 312.5;
+  -attr-width: 190;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-6 {
-  -attr-width: 375;
+  -attr-width: 228;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-7 {
-  -attr-width: 437.5;
+  -attr-width: 266;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-8 {
-  -attr-width: 500;
+  -attr-width: 304;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-9 {
-  -attr-width: 562.5;
+  -attr-width: 342;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-10 {
-  -attr-width: 625;
+  -attr-width: 380;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-11 {
-  -attr-width: 687.5;
+  -attr-width: 418;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-col-container TD.mso-col.col-12 {
-  -attr-width: 750;
+  -attr-width: 456;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-hero-container {
-  -attr-width: 802;
+  -attr-width: 552;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-hero-container TD.mso-col {
   font-size: 0;
   -attr-valign: top;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row TABLE.mso-hero-container TD.mso-col.col-hero {
-  -attr-width: 800;
+  -attr-width: 550;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col {
   display: inline-block;
@@ -155,238 +155,238 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   }
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-1 {
-  max-width: 62px;
+  max-width: 38px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-1 TD.content-wrapper {
-  -attr-width: 62;
-  padding: 0 25px 0 25px;
+  -attr-width: 38;
+  padding: 0 3px 0 3px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-1 TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-1 TD.content-wrapper TABLE.content TD {
-  -attr-width: 12;
+  -attr-width: 32;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-1 TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 12;
-  max-width: 12px;
-  width: 12px;
+  -attr-width: 32;
+  max-width: 32px;
+  width: 32px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-2 {
-  max-width: 125px;
+  max-width: 76px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-2 TD.content-wrapper {
-  -attr-width: 125;
-  padding: 0 25px 0 25px;
+  -attr-width: 76;
+  padding: 0 3px 0 3px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-2 TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-2 TD.content-wrapper TABLE.content TD {
-  -attr-width: 75;
+  -attr-width: 70;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-2 TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 75;
-  max-width: 75px;
-  width: 75px;
+  -attr-width: 70;
+  max-width: 70px;
+  width: 70px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-3 {
-  max-width: 187.5px;
+  max-width: 114px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-3 TD.content-wrapper {
-  -attr-width: 187.5;
-  padding: 0 25px 0 25px;
+  -attr-width: 114;
+  padding: 0 3px 0 3px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-3 TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-3 TD.content-wrapper TABLE.content TD {
-  -attr-width: 138;
+  -attr-width: 108;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-3 TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 138;
-  max-width: 138px;
-  width: 138px;
+  -attr-width: 108;
+  max-width: 108px;
+  width: 108px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-4 {
-  max-width: 250px;
+  max-width: 152px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-4 TD.content-wrapper {
-  -attr-width: 250;
-  padding: 0 25px 0 25px;
+  -attr-width: 152;
+  padding: 0 3px 0 3px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-4 TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-4 TD.content-wrapper TABLE.content TD {
-  -attr-width: 200;
+  -attr-width: 146;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-4 TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 200;
-  max-width: 200px;
-  width: 200px;
+  -attr-width: 146;
+  max-width: 146px;
+  width: 146px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-5 {
-  max-width: 312.5px;
+  max-width: 190px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-5 TD.content-wrapper {
-  -attr-width: 312.5;
-  padding: 0 25px 0 25px;
+  -attr-width: 190;
+  padding: 0 3px 0 3px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-5 TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-5 TD.content-wrapper TABLE.content TD {
-  -attr-width: 263;
+  -attr-width: 184;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-5 TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 263;
-  max-width: 263px;
-  width: 263px;
+  -attr-width: 184;
+  max-width: 184px;
+  width: 184px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-6 {
-  max-width: 375px;
+  max-width: 228px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-6 TD.content-wrapper {
-  -attr-width: 375;
-  padding: 0 25px 0 25px;
+  -attr-width: 228;
+  padding: 0 3px 0 3px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-6 TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-6 TD.content-wrapper TABLE.content TD {
-  -attr-width: 325;
+  -attr-width: 222;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-6 TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 325;
-  max-width: 325px;
-  width: 325px;
+  -attr-width: 222;
+  max-width: 222px;
+  width: 222px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-7 {
-  max-width: 437.5px;
+  max-width: 266px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-7 TD.content-wrapper {
-  -attr-width: 437.5;
-  padding: 0 25px 0 25px;
+  -attr-width: 266;
+  padding: 0 3px 0 3px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-7 TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-7 TD.content-wrapper TABLE.content TD {
-  -attr-width: 388;
+  -attr-width: 260;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-7 TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 388;
-  max-width: 388px;
-  width: 388px;
+  -attr-width: 260;
+  max-width: 260px;
+  width: 260px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-8 {
-  max-width: 500px;
+  max-width: 304px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-8 TD.content-wrapper {
-  -attr-width: 500;
-  padding: 0 25px 0 25px;
+  -attr-width: 304;
+  padding: 0 3px 0 3px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-8 TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-8 TD.content-wrapper TABLE.content TD {
-  -attr-width: 450;
+  -attr-width: 298;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-8 TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 450;
-  max-width: 450px;
-  width: 450px;
+  -attr-width: 298;
+  max-width: 298px;
+  width: 298px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-9 {
-  max-width: 562.5px;
+  max-width: 342px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-9 TD.content-wrapper {
-  -attr-width: 562.5;
-  padding: 0 25px 0 25px;
+  -attr-width: 342;
+  padding: 0 3px 0 3px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-9 TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-9 TD.content-wrapper TABLE.content TD {
-  -attr-width: 513;
+  -attr-width: 336;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-9 TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 513;
-  max-width: 513px;
-  width: 513px;
+  -attr-width: 336;
+  max-width: 336px;
+  width: 336px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-10 {
-  max-width: 625px;
+  max-width: 380px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-10 TD.content-wrapper {
-  -attr-width: 625;
-  padding: 0 25px 0 25px;
+  -attr-width: 380;
+  padding: 0 3px 0 3px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-10 TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-10 TD.content-wrapper TABLE.content TD {
-  -attr-width: 575;
+  -attr-width: 374;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-10 TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 575;
-  max-width: 575px;
-  width: 575px;
+  -attr-width: 374;
+  max-width: 374px;
+  width: 374px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-11 {
-  max-width: 687.5px;
+  max-width: 418px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-11 TD.content-wrapper {
-  -attr-width: 687.5;
-  padding: 0 25px 0 25px;
+  -attr-width: 418;
+  padding: 0 3px 0 3px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-11 TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-11 TD.content-wrapper TABLE.content TD {
-  -attr-width: 638;
+  -attr-width: 412;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-11 TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 638;
-  max-width: 638px;
-  width: 638px;
+  -attr-width: 412;
+  max-width: 412px;
+  width: 412px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-12 {
-  max-width: 750px;
+  max-width: 456px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-12 TD.content-wrapper {
-  -attr-width: 750;
-  padding: 0 25px 0 25px;
+  -attr-width: 456;
+  padding: 0 3px 0 3px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-12 TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-12 TD.content-wrapper TABLE.content TD {
-  -attr-width: 700;
+  -attr-width: 450;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-12 TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 700;
-  max-width: 700px;
-  width: 700px;
+  -attr-width: 450;
+  max-width: 450px;
+  width: 450px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero {
-  max-width: 800px;
+  max-width: 550px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero TD.content-wrapper {
-  -attr-width: 800;
+  -attr-width: 550;
   padding: 0 0 0 0;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero TD.content-wrapper TABLE.content {
   width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero TD.content-wrapper TABLE.content TD {
-  -attr-width: 800;
+  -attr-width: 550;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero TD.content-wrapper TABLE.content.image IMG {
-  -attr-width: 800;
-  max-width: 800px;
-  width: 800px;
+  -attr-width: 550;
+  max-width: 550px;
+  width: 550px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content-wrapper {
   -attr-align: center;
@@ -429,7 +429,7 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   padding-top: 5.32px;
   padding-bottom: 5.32px;
 }
-@media (max-width: 800px) {
+@media (max-width: 550px) {
   .col-md-1 {
     max-width: 8.33333333% !important;
     width: 8.33333333% !important;
@@ -439,8 +439,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-md-1 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-md-1 .image IMG {
     max-width: 100%!important;
@@ -459,8 +459,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-md-2 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-md-2 .image IMG {
     max-width: 100%!important;
@@ -479,8 +479,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-md-3 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-md-3 .image IMG {
     max-width: 100%!important;
@@ -499,8 +499,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-md-4 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-md-4 .image IMG {
     max-width: 100%!important;
@@ -519,8 +519,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-md-5 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-md-5 .image IMG {
     max-width: 100%!important;
@@ -539,8 +539,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-md-6 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-md-6 .image IMG {
     max-width: 100%!important;
@@ -559,8 +559,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-md-7 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-md-7 .image IMG {
     max-width: 100%!important;
@@ -579,8 +579,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-md-8 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-md-8 .image IMG {
     max-width: 100%!important;
@@ -599,8 +599,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-md-9 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-md-9 .image IMG {
     max-width: 100%!important;
@@ -619,8 +619,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-md-10 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-md-10 .image IMG {
     max-width: 100%!important;
@@ -639,8 +639,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-md-11 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-md-11 .image IMG {
     max-width: 100%!important;
@@ -659,8 +659,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-md-12 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-md-12 .image IMG {
     max-width: 100%!important;
@@ -681,8 +681,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-sm-1 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-sm-1 .image IMG {
     max-width: 100%!important;
@@ -701,8 +701,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-sm-2 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-sm-2 .image IMG {
     max-width: 100%!important;
@@ -721,8 +721,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-sm-3 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-sm-3 .image IMG {
     max-width: 100%!important;
@@ -741,8 +741,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-sm-4 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-sm-4 .image IMG {
     max-width: 100%!important;
@@ -761,8 +761,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-sm-5 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-sm-5 .image IMG {
     max-width: 100%!important;
@@ -781,8 +781,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-sm-6 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-sm-6 .image IMG {
     max-width: 100%!important;
@@ -801,8 +801,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-sm-7 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-sm-7 .image IMG {
     max-width: 100%!important;
@@ -821,8 +821,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-sm-8 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-sm-8 .image IMG {
     max-width: 100%!important;
@@ -841,8 +841,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-sm-9 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-sm-9 .image IMG {
     max-width: 100%!important;
@@ -861,8 +861,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-sm-10 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-sm-10 .image IMG {
     max-width: 100%!important;
@@ -881,8 +881,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-sm-11 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-sm-11 .image IMG {
     max-width: 100%!important;
@@ -901,8 +901,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-sm-12 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-sm-12 .image IMG {
     max-width: 100%!important;
@@ -923,8 +923,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-xs-1 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-xs-1 .image IMG {
     max-width: 100%!important;
@@ -943,8 +943,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-xs-2 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-xs-2 .image IMG {
     max-width: 100%!important;
@@ -963,8 +963,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-xs-3 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-xs-3 .image IMG {
     max-width: 100%!important;
@@ -983,8 +983,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-xs-4 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-xs-4 .image IMG {
     max-width: 100%!important;
@@ -1003,8 +1003,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-xs-5 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-xs-5 .image IMG {
     max-width: 100%!important;
@@ -1023,8 +1023,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-xs-6 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-xs-6 .image IMG {
     max-width: 100%!important;
@@ -1043,8 +1043,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-xs-7 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-xs-7 .image IMG {
     max-width: 100%!important;
@@ -1063,8 +1063,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-xs-8 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-xs-8 .image IMG {
     max-width: 100%!important;
@@ -1083,8 +1083,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-xs-9 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-xs-9 .image IMG {
     max-width: 100%!important;
@@ -1103,8 +1103,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-xs-10 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-xs-10 .image IMG {
     max-width: 100%!important;
@@ -1123,8 +1123,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-xs-11 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-xs-11 .image IMG {
     max-width: 100%!important;
@@ -1143,8 +1143,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
     width: 100%!important;
   }
   .col-xs-12 TABLE.content-wrapper TD.content-wrapper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .col-xs-12 .image IMG {
     max-width: 100%!important;
@@ -1270,7 +1270,7 @@ H5 A {
     line-height: 17.5px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 550px) {
   H1,
   H1 A {
     font-size: 35px;
@@ -1382,7 +1382,7 @@ H5 A {
     Margin: 10.64px 0 !important;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 550px) {
   .img-cover-md {
     object-fit: cover;
     overflow: hidden;
