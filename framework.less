@@ -32,16 +32,9 @@
 /* Set base font-size*/
 
 @base-font-size: 14px; // Sets the base font size. All other font sizes are calculated from this size
-@base-font-stack: 'Overpass','Roboto Slab',arial;
 @base-font-line-height: 1.52;
 @base-whitespace: (@base-font-size * @base-font-line-height);
-@base-font-color: #777;
-@base-font-weight: 400;
 
-@font-stack-secondary: Verdana,sans-serif; // sets the font stack for headings
-@heading-font-stack: 'Roboto Slab',serif;
-@heading-color: #f5003f;
-@heading-font-weight: 400;
 
 /////////////////////////////////////////////////////////////
 
@@ -264,22 +257,14 @@ TABLE.body {
                                 &.text TD {
                                     -attr-width: 100%;
                                     -attr-align: center;
-                                    font-family: Arial, Helvetica, sans-serif;
-                                    font-size: 13px;
-                                    color: #737373;
                                     mso-line-height-rule: exactly;
-                                    line-height: 18px;
                                     padding-top: 0;
                                     padding-bottom: ( 0.5 * @base-whitespace);
                                 }
                                 &.preheader TD {
                                     -attr-width: 100%;
                                     -attr-align: center;
-                                    font-family: Arial, Helvetica, sans-serif;
-                                    font-size: 13px;
-                                    color: #737373;
                                     mso-line-height-rule: exactly;
-                                    line-height: 18px;
                                     padding-top: (0.25 * @base-whitespace);
                                     padding-bottom: ( 0.25 * @base-whitespace);
                                 }
@@ -351,18 +336,17 @@ TABLE.body {
 
 /////////////////////////////////////////////////////////////
 
-.text p, .text em {
+.content.text p, .content.text em {
     margin:0;
     Margin:0;
     padding:0;
+    font-size: @base-font-size;
+    line-height: @base-font-line-height;
 }
 
 H1,
 H1 A {
     .mixin-desktop-typography (3, 1.05);
-    font-family: @heading-font-stack;
-    font-weight: @heading-font-weight;
-    color: @heading-color;
     margin: 0 0 @base-whitespace 0!important;
     padding: 0!important;
 }
@@ -370,9 +354,6 @@ H1 A {
 H2,
 H2 A {
     .mixin-desktop-typography (2.25, 1.25);
-    font-family: @heading-font-stack;
-    font-weight: @heading-font-weight;
-    color: @heading-color;
     margin: 0 0 @base-whitespace 0!important;
     padding: 0!important;
 }
@@ -380,9 +361,6 @@ H2 A {
 H3,
 H3 A {
     .mixin-desktop-typography (1.75, 1.25);
-    font-family: @heading-font-stack;
-    font-weight: @heading-font-weight;
-    color: @heading-color;
     margin: 0 0 @base-whitespace 0!important;
     padding: 0!important;
 }
@@ -392,9 +370,6 @@ H4 A,
 H5,
 H5 A {
     .mixin-desktop-typography (1.125, 1.22222);
-    font-family: @heading-font-stack;
-    font-weight: @heading-font-weight;
-    color: @heading-color;
     margin: 0 0 @base-whitespace 0!important;
     padding: 0!important;
 }

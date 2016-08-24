@@ -1,0 +1,75 @@
+/* Set background colors*/
+
+@body-bg: #ffffff; // Sets the background color on the body of your document
+@boxed-content-bg: #f3ebeb; // Sets the background color on boxed content
+@grid-bg: #ff0000;
+
+
+/* Typography */
+
+@base-font-stack: 'Overpass','Roboto Slab',arial;
+@base-font-color: #666;
+@base-font-weight: 400;
+/* Please note: font size and line heights are set in framework.less*/
+
+
+/* Typography > headings */
+
+@heading-font-stack: 'Roboto Slab',serif;
+@heading-color: #cc0000;
+@heading-font-weight: 400;
+/* Please note: font size and line heights are set in framework.less*/
+
+
+/* Typography > preheader */
+
+@preheader-font-stack: 'Roboto Slab',serif;
+@preheader-font-size: 12px;
+@preheader-color: #cc0000;
+@preheader-line-height:1.52;
+
+
+TABLE.content.preheader {
+    font-family: @preheader-font-stack;
+    font-size: @preheader-font-size;
+    color: @preheader-color;
+    line-height: (@preheader-line-height * @preheader-font-size);
+}
+
+P, TABLE.content.text TD {
+    font-family: @base-font-stack;
+    color: @base-font-color;
+    font-weight: @base-font-weight;
+}
+
+H1,H2,H3,H4,H5 {
+    font-size :@heading-font-stack;
+    color: @heading-color;
+    font-weight: @heading-font-weight;
+}
+
+
+
+
+.white-band {
+    background-color:#eeeeee;
+    TABLE.grid {
+        -attr-bgcolor: #fefffe;
+        background-color:#ffffff;
+    }
+}
+.black-band {background-color:#555555;}
+.red-band {
+    background-color:#f5003f;
+    TABLE.grid {
+        -attr-bgcolor: #fefffe;
+        background-color:#ffffff;
+    }
+}
+.blue-band {
+    background-color:#00a9f7;
+    TABLE.grid {
+        -attr-bgcolor: #fefffe;
+        background-color:#ffffff;
+    }
+}
