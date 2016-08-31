@@ -1150,8 +1150,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 /** Typography **/
 .content.text p,
 .content.text em {
-  margin: 0;
-  Margin: 0;
+  margin: 0 0 21.28px 0;
+  Margin: 0 0 21.28px 0;
   padding: 0;
   font-size: 14px;
   line-height: 1.52;
