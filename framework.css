@@ -1186,6 +1186,13 @@ H5 A {
   margin: 0 0 21.28px 0 !important;
   padding: 0!important;
 }
+ul,
+ol,
+li {
+  padding: 0 !important;
+  Margin: 0 !important;
+  Margin: 5px 0 5px 5px !important;
+}
 @media (max-width: 320px) {
   H1,
   H1 A {
