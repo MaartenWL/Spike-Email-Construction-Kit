@@ -1188,37 +1188,37 @@ li {
   Margin: 0 !important;
   Margin: 5px 0 5px 5px !important;
 }
-@media (max-width: 320px) {
+@media (max-width: 550px) {
   H1,
   H1 A {
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 35px;
+    line-height: 39.375px;
   }
   H2,
   H2 A {
-    font-size: 22.75px;
-    line-height: 26.24999991px;
+    font-size: 28px;
+    line-height: 35px;
   }
   H3,
   H3 A {
-    font-size: 19.25px;
-    line-height: 21.87500007px;
+    font-size: 21px;
+    line-height: 26.25px;
   }
   H4,
   H4 A {
     font-size: 15.75px;
-    line-height: 19.249965px;
+    line-height: 17.4999825px;
   }
   H5,
   H5 A {
     font-size: 15.75px;
-    line-height: 19.249965px;
+    line-height: 17.4999825px;
   }
   .text p,
   .text em {
-    Margin: 0 0 21px 0;
-    font-size: 15.4px;
-    line-height: 19.25px;
+    Margin: 0 0 21.28px 0 !important;
+    font-size: 14px;
+    line-height: 21.28px;
   }
 }
 @media (max-width: 480px) {
@@ -1254,37 +1254,37 @@ li {
     line-height: 17.5px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 320px) {
   H1,
   H1 A {
-    font-size: 35px;
-    line-height: 39.375px;
-  }
-  H2,
-  H2 A {
     font-size: 28px;
     line-height: 35px;
   }
+  H2,
+  H2 A {
+    font-size: 22.75px;
+    line-height: 26.24999991px;
+  }
   H3,
   H3 A {
-    font-size: 21px;
-    line-height: 26.25px;
+    font-size: 19.25px;
+    line-height: 21.87500007px;
   }
   H4,
   H4 A {
     font-size: 15.75px;
-    line-height: 17.4999825px;
+    line-height: 19.249965px;
   }
   H5,
   H5 A {
     font-size: 15.75px;
-    line-height: 17.4999825px;
+    line-height: 19.249965px;
   }
   .text p,
   .text em {
-    Margin: 0 0 21.28px 0 !important;
-    font-size: 14px;
-    line-height: 21.28px;
+    Margin: 0 0 21px 0;
+    font-size: 15.4px;
+    line-height: 19.25px;
   }
 }
 /** Responsive Helper classes **/
@@ -1306,33 +1306,33 @@ li {
 .whitespace {
   Margin: 10.64px 0;
 }
-@media (max-width: 320px) {
-  .img-cover-xs {
+@media (max-width: 550px) {
+  .img-cover-md {
     object-fit: cover;
     overflow: hidden;
   }
-  .img-no-scale-xs {
+  .img-no-scale-md {
     object-fit: none;
   }
-  .img-down-scale-xs {
+  .img-down-scale-md {
     object-fit: scale-down;
   }
-  .text-center-xs {
+  .text-center-md {
     text-align: center;
   }
-  .text-left-xs {
+  .text-left-md {
     text-align: left;
   }
-  .text-right-xs {
+  .text-right-md {
     text-align: right;
   }
-  .text-justify-xs {
+  .text-justify-md {
     text-align: justify;
   }
-  .hidden-xs {
+  .hidden-md {
     display: none!important;
   }
-  .whitespace-xs {
+  .whitespace-md {
     Margin: 10.64px 0 !important;
   }
 }
@@ -1366,33 +1366,33 @@ li {
     Margin: 10.64px 0 !important;
   }
 }
-@media (max-width: 550px) {
-  .img-cover-md {
+@media (max-width: 320px) {
+  .img-cover-xs {
     object-fit: cover;
     overflow: hidden;
   }
-  .img-no-scale-md {
+  .img-no-scale-xs {
     object-fit: none;
   }
-  .img-down-scale-md {
+  .img-down-scale-xs {
     object-fit: scale-down;
   }
-  .text-center-md {
+  .text-center-xs {
     text-align: center;
   }
-  .text-left-md {
+  .text-left-xs {
     text-align: left;
   }
-  .text-right-md {
+  .text-right-xs {
     text-align: right;
   }
-  .text-justify-md {
+  .text-justify-xs {
     text-align: justify;
   }
-  .hidden-md {
+  .hidden-xs {
     display: none!important;
   }
-  .whitespace-md {
+  .whitespace-xs {
     Margin: 10.64px 0 !important;
   }
 }
