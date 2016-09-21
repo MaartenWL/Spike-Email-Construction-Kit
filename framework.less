@@ -47,12 +47,6 @@ BODY {margin:0;padding:0;}
 IMG {
     display:block;
     -attr-border: 0;
-    .mixin-img-no-scale;
-    @media screen {
-        &.scale-down {
-            object-fit:scale-down;
-        }
-    }
 }
 
 TABLE {
@@ -249,6 +243,7 @@ TABLE.body {
                             TABLE.content {
                                 &.image TD {
                                     -attr-align: center;
+                                    padding-bottom:@base-whitespace;
                                     IMG {
                                         width:100%;
                                         height: auto!important;

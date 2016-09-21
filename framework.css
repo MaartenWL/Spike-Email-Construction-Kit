@@ -13,12 +13,6 @@ BODY {
 IMG {
   display: block;
   -attr-border: 0;
-  object-fit: none;
-}
-@media screen {
-  IMG.scale-down {
-    object-fit: scale-down;
-  }
 }
 TABLE {
   -attr-cellspacing: 0;
@@ -402,6 +396,7 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content.image TD {
   -attr-align: center;
+  padding-bottom: 21.28px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content.image TD IMG {
   width: 100%;
