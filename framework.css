@@ -400,7 +400,7 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content.image TD IMG {
   width: 100%;
-  height: auto!important;
+  height: auto;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content.text TD {
   -attr-width: 100%;
@@ -1155,22 +1155,22 @@ H1,
 H1 A {
   font-size: 42px;
   line-height: 44.1px;
-  margin: 0 0 21.28px 0 !important;
-  padding: 0!important;
+  margin: 0 0 21.28px 0;
+  padding: 0;
 }
 H2,
 H2 A {
   font-size: 31.5px;
   line-height: 39.375px;
-  margin: 0 0 21.28px 0 !important;
-  padding: 0!important;
+  margin: 0 0 21.28px 0;
+  padding: 0;
 }
 H3,
 H3 A {
   font-size: 24.5px;
   line-height: 30.625px;
-  margin: 0 0 21.28px 0 !important;
-  padding: 0!important;
+  margin: 0 0 21.28px 0;
+  padding: 0;
 }
 H4,
 H4 A,
@@ -1178,113 +1178,113 @@ H5,
 H5 A {
   font-size: 15.75px;
   line-height: 19.249965px;
-  margin: 0 0 21.28px 0 !important;
-  padding: 0!important;
+  margin: 0 0 21.28px 0;
+  padding: 0;
 }
 ul,
 ol,
 li {
-  padding: 0 !important;
-  Margin: 0 !important;
-  Margin: 5px 0 5px 5px !important;
+  padding: 0;
+  Margin: 0;
+  Margin: 5px 0 5px 5px;
 }
 @media (max-width: 550px) {
   H1,
   H1 A {
-    font-size: 35px;
-    line-height: 39.375px;
+    font-size: 35px !important;
+    line-height: 39.375px !important;
   }
   H2,
   H2 A {
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 28px !important;
+    line-height: 35px !important;
   }
   H3,
   H3 A {
-    font-size: 21px;
-    line-height: 26.25px;
+    font-size: 21px !important;
+    line-height: 26.25px !important;
   }
   H4,
   H4 A {
-    font-size: 15.75px;
-    line-height: 17.4999825px;
+    font-size: 15.75px !important;
+    line-height: 17.4999825px !important;
   }
   H5,
   H5 A {
-    font-size: 15.75px;
-    line-height: 17.4999825px;
+    font-size: 15.75px !important;
+    line-height: 17.4999825px !important;
   }
   .text p,
   .text em {
     Margin: 0 0 21.28px 0 !important;
-    font-size: 14px;
-    line-height: 21.28px;
+    font-size: 14px !important;
+    line-height: 21.28px !important;
   }
 }
 @media (max-width: 480px) {
   H1,
   H1 A {
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 28px !important;
+    line-height: 35px !important;
   }
   H2,
   H2 A {
-    font-size: 22.75px;
-    line-height: 26.24999991px;
+    font-size: 22.75px !important;
+    line-height: 26.24999991px !important;
   }
   H3,
   H3 A {
-    font-size: 19.25px;
-    line-height: 21.87500007px;
+    font-size: 19.25px !important;
+    line-height: 21.87500007px !important;
   }
   H4,
   H4 A {
-    font-size: 15.75px;
-    line-height: 17.4999825px;
+    font-size: 15.75px !important;
+    line-height: 17.4999825px !important;
   }
   H5,
   H5 A {
-    font-size: 15.75px;
-    line-height: 17.4999825px;
+    font-size: 15.75px !important;
+    line-height: 17.4999825px !important;
   }
   .text p,
   .text em {
     Margin: 0 0 17.5px 0;
-    font-size: 14px;
-    line-height: 17.5px;
+    font-size: 14px !important;
+    line-height: 17.5px !important;
   }
 }
 @media (max-width: 320px) {
   H1,
   H1 A {
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 28px !important;
+    line-height: 35px !important;
   }
   H2,
   H2 A {
-    font-size: 22.75px;
-    line-height: 26.24999991px;
+    font-size: 22.75px !important;
+    line-height: 26.24999991px !important;
   }
   H3,
   H3 A {
-    font-size: 19.25px;
-    line-height: 21.87500007px;
+    font-size: 19.25px !important;
+    line-height: 21.87500007px !important;
   }
   H4,
   H4 A {
-    font-size: 15.75px;
-    line-height: 19.249965px;
+    font-size: 15.75px !important;
+    line-height: 19.249965px !important;
   }
   H5,
   H5 A {
-    font-size: 15.75px;
-    line-height: 19.249965px;
+    font-size: 15.75px !important;
+    line-height: 19.249965px !important;
   }
   .text p,
   .text em {
     Margin: 0 0 21px 0;
-    font-size: 15.4px;
-    line-height: 19.25px;
+    font-size: 15.4px !important;
+    line-height: 19.25px !important;
   }
 }
 /** Responsive Helper classes **/
@@ -1301,36 +1301,36 @@ li {
   text-align: justify;
 }
 .hidden {
-  display: none!important;
+  display: none;
 }
 .whitespace {
   Margin: 10.64px 0;
 }
 @media (max-width: 550px) {
   .img-cover-md {
-    object-fit: cover;
-    overflow: hidden;
+    object-fit: cover !important;
+    overflow: hidden !important;
   }
   .img-no-scale-md {
-    object-fit: none;
+    object-fit: none !important;
   }
   .img-down-scale-md {
-    object-fit: scale-down;
+    object-fit: scale-down !important;
   }
   .text-center-md {
-    text-align: center;
+    text-align: center !important;
   }
   .text-left-md {
-    text-align: left;
+    text-align: left !important;
   }
   .text-right-md {
-    text-align: right;
+    text-align: right !important;
   }
   .text-justify-md {
-    text-align: justify;
+    text-align: justify !important;
   }
   .hidden-md {
-    display: none!important;
+    display: none !important;
   }
   .whitespace-md {
     Margin: 10.64px 0 !important;
@@ -1338,29 +1338,29 @@ li {
 }
 @media (max-width: 480px) {
   .img-cover-sm {
-    object-fit: cover;
-    overflow: hidden;
+    object-fit: cover !important;
+    overflow: hidden !important;
   }
   .img-no-scale-sm {
-    object-fit: none;
+    object-fit: none !important;
   }
   .img-down-scale-sm {
-    object-fit: scale-down;
+    object-fit: scale-down !important;
   }
   .text-center-sm {
-    text-align: center;
+    text-align: center !important;
   }
   .text-left-sm {
-    text-align: left;
+    text-align: left !important;
   }
   .text-right-sm {
-    text-align: right;
+    text-align: right !important;
   }
   .text-justify-sm {
-    text-align: justify;
+    text-align: justify !important;
   }
   .hidden-sm {
-    display: none!important;
+    display: none !important;
   }
   .whitespace-sm {
     Margin: 10.64px 0 !important;
@@ -1368,29 +1368,29 @@ li {
 }
 @media (max-width: 320px) {
   .img-cover-xs {
-    object-fit: cover;
-    overflow: hidden;
+    object-fit: cover !important;
+    overflow: hidden !important;
   }
   .img-no-scale-xs {
-    object-fit: none;
+    object-fit: none !important;
   }
   .img-down-scale-xs {
-    object-fit: scale-down;
+    object-fit: scale-down !important;
   }
   .text-center-xs {
-    text-align: center;
+    text-align: center !important;
   }
   .text-left-xs {
-    text-align: left;
+    text-align: left !important;
   }
   .text-right-xs {
-    text-align: right;
+    text-align: right !important;
   }
   .text-justify-xs {
-    text-align: justify;
+    text-align: justify !important;
   }
   .hidden-xs {
-    display: none!important;
+    display: none !important;
   }
   .whitespace-xs {
     Margin: 10.64px 0 !important;
@@ -1432,5 +1432,5 @@ li {
   text-align: justify;
 }
 .mixin-hidden {
-  display: none!important;
+  display: none;
 }

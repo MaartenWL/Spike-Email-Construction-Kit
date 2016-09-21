@@ -246,7 +246,7 @@ TABLE.body {
                                     padding-bottom:@base-whitespace;
                                     IMG {
                                         width:100%;
-                                        height: auto!important;
+                                        height: auto;
                                     }
                                 }
                                 &.text TD {
@@ -274,7 +274,6 @@ TABLE.body {
 
 @media (max-width: @breakpoint-md) {
     .col {
-
         &-md {
             &-1 {.mixin-responsive-grid-column(1,@breakpoint-md);}
             &-2 {.mixin-responsive-grid-column(2,@breakpoint-md);}
@@ -342,22 +341,22 @@ TABLE.body {
 H1,
 H1 A {
     .mixin-desktop-typography (3, 1.05);
-    margin: 0 0 @base-whitespace 0!important;
-    padding: 0!important;
+    margin: 0 0 @base-whitespace 0;
+    padding: 0;
 }
 
 H2,
 H2 A {
     .mixin-desktop-typography (2.25, 1.25);
-    margin: 0 0 @base-whitespace 0!important;
-    padding: 0!important;
+    margin: 0 0 @base-whitespace 0;
+    padding: 0;
 }
 
 H3,
 H3 A {
     .mixin-desktop-typography (1.75, 1.25);
-    margin: 0 0 @base-whitespace 0!important;
-    padding: 0!important;
+    margin: 0 0 @base-whitespace 0;
+    padding: 0;
 }
 
 H4,
@@ -365,39 +364,39 @@ H4 A,
 H5,
 H5 A {
     .mixin-desktop-typography (1.125, 1.22222);
-    margin: 0 0 @base-whitespace 0!important;
-    padding: 0!important;
+    margin: 0 0 @base-whitespace 0;
+    padding: 0;
 }
 
 ul, ol, li {
-    padding: 0 !important;
-    Margin: 0 !important;
-    Margin: 5px 0 5px 5px !important;
+    padding: 0;
+    Margin: 0;
+    Margin: 5px 0 5px 5px;
 }
 
 @media (max-width: @breakpoint-md) {
-    H1,H1 A {.mixin-responsive-typography (@breakpoint-md, 2.5, 1.125);}
-    H2,H2 A {.mixin-responsive-typography (@breakpoint-md, 2, 1.25);}
-    H3,H3 A {.mixin-responsive-typography (@breakpoint-md, 1.5, 1.25);}
-    H4,H4 A {.mixin-responsive-typography (@breakpoint-md, 1.125, 1.11111);}
-    H5,H5 A {.mixin-responsive-typography (@breakpoint-md, 1.125, 1.11111);}
-    .text p, .text em {Margin: 0 0 @base-whitespace 0!important; .mixin-responsive-typography(@breakpoint-md, 1, @base-font-line-height);}
+    H1,H1 A {.mixin-responsive-typography (@breakpoint-md, 2.5, 1.125)!important;}
+    H2,H2 A {.mixin-responsive-typography (@breakpoint-md, 2, 1.25)!important;}
+    H3,H3 A {.mixin-responsive-typography (@breakpoint-md, 1.5, 1.25)!important;}
+    H4,H4 A {.mixin-responsive-typography (@breakpoint-md, 1.125, 1.11111)!important;}
+    H5,H5 A {.mixin-responsive-typography (@breakpoint-md, 1.125, 1.11111)!important;}
+    .text p, .text em {Margin: 0 0 @base-whitespace 0!important; .mixin-responsive-typography(@breakpoint-md, 1, @base-font-line-height)!important;}
 }
 @media (max-width: @breakpoint-sm) {
-    H1,H1 A {.mixin-responsive-typography (@breakpoint-sm, 2, 1.25);}
-    H2,H2 A {.mixin-responsive-typography (@breakpoint-sm, 1.625, 1.15384615);}
-    H3,H3 A {.mixin-responsive-typography (@breakpoint-sm, 1.375, 1.13636364);}
-    H4,H4 A {.mixin-responsive-typography (@breakpoint-sm, 1.125, 1.11111);}
-    H5,H5 A {.mixin-responsive-typography (@breakpoint-sm, 1.125, 1.11111);}
-    .text p, .text em {Margin: 0 0 (1.25 * (1 * @base-font-size) * 1px) 0; .mixin-responsive-typography(@breakpoint-sm, 1, 1.25);}
+    H1,H1 A {.mixin-responsive-typography (@breakpoint-sm, 2, 1.25)!important;}
+    H2,H2 A {.mixin-responsive-typography (@breakpoint-sm, 1.625, 1.15384615)!important;}
+    H3,H3 A {.mixin-responsive-typography (@breakpoint-sm, 1.375, 1.13636364)!important;}
+    H4,H4 A {.mixin-responsive-typography (@breakpoint-sm, 1.125, 1.11111)!important;}
+    H5,H5 A {.mixin-responsive-typography (@breakpoint-sm, 1.125, 1.11111)!important;}
+    .text p, .text em {Margin: 0 0 (1.25 * (1 * @base-font-size) * 1px) 0; .mixin-responsive-typography(@breakpoint-sm, 1, 1.25)!important;}
 }
 @media (max-width: @breakpoint-xs) {
-    H1,H1 A {.mixin-responsive-typography (@breakpoint-xs, 2, 1.25);}
-    H2,H2 A {.mixin-responsive-typography (@breakpoint-xs, 1.625, 1.15384615);}
-    H3,H3 A {.mixin-responsive-typography (@breakpoint-xs, 1.375, 1.13636364);}
-    H4,H4 A {.mixin-responsive-typography (@breakpoint-xs, 1.125, 1.22222);}
-    H5,H5 A {.mixin-responsive-typography (@breakpoint-xs, 1.125, 1.22222);}
-    .text p, .text em { Margin: 0 0 (1.25 * (1.2 * @base-font-size) * 1px) 0; .mixin-responsive-typography(@breakpoint-xs, 1.1, 1.25);}
+    H1,H1 A {.mixin-responsive-typography (@breakpoint-xs, 2, 1.25)!important;}
+    H2,H2 A {.mixin-responsive-typography (@breakpoint-xs, 1.625, 1.15384615)!important;}
+    H3,H3 A {.mixin-responsive-typography (@breakpoint-xs, 1.375, 1.13636364)!important;}
+    H4,H4 A {.mixin-responsive-typography (@breakpoint-xs, 1.125, 1.22222)!important;}
+    H5,H5 A {.mixin-responsive-typography (@breakpoint-xs, 1.125, 1.22222)!important;}
+    .text p, .text em { Margin: 0 0 (1.25 * (1.2 * @base-font-size) * 1px) 0; .mixin-responsive-typography(@breakpoint-xs, 1.1, 1.25)!important;}
 }
 
 
@@ -416,36 +415,36 @@ ul, ol, li {
 .whitespace {Margin: (0.5 * @base-whitespace) 0;}
 
 @media (max-width: @breakpoint-md) {
-    .img-cover-md {.mixin-img-cover;}
-    .img-no-scale-md {.mixin-img-no-scale;}
-    .img-down-scale-md {.mixin-img-down-scale;}
-    .text-center-md {.mixin-text-center;}
-    .text-left-md {.mixin-text-left;}
-    .text-right-md {.mixin-text-right;}
-    .text-justify-md {.mixin-text-justify;}
-    .hidden-md {.mixin-hidden;}
+    .img-cover-md {.mixin-img-cover!important}
+    .img-no-scale-md {.mixin-img-no-scale!important;}
+    .img-down-scale-md {.mixin-img-down-scale!important;}
+    .text-center-md {.mixin-text-center!important;}
+    .text-left-md {.mixin-text-left!important;}
+    .text-right-md {.mixin-text-right!important;}
+    .text-justify-md {.mixin-text-justify!important;}
+    .hidden-md {.mixin-hidden!important;}
     .whitespace-md {Margin: (0.5 * @base-whitespace) 0!important;}
 }
 @media (max-width: @breakpoint-sm) {
-    .img-cover-sm {.mixin-img-cover;}
-    .img-no-scale-sm {.mixin-img-no-scale;}
-    .img-down-scale-sm {.mixin-img-down-scale;}
-    .text-center-sm {.mixin-text-center;}
-    .text-left-sm {.mixin-text-left;}
-    .text-right-sm {.mixin-text-right;}
-    .text-justify-sm {.mixin-text-justify;}
-    .hidden-sm {.mixin-hidden;}
+    .img-cover-sm {.mixin-img-cover!important;}
+    .img-no-scale-sm {.mixin-img-no-scale!important;}
+    .img-down-scale-sm {.mixin-img-down-scale!important;}
+    .text-center-sm {.mixin-text-center!important;}
+    .text-left-sm {.mixin-text-left!important;}
+    .text-right-sm {.mixin-text-right!important;}
+    .text-justify-sm {.mixin-text-justify!important;}
+    .hidden-sm {.mixin-hidden!important;}
     .whitespace-sm {Margin: (0.5 * @base-whitespace) 0!important;}
 }
 @media (max-width: @breakpoint-xs) {
-    .img-cover-xs {.mixin-img-cover;}
-    .img-no-scale-xs {.mixin-img-no-scale;}
-    .img-down-scale-xs {.mixin-img-down-scale;}
-    .text-center-xs {.mixin-text-center;}
-    .text-left-xs {.mixin-text-left;}
-    .text-right-xs {.mixin-text-right;}
-    .text-justify-xs {.mixin-text-justify;}
-    .hidden-xs {.mixin-hidden;}
+    .img-cover-xs {.mixin-img-cover!important;}
+    .img-no-scale-xs {.mixin-img-no-scale!important;}
+    .img-down-scale-xs {.mixin-img-down-scale!important;}
+    .text-center-xs {.mixin-text-center!important;}
+    .text-left-xs {.mixin-text-left!important;}
+    .text-right-xs {.mixin-text-right!important;}
+    .text-justify-xs {.mixin-text-justify!important;}
+    .hidden-xs {.mixin-hidden!important;}
     .whitespace-xs {Margin: (0.5 * @base-whitespace) 0!important;}
 }
 
@@ -500,7 +499,7 @@ ul, ol, li {
 }
 
 .mixin-hidden {
-    display: none!important;
+    display: none;
 }
 
 .mixin-grid-column(@col-x, @gutter){
