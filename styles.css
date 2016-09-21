@@ -5,6 +5,10 @@
 /* Typography > headings */
 /* Please note: font size and line heights are set in framework.less*/
 /* Typography > preheader */
+TABLE.content.text TD p.lead {
+  font-size: 16px;
+  color: #777777;
+}
 TABLE.content.preheader {
   font-family: 'Roboto Slab', serif;
   font-size: 12px;
@@ -13,40 +17,133 @@ TABLE.content.preheader {
 }
 P,
 TABLE.content.text TD {
-  font-family: 'Overpass', 'Roboto Slab', arial;
-  color: #666666;
+  font-family: verdana, arial;
   font-weight: 400;
+  color: #444444;
 }
 H1,
 H2,
 H3,
 H4,
 H5 {
-  font-size: 'Roboto Slab', serif;
-  color: #cc0000;
+  font-family: verdana, arial;
   font-weight: 400;
+  border-radius: 50px;
+}
+em {
+  color: #000000;
 }
 .white-band {
-  background-color: #eeeeee;
+  background-color: #ffffff;
+  -attr-bgcolor: #eeeeee;
+}
+.white-band H1,
+.white-band H2,
+.white-band H3,
+.white-band H4,
+.white-band H5,
+.white-band H6 {
+  color: #444444;
+}
+.white-band p {
+  color: #444444;
 }
 .white-band TABLE.grid {
-  -attr-bgcolor: #fefffe;
-  background-color: #ffffff;
-}
-.black-band {
-  background-color: #555555;
-}
-.red-band {
-  background-color: #f5003f;
-}
-.red-band TABLE.grid {
-  -attr-bgcolor: #fefffe;
+  -attr-bgcolor: #ffffff;
   background-color: #ffffff;
 }
 .blue-band {
-  background-color: #00a9f7;
+  background-color: #02acf3;
+  -attr-bgcolor: #eeeeee;
+}
+.blue-band H1,
+.blue-band H2,
+.blue-band H3,
+.blue-band H4,
+.blue-band H5,
+.blue-band H6 {
+  color: #02acf3;
+}
+.blue-band p {
+  color: #444444;
 }
 .blue-band TABLE.grid {
-  -attr-bgcolor: #fefffe;
+  -attr-bgcolor: #ffffff;
+  background-color: #ffffff;
+}
+.green-band {
+  background-color: #88cf00;
+  -attr-bgcolor: #eeeeee;
+}
+.green-band H1,
+.green-band H2,
+.green-band H3,
+.green-band H4,
+.green-band H5,
+.green-band H6 {
+  color: #88cf00;
+}
+.green-band p {
+  color: #444444;
+}
+.green-band TABLE.grid {
+  -attr-bgcolor: #ffffff;
+  background-color: #ffffff;
+}
+.pink-band {
+  background-color: #de008d;
+  -attr-bgcolor: #eeeeee;
+}
+.pink-band H1,
+.pink-band H2,
+.pink-band H3,
+.pink-band H4,
+.pink-band H5,
+.pink-band H6 {
+  color: #de008d;
+}
+.pink-band p {
+  color: #444444;
+}
+.pink-band TABLE.grid {
+  -attr-bgcolor: #ffffff;
+  background-color: #ffffff;
+}
+.aqua-band {
+  background-color: #01b7ad;
+  -attr-bgcolor: #eeeeee;
+}
+.aqua-band H1,
+.aqua-band H2,
+.aqua-band H3,
+.aqua-band H4,
+.aqua-band H5,
+.aqua-band H6 {
+  color: #01b7ad;
+}
+.aqua-band p {
+  color: #444444;
+}
+.aqua-band TABLE.grid {
+  -attr-bgcolor: #ffffff;
+  background-color: #ffffff;
+}
+.red-band {
+  background-color: #f5003f;
+  -attr-bgcolor: #eeeeee;
+}
+.red-band H1,
+.red-band H2,
+.red-band H3,
+.red-band H4,
+.red-band H5,
+.red-band H6 {
+  color: #f5003f;
+}
+.red-band p {
+  color: #444444;
+}
+.red-band TABLE.grid {
+  -attr-bgcolor: #ffffff;
   background-color: #ffffff;
 }
