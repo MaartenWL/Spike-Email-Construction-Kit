@@ -7,15 +7,15 @@
 
 /* Typography */
 
-@base-font-stack: 'Overpass','Roboto Slab',arial;
-@base-font-color: #666;
+@base-font-stack: verdana,arial;
+@base-font-color: #444444;
 @base-font-weight: 400;
 /* Please note: font size and line heights are set in framework.less*/
 
 
 /* Typography > headings */
 
-@heading-font-stack: 'Roboto Slab',serif;
+@heading-font-stack: verdana,arial;
 @heading-color: #cc0000;
 @heading-font-weight: 400;
 /* Please note: font size and line heights are set in framework.less*/
@@ -28,6 +28,10 @@
 @preheader-color: #cc0000;
 @preheader-line-height:1.52;
 
+TABLE.content.text TD p.lead {
+    font-size:16px;
+    color:#777777;
+}
 
 TABLE.content.preheader {
     font-family: @preheader-font-stack;
@@ -38,38 +42,91 @@ TABLE.content.preheader {
 
 P, TABLE.content.text TD {
     font-family: @base-font-stack;
-    color: @base-font-color;
     font-weight: @base-font-weight;
+    color:@base-font-color;
 }
 
 H1,H2,H3,H4,H5 {
-    font-size :@heading-font-stack;
-    color: @heading-color;
+    font-family :@heading-font-stack;
     font-weight: @heading-font-weight;
+    border-radius:50px;
 }
 
-
-
+em {color:#000000;}
 
 .white-band {
-    background-color:#eeeeee;
+    background-color:#ffffff;
+    -attr-bgcolor:#eeeeee;
+    H1,H2,H3,H4,H5,H6 {color:#444444;}
+    p {color:#444444;}
     TABLE.grid {
-        -attr-bgcolor: #fefffe;
+        -attr-bgcolor: #ffffff;
         background-color:#ffffff;
+        border: solid 1px #444444 !important;
     }
 }
-.black-band {background-color:#555555;}
-.red-band {
-    background-color:#f5003f;
-    TABLE.grid {
-        -attr-bgcolor: #fefffe;
-        background-color:#ffffff;
-    }
-}
+
+
 .blue-band {
-    background-color:#00a9f7;
+    background-color:#02acf3;
+    -attr-bgcolor:#eeeeee;
+    H1,H2,H3,H4,H5,H6 {color:#02acf3;}
+    p {color:#444444;}
     TABLE.grid {
-        -attr-bgcolor: #fefffe;
+        -attr-bgcolor: #ffffff;
         background-color:#ffffff;
+        border: solid 1px #aaaaaa !important;
+    }
+}
+
+
+.green-band {
+    background-color:#88cf00;
+    -attr-bgcolor:#eeeeee;
+    H1,H2,H3,H4,H5,H6 {color:#88cf00;}
+    p {color:#444444;}
+    TABLE.grid {
+        -attr-bgcolor: #ffffff;
+        background-color:#ffffff;
+        border: solid 1px #aaaaaa !important;
+    }
+}
+
+
+.pink-band {
+    background-color:#de008d;
+    -attr-bgcolor:#eeeeee;
+    H1,H2,H3,H4,H5,H6 {color:#de008d;}
+    p {color:#444444;}
+    TABLE.grid {
+        -attr-bgcolor: #ffffff;
+        background-color:#ffffff;
+        border: solid 1px #aaaaaa !important;
+    }
+}
+
+
+.aqua-band {
+    background-color:#01b7ad;
+    -attr-bgcolor:#eeeeee;
+    H1,H2,H3,H4,H5,H6 {color:#01b7ad;}
+    p {color:#444444;}
+    TABLE.grid {
+        -attr-bgcolor: #ffffff;
+        background-color:#ffffff;
+        border: solid 1px #aaaaaa !important;
+    }
+}
+
+
+.red-band {
+     background-color:#f5003f;
+    -attr-bgcolor:#eeeeee;
+    H1,H2,H3,H4,H5,H6 {color:#f5003f;}
+    p {color:#444444;}
+    TABLE.grid {
+        -attr-bgcolor: #ffffff;
+        background-color:#ffffff;
+        border: solid 1px #aaaaaa !important;
     }
 }
