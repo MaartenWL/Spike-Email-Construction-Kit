@@ -366,10 +366,11 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero {
   max-width: 550px;
+  width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero TD.content-wrapper {
   -attr-width: 550;
-  padding: 0 0 0 0;
+  padding: 0;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero TD.content-wrapper TABLE.content {
   width: 100%;
@@ -380,7 +381,7 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero TD.content-wrapper TABLE.content.image IMG {
   -attr-width: 550;
   max-width: 550px;
-  width: 550px;
+  width: 100%;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content-wrapper {
   -attr-align: center;
