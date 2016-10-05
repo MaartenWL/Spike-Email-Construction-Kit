@@ -5,6 +5,16 @@
 /* Typography > headings */
 /* Please note: font size and line heights are set in framework.less*/
 /* Typography > preheader */
+body,
+TABLE.body {
+  background-color: #eeeeee;
+  -attr-bgcolor: #eeeeee;
+}
+table.grid,
+td.grid {
+  background-color: #ffffff;
+  -attr-bgcolor: #ffffff;
+}
 TABLE.content.text TD p.lead {
   font-size: 16px;
   color: #777777;

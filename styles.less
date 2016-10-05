@@ -1,8 +1,9 @@
 /* Set background colors*/
 
-@body-bg: #ffffff; // Sets the background color on the body of your document
+@body-bg: #eeeeee; // Sets the background color on the body of your document
+@grid-bg: #ffffff;
 @boxed-content-bg: #f3ebeb; // Sets the background color on boxed content
-@grid-bg: #ff0000;
+
 
 
 /* Typography */
@@ -27,6 +28,17 @@
 @preheader-font-size: 12px;
 @preheader-color: #cc0000;
 @preheader-line-height:1.52;
+
+
+body, TABLE.body {
+    background-color:@body-bg;
+    -attr-bgcolor:@body-bg;
+}
+
+table.grid, td.grid {
+    background-color:@grid-bg;
+    -attr-bgcolor:@grid-bg;
+}
 
 TABLE.content.text TD p.lead {
     font-size:16px;
