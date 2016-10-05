@@ -504,6 +504,8 @@ ul, ol, li {
 
 .mixin-grid-column(@col-x, @gutter){
     max-width:@col-x;
+    min-height:1px;
+    width:@col-x;
     TD.content-wrapper {
         -attr-width: unit(@col-x);
         padding: 0 ceil(0.5 * @gutter) 0 floor(0.5 * @gutter);

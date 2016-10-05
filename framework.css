@@ -150,6 +150,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-1 {
   max-width: 38px;
+  min-height: 1px;
+  width: 38px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-1 TD.content-wrapper {
   -attr-width: 38;
@@ -168,6 +170,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-2 {
   max-width: 76px;
+  min-height: 1px;
+  width: 76px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-2 TD.content-wrapper {
   -attr-width: 76;
@@ -186,6 +190,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-3 {
   max-width: 114px;
+  min-height: 1px;
+  width: 114px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-3 TD.content-wrapper {
   -attr-width: 114;
@@ -204,6 +210,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-4 {
   max-width: 152px;
+  min-height: 1px;
+  width: 152px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-4 TD.content-wrapper {
   -attr-width: 152;
@@ -222,6 +230,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-5 {
   max-width: 190px;
+  min-height: 1px;
+  width: 190px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-5 TD.content-wrapper {
   -attr-width: 190;
@@ -240,6 +250,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-6 {
   max-width: 228px;
+  min-height: 1px;
+  width: 228px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-6 TD.content-wrapper {
   -attr-width: 228;
@@ -258,6 +270,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-7 {
   max-width: 266px;
+  min-height: 1px;
+  width: 266px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-7 TD.content-wrapper {
   -attr-width: 266;
@@ -276,6 +290,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-8 {
   max-width: 304px;
+  min-height: 1px;
+  width: 304px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-8 TD.content-wrapper {
   -attr-width: 304;
@@ -294,6 +310,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-9 {
   max-width: 342px;
+  min-height: 1px;
+  width: 342px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-9 TD.content-wrapper {
   -attr-width: 342;
@@ -312,6 +330,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-10 {
   max-width: 380px;
+  min-height: 1px;
+  width: 380px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-10 TD.content-wrapper {
   -attr-width: 380;
@@ -330,6 +350,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-11 {
   max-width: 418px;
+  min-height: 1px;
+  width: 418px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-11 TD.content-wrapper {
   -attr-width: 418;
@@ -348,6 +370,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-12 {
   max-width: 456px;
+  min-height: 1px;
+  width: 456px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-12 TD.content-wrapper {
   -attr-width: 456;
