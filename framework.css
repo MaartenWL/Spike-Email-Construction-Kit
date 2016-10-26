@@ -9,9 +9,12 @@
 BODY {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
 }
 IMG {
   display: block;
+  outline: none;
   -attr-border: 0;
 }
 TABLE {
@@ -58,6 +61,30 @@ TABLE TD.double-grid-row-gutter {
 }
 @-ms-viewport {
   width: device-width;
+}
+/* Remove margin on email wrapper in Android 4.4 KitKat */
+/* See more at: https://blog.jmwhite.co.uk/2015/09/19/revealing-why-emails-appear-off-centre-in-android-4-4-kitkat/ */
+div[style*="margin: 16px 0"] {
+  margin: 0 !important;
+  font-size: 100% !important;
+}
+#outlook a {
+  padding: 0;
+}
+.ReadMsgBody {
+  width: 100%;
+}
+.ExternalClass {
+  width: 100%;
+}
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div,
+.ExternalClass * {
+  line-height: 100%;
 }
 /** Calculated **/
 /* Calculate column widths */
