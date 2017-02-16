@@ -1196,7 +1196,8 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 }
 /** Typography **/
 .content .text p,
-.content .text em {
+.content .text em,
+.content .text {
   margin: 0 0 21.28px 0;
   Margin: 0 0 21.28px 0;
   padding: 0;
@@ -1267,7 +1268,8 @@ li {
     line-height: 17.4999825px !important;
   }
   .text p,
-  .text em {
+  .text em,
+  .text {
     Margin: 0 0 21.28px 0 !important;
     font-size: 14px !important;
     line-height: 21.28px !important;
@@ -1300,7 +1302,8 @@ li {
     line-height: 17.4999825px !important;
   }
   .text p,
-  .text em {
+  .text em,
+  .text {
     Margin: 0 0 17.5px 0;
     font-size: 14px !important;
     line-height: 17.5px !important;
@@ -1333,7 +1336,8 @@ li {
     line-height: 19.249965px !important;
   }
   .text p,
-  .text em {
+  .text em,
+  .text {
     Margin: 0 0 21px 0;
     font-size: 15.4px !important;
     line-height: 19.25px !important;

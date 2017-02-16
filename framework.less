@@ -338,7 +338,7 @@ TABLE.body {
 
 /////////////////////////////////////////////////////////////
 
-.content .text p, .content .text em {
+.content .text p, .content .text em, .content .text {
     margin:0 0 @base-whitespace 0;
     Margin:0 0 @base-whitespace 0;
     padding:0;
@@ -388,7 +388,7 @@ ul, ol, li {
     H3,H3 A {.mixin-responsive-typography (@breakpoint-md, 1.5, 1.25)!important;}
     H4,H4 A {.mixin-responsive-typography (@breakpoint-md, 1.125, 1.11111)!important;}
     H5,H5 A {.mixin-responsive-typography (@breakpoint-md, 1.125, 1.11111)!important;}
-    .text p, .text em {Margin: 0 0 @base-whitespace 0!important; .mixin-responsive-typography(@breakpoint-md, 1, @base-font-line-height)!important;}
+    .text p, .text em, .text {Margin: 0 0 @base-whitespace 0!important; .mixin-responsive-typography(@breakpoint-md, 1, @base-font-line-height)!important;}
 }
 @media (max-width: @breakpoint-sm) {
     H1,H1 A {.mixin-responsive-typography (@breakpoint-sm, 2, 1.25)!important;}
@@ -396,7 +396,7 @@ ul, ol, li {
     H3,H3 A {.mixin-responsive-typography (@breakpoint-sm, 1.375, 1.13636364)!important;}
     H4,H4 A {.mixin-responsive-typography (@breakpoint-sm, 1.125, 1.11111)!important;}
     H5,H5 A {.mixin-responsive-typography (@breakpoint-sm, 1.125, 1.11111)!important;}
-    .text p, .text em {Margin: 0 0 (1.25 * (1 * @base-font-size) * 1px) 0; .mixin-responsive-typography(@breakpoint-sm, 1, 1.25)!important;}
+    .text p, .text em, .text {Margin: 0 0 (1.25 * (1 * @base-font-size) * 1px) 0; .mixin-responsive-typography(@breakpoint-sm, 1, 1.25)!important;}
 }
 @media (max-width: @breakpoint-xs) {
     H1,H1 A {.mixin-responsive-typography (@breakpoint-xs, 2, 1.25)!important;}
@@ -404,7 +404,7 @@ ul, ol, li {
     H3,H3 A {.mixin-responsive-typography (@breakpoint-xs, 1.375, 1.13636364)!important;}
     H4,H4 A {.mixin-responsive-typography (@breakpoint-xs, 1.125, 1.22222)!important;}
     H5,H5 A {.mixin-responsive-typography (@breakpoint-xs, 1.125, 1.22222)!important;}
-    .text p, .text em { Margin: 0 0 (1.25 * (1.2 * @base-font-size) * 1px) 0; .mixin-responsive-typography(@breakpoint-xs, 1.1, 1.25)!important;}
+    .text p, .text em, .text { Margin: 0 0 (1.25 * (1.2 * @base-font-size) * 1px) 0; .mixin-responsive-typography(@breakpoint-xs, 1.1, 1.25)!important;}
 }
 
 
