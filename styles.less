@@ -2,9 +2,7 @@
 
 @body-bg: #eeeeee; // Sets the background color on the body of your document
 @grid-bg: #ffffff;
-@boxed-content-bg: #f3ebeb; // Sets the background color on boxed content
-
-
+@content-box-bg: #ffffff; // Sets the background color on boxed content
 
 /* Typography */
 
@@ -38,6 +36,11 @@ body, TABLE.body {
 table.grid, td.grid {
     background-color:@grid-bg;
     -attr-bgcolor:@grid-bg;
+}
+
+TABLE.content-box, TD.content-box {
+     background-color:@content-box-bg;
+    -attr-bgcolor:@content-box-bg;
 }
 
 TABLE.content .text p.lead {

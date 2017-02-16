@@ -13,21 +13,13 @@
 
 @surrounding-gutter: 50px; // Sets the whitespace around your content
 @column-gutter: 6px; // Sets the whitespace between collumns
-
+@content-box-padding: 20px; // Sets the padding within content boxes, when used
 
 /** Setting breakpoints */
 
 @breakpoint-md: @grid-width; // Sets the first breakpoint, normally equals the desktop width of your content area
 @breakpoint-sm: 480px; // Sets the breakpoint to target small devices
 @breakpoint-xs: 320px; // Sets the breakpoint to target the smallest devices
-
-
-/* Set background colors*/
-
-@body-bg: #ffffff; // Sets the background color on the body of your document
-@boxed-content-bg: #f3ebeb; // Sets the background color on boxed content
-@grid-bg: #ff0000;
-
 
 /* Set base font-size*/
 
@@ -245,6 +237,12 @@ TABLE.body {
                                     text-align: center;
                                     vertical-align: top;
                                     font-size: 0;
+                                }
+                            }
+
+                            TABLE.content-box {
+                                TD.content-box {
+                                    padding:@content-box-padding;
                                 }
                             }
 
@@ -519,10 +517,10 @@ ul, ol, li {
         padding: 0 ceil(0.5 * @gutter) 0 floor(0.5 * @gutter);
         TABLE.content {
             width: 100%;
-            TD {
+            TD.content {
                 -attr-width: unit( ceil(@col-x - @gutter) );
             }
-            &.image IMG {
+            TD.image IMG {
                 -attr-width: unit( ceil(@col-x - @gutter) );
                 max-width: ceil(@col-x - @gutter);
                 width: ceil(@col-x - @gutter);
@@ -539,10 +537,10 @@ ul, ol, li {
         padding: 0;
         TABLE.content {
             width: 100%;
-            TD {
+            TD.content {
                 -attr-width: unit( ceil(@col-x - @gutter) );
             }
-            &.image IMG {
+            TD.image IMG {
                 -attr-width: unit( ceil(@col-x - @gutter) );
                 max-width: ceil(@col-x - @gutter);
                 width:100%;

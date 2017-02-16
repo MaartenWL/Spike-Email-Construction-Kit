@@ -15,6 +15,11 @@ td.grid {
   background-color: #ffffff;
   -attr-bgcolor: #ffffff;
 }
+TABLE.content-box,
+TD.content-box {
+  background-color: #ffffff;
+  -attr-bgcolor: #ffffff;
+}
 TABLE.content .text p.lead {
   font-size: 16px;
   color: #777777;

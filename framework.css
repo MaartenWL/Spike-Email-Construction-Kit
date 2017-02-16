@@ -3,7 +3,6 @@
 /** Set width of content;*/
 /** Set column gutter between columns */
 /** Setting breakpoints */
-/* Set background colors*/
 /* Set base font-size*/
 /** Reset styling **/
 BODY {
@@ -187,10 +186,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-1 TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-1 TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-1 TD.content-wrapper TABLE.content TD.content {
   -attr-width: 32;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-1 TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-1 TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 32;
   max-width: 32px;
   width: 32px;
@@ -207,10 +206,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-2 TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-2 TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-2 TD.content-wrapper TABLE.content TD.content {
   -attr-width: 70;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-2 TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-2 TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 70;
   max-width: 70px;
   width: 70px;
@@ -227,10 +226,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-3 TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-3 TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-3 TD.content-wrapper TABLE.content TD.content {
   -attr-width: 108;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-3 TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-3 TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 108;
   max-width: 108px;
   width: 108px;
@@ -247,10 +246,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-4 TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-4 TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-4 TD.content-wrapper TABLE.content TD.content {
   -attr-width: 146;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-4 TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-4 TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 146;
   max-width: 146px;
   width: 146px;
@@ -267,10 +266,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-5 TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-5 TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-5 TD.content-wrapper TABLE.content TD.content {
   -attr-width: 184;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-5 TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-5 TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 184;
   max-width: 184px;
   width: 184px;
@@ -287,10 +286,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-6 TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-6 TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-6 TD.content-wrapper TABLE.content TD.content {
   -attr-width: 222;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-6 TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-6 TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 222;
   max-width: 222px;
   width: 222px;
@@ -307,10 +306,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-7 TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-7 TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-7 TD.content-wrapper TABLE.content TD.content {
   -attr-width: 260;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-7 TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-7 TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 260;
   max-width: 260px;
   width: 260px;
@@ -327,10 +326,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-8 TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-8 TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-8 TD.content-wrapper TABLE.content TD.content {
   -attr-width: 298;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-8 TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-8 TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 298;
   max-width: 298px;
   width: 298px;
@@ -347,10 +346,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-9 TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-9 TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-9 TD.content-wrapper TABLE.content TD.content {
   -attr-width: 336;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-9 TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-9 TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 336;
   max-width: 336px;
   width: 336px;
@@ -367,10 +366,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-10 TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-10 TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-10 TD.content-wrapper TABLE.content TD.content {
   -attr-width: 374;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-10 TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-10 TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 374;
   max-width: 374px;
   width: 374px;
@@ -387,10 +386,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-11 TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-11 TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-11 TD.content-wrapper TABLE.content TD.content {
   -attr-width: 412;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-11 TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-11 TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 412;
   max-width: 412px;
   width: 412px;
@@ -407,10 +406,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-12 TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-12 TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-12 TD.content-wrapper TABLE.content TD.content {
   -attr-width: 450;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-12 TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-12 TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 450;
   max-width: 450px;
   width: 450px;
@@ -426,10 +425,10 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero TD.content-wrapper TABLE.content {
   width: 100%;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero TD.content-wrapper TABLE.content TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero TD.content-wrapper TABLE.content TD.content {
   -attr-width: 550;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero TD.content-wrapper TABLE.content.image IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col.col-hero TD.content-wrapper TABLE.content TD.image IMG {
   -attr-width: 550;
   max-width: 550px;
   width: 100%;
@@ -445,6 +444,9 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   text-align: center;
   vertical-align: top;
   font-size: 0;
+}
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content-box TD.content-box {
+  padding: 20px;
 }
 TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content TD.image {
   -attr-align: center;
