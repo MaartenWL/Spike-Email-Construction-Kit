@@ -446,22 +446,22 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   vertical-align: top;
   font-size: 0;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content.image TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content TD.image {
   -attr-align: center;
   padding-bottom: 21.28px;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content.image TD IMG {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content TD.image IMG {
   width: 100%;
   height: auto;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content.text TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content TD.text {
   -attr-width: 100%;
   -attr-align: center;
   mso-line-height-rule: exactly;
   padding-top: 0;
   padding-bottom: 10.64px;
 }
-TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content.preheader TD {
+TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-col TABLE.content TD.preheader {
   -attr-width: 100%;
   -attr-align: center;
   mso-line-height-rule: exactly;
