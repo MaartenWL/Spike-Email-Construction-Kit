@@ -15,18 +15,18 @@ td.grid {
   background-color: #ffffff;
   -attr-bgcolor: #ffffff;
 }
-TABLE.content.text TD p.lead {
+TABLE.content .text p.lead {
   font-size: 16px;
   color: #777777;
 }
-TABLE.content.preheader {
+TABLE.content .preheader {
   font-family: 'Roboto Slab', serif;
   font-size: 12px;
   color: #cc0000;
   line-height: 18.24px;
 }
 P,
-TABLE.content.text TD {
+TABLE.content .text {
   font-family: verdana, arial;
   font-weight: 400;
   color: #444444;
