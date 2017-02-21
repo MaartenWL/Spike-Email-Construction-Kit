@@ -13,7 +13,6 @@
 
 @surrounding-gutter: 25px; // Sets the whitespace around your content
 @column-gutter: 25px; // Sets the whitespace between collumns
-@content-box-padding: 50px; // Sets the padding within content boxes, when used
 
 /** Setting breakpoints */
 
@@ -61,6 +60,9 @@ TABLE {
         &.gutter-top {
             padding-top: 0.5 * @column-gutter!important;
         }
+        &.full-gutter-top {
+            padding-top: @column-gutter!important;
+        }
         &.gutter-right {
             padding-right: 0.5 * @column-gutter!important;
         }
@@ -69,6 +71,9 @@ TABLE {
         }
         &.gutter-bottom {
             padding-bottom: 0.5 * @column-gutter!important;
+        }
+        &.full-gutter-bottom {
+            padding-bottom: @column-gutter!important;
         }
         &.gutter-left {
             padding-left: 0.5 * @column-gutter!important;
@@ -80,7 +85,13 @@ TABLE {
             padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
         }
         &.full-grid-row-gutter {
-            padding: @surrounding-gutter!important;
+            padding: (.5 *  @surrounding-gutter) @surrounding-gutter!important;
+        }
+        &.full-grid-row-gutter-hor{
+            padding: 0 @surrounding-gutter!important;
+        }
+        &.full-grid-row-gutter-ver{
+            padding: @surrounding-gutter 0!important;
         }
         &.double-grid-row-gutter {
             padding: @base-whitespace ceil(@surrounding-gutter - (0.5 * @column-gutter)) @base-whitespace floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
@@ -126,18 +137,18 @@ div[style*="margin: 16px 0"] {margin:0 !important; font-size:100% !important;}
 
 /* Calculate column widths (border-box-sizing)*/
 
-@col-1-boxed: floor(@grid-width - ( ( 2 * @surrounding-gutter ) - ( 2 * @column-gutter) ) / 12);
-@col-2-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 2);
-@col-3-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 3);
-@col-4-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 4);
-@col-5-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 5);
-@col-6-boxed: (((@grid-width - ( 2 * @surrounding-gutter )) / 12) * 6);
-@col-7-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 7);
-@col-8-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 8);
-@col-9-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 9);
-@col-10-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 10);
-@col-11-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 11);
-@col-12-boxed: floor(((@grid-width - ( 2 * @surrounding-gutter )) / 12) * 12);
+@col-1-boxed: floor(@grid-width - ( 2 * @surrounding-gutter + @column-gutter) / 12);
+@col-2-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 2 );
+@col-3-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 3 );
+@col-4-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 4 );
+@col-5-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 5 );
+@col-6-boxed: (((@grid-width - ( 2 * @surrounding-gutter)) / 12) * 6 );
+@col-7-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 7 );
+@col-8-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 8 );
+@col-9-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 9 );
+@col-10-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 10 );
+@col-11-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 11 );
+@col-12-boxed: floor(((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 12);
 
 /////////////////////////////////////////////////////////////
 
@@ -164,6 +175,11 @@ TABLE.body {
                         text-align: center;
                         vertical-align: top;
                         font-size: 0;
+
+                        TABLE.content-box {
+                            -att-width:100%;
+                            width:100%;
+                        }
 
                         TABLE.mso-col-container {
                             -attr-width:unit(@col-12 + 2);
@@ -202,7 +218,7 @@ TABLE.body {
                         }
 
                         TABLE.mso-boxed-col-container {
-                            -attr-width:unit(@col-12 + 2);
+                            -attr-width:unit(@col-12-boxed + 2);
 
                             TD.mso-boxed-col {
                                 font-size: 0;
@@ -326,16 +342,10 @@ TABLE.body {
                                 }
                             }
 
-                            TABLE.content-box {
-                                TD.content-box {
-                                    padding:@content-box-padding;
-                                }
-                            }
-
                             TABLE.content {
                                 TD.image {
                                     -attr-align: center;
-                                    padding-bottom:@base-whitespace;
+                                    //padding-bottom:@base-whitespace;
                                     IMG {
                                         width:100%;
                                         height: auto;
@@ -346,7 +356,7 @@ TABLE.body {
                                     -attr-align: center;
                                     mso-line-height-rule: exactly;
                                     padding-top: 0;
-                                    padding-bottom: ( 0.5 * @base-whitespace);
+                                    //padding-bottom: ( 0.5 * @base-whitespace);
                                 }
                                 TD.preheader {
                                     -attr-width: 100%;
