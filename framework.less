@@ -11,9 +11,9 @@
 
 /** Set column gutter between columns */
 
-@surrounding-gutter: 50px; // Sets the whitespace around your content
-@column-gutter: 6px; // Sets the whitespace between collumns
-@content-box-padding: 20px; // Sets the padding within content boxes, when used
+@surrounding-gutter: 25px; // Sets the whitespace around your content
+@column-gutter: 25px; // Sets the whitespace between collumns
+@content-box-padding: 50px; // Sets the padding within content boxes, when used
 
 /** Setting breakpoints */
 
@@ -79,6 +79,9 @@ TABLE {
         &.grid-row-gutter {
             padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
         }
+        &.full-grid-row-gutter {
+            padding: @surrounding-gutter!important;
+        }
         &.double-grid-row-gutter {
             padding: @base-whitespace ceil(@surrounding-gutter - (0.5 * @column-gutter)) @base-whitespace floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
         }
@@ -103,7 +106,7 @@ div[style*="margin: 16px 0"] {margin:0 !important; font-size:100% !important;}
 
 /////////////////////////////////////////////////////////////
 
-/* Calculate column widths */
+/* Calculate column widths (content-box-sizing)*/
 
 @col-1: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12);
 @col-2: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2);
@@ -119,6 +122,22 @@ div[style*="margin: 16px 0"] {margin:0 !important; font-size:100% !important;}
 @col-12: floor(((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 12);
 @col-hero: (@grid-width);
 @col-gutter: @column-gutter;
+
+
+/* Calculate column widths (border-box-sizing)*/
+
+@col-1-boxed: floor(@grid-width - ( ( 2 * @surrounding-gutter ) - ( 2 * @column-gutter) ) / 12);
+@col-2-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 2);
+@col-3-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 3);
+@col-4-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 4);
+@col-5-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 5);
+@col-6-boxed: (((@grid-width - ( 2 * @surrounding-gutter )) / 12) * 6);
+@col-7-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 7);
+@col-8-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 8);
+@col-9-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 9);
+@col-10-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 10);
+@col-11-boxed: (((@grid-width - (( 2 * @surrounding-gutter ) - ( 2 * @column-gutter))) / 12) * 11);
+@col-12-boxed: floor(((@grid-width - ( 2 * @surrounding-gutter )) / 12) * 12);
 
 /////////////////////////////////////////////////////////////
 
@@ -182,6 +201,42 @@ TABLE.body {
                             }
                         }
 
+                        TABLE.mso-boxed-col-container {
+                            -attr-width:unit(@col-12 + 2);
+
+                            TD.mso-boxed-col {
+                                font-size: 0;
+                                -attr-valign:top;
+                                &.boxed-col {
+
+                                    &-1 {
+                                        .mixin-grid-mso-column(@col-1-boxed);}
+                                    &-2 {
+                                        .mixin-grid-mso-column(@col-2-boxed);}
+                                    &-3 {
+                                        .mixin-grid-mso-column(@col-3-boxed);}
+                                    &-4 {
+                                        .mixin-grid-mso-column(@col-4-boxed);}
+                                    &-5 {
+                                        .mixin-grid-mso-column(@col-5-boxed);}
+                                    &-6 {
+                                        .mixin-grid-mso-column(@col-6-boxed);}
+                                    &-7 {
+                                        .mixin-grid-mso-column(@col-7-boxed);}
+                                    &-8 {
+                                        .mixin-grid-mso-column(@col-8-boxed);}
+                                    &-9 {
+                                        .mixin-grid-mso-column(@col-9-boxed);}
+                                    &-10 {
+                                        .mixin-grid-mso-column(@col-10-boxed);}
+                                    &-11 {
+                                        .mixin-grid-mso-column(@col-11-boxed);}
+                                    &-12 {
+                                        .mixin-grid-mso-column(@col-12-boxed);}
+                                }
+                            }
+                        }
+
                         TABLE.mso-hero-container {
                             -attr-width:unit(@grid-width + 2);
                              TD.mso-col {
@@ -224,8 +279,39 @@ TABLE.body {
 
                                 &-hero {
                                     .mixin-hero-image(@col-hero,0);}
-
                             }
+
+                            &.boxed-col {
+
+                                &-1 {
+                                    .mixin-grid-column(@col-1-boxed,@column-gutter);}
+                                &-2 {
+                                    .mixin-grid-column(@col-2-boxed,@column-gutter);}
+                                &-3 {
+                                    .mixin-grid-column(@col-3-boxed,@column-gutter);}
+                                &-4 {
+                                    .mixin-grid-column(@col-4-boxed,@column-gutter);}
+                                &-5 {
+                                    .mixin-grid-column(@col-5-boxed,@column-gutter);}
+                                &-6 {
+                                    .mixin-grid-column(@col-6-boxed,@column-gutter);}
+                                &-7 {
+                                    .mixin-grid-column(@col-7-boxed,@column-gutter);}
+                                &-8 {
+                                    .mixin-grid-column(@col-8-boxed,@column-gutter);}
+                                &-9 {
+                                    .mixin-grid-column(@col-9-boxed,@column-gutter);}
+                                &-10 {
+                                    .mixin-grid-column(@col-10-boxed,@column-gutter);}
+                                &-11 {
+                                    .mixin-grid-column(@col-11-boxed,@column-gutter);}
+                                &-12 {
+                                    .mixin-grid-column(@col-12-boxed,@column-gutter);}
+
+                                &-hero {
+                                    .mixin-hero-image(@col-hero,0);}
+                            }
+
 
                             TABLE.content-wrapper {
                                 -attr-align: center;
