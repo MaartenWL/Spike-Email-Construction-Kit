@@ -24,7 +24,7 @@
 
 @base-font-size: 14px; // Sets the base font size. All other font sizes are calculated from this size
 @base-font-line-height: 1.52;
-@base-whitespace: (@base-font-size * @base-font-line-height);
+@base-whitespace: @column-gutter;
 
 
 /////////////////////////////////////////////////////////////
@@ -57,42 +57,57 @@ TABLE {
         &.gutter {
             padding: 0.5 * @column-gutter!important;
         }
+
         &.gutter-top {
             padding-top: 0.5 * @column-gutter!important;
         }
         &.full-gutter-top {
             padding-top: @column-gutter!important;
         }
+
         &.gutter-right {
             padding-right: 0.5 * @column-gutter!important;
         }
-        &.double-gutter-right {
+        &.full-gutter-right {
             padding-right: @column-gutter!important;
         }
+
         &.gutter-bottom {
             padding-bottom: 0.5 * @column-gutter!important;
         }
         &.full-gutter-bottom {
             padding-bottom: @column-gutter!important;
         }
+
         &.gutter-left {
             padding-left: 0.5 * @column-gutter!important;
         }
-        &.double-gutter-left {
+        &.full-gutter-left {
             padding-left: @column-gutter!important;
         }
+
+        &.full-gutter-hor{
+            padding: 0 @column-gutter!important;
+        }
+        &.full-grid-row-gutter-hor{
+            padding: 0 @surrounding-gutter!important;
+        }
+
+        &.full-gutter-ver{
+            padding: @column-gutter 0!important;
+        }
+        &.full-grid-row-gutter-ver{
+            padding: @surrounding-gutter 0!important;
+        }
+
         &.grid-row-gutter {
             padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
         }
         &.full-grid-row-gutter {
             padding: (.5 *  @surrounding-gutter) @surrounding-gutter!important;
         }
-        &.full-grid-row-gutter-hor{
-            padding: 0 @surrounding-gutter!important;
-        }
-        &.full-grid-row-gutter-ver{
-            padding: @surrounding-gutter 0!important;
-        }
+
+
         &.double-grid-row-gutter {
             padding: @base-whitespace ceil(@surrounding-gutter - (0.5 * @column-gutter)) @base-whitespace floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
         }
@@ -142,7 +157,7 @@ div[style*="margin: 16px 0"] {margin:0 !important; font-size:100% !important;}
 @col-3-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 3 );
 @col-4-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 4 );
 @col-5-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 5 );
-@col-6-boxed: (((@grid-width - ( 2 * @surrounding-gutter)) / 12) * 6 );
+@col-6-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 6 );
 @col-7-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 7 );
 @col-8-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 8 );
 @col-9-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 9 );
@@ -443,21 +458,21 @@ TABLE.body {
 H1,
 H1 A {
     .mixin-desktop-typography (3, 1.05);
-    margin: 0 0 @base-whitespace 0;
+    margin: 0;
     padding: 0;
 }
 
 H2,
 H2 A {
     .mixin-desktop-typography (2.25, 1.25);
-    margin: 0 0 @base-whitespace 0;
+    margin: 0;
     padding: 0;
 }
 
 H3,
 H3 A {
     .mixin-desktop-typography (1.75, 1.25);
-    margin: 0 0 @base-whitespace 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -466,7 +481,7 @@ H4 A,
 H5,
 H5 A {
     .mixin-desktop-typography (1.125, 1.22222);
-    margin: 0 0 @base-whitespace 0;
+    margin: 0 ;
     padding: 0;
 }
 
@@ -620,6 +635,18 @@ ul, ol, li {
                 -attr-width: unit( ceil(@col-x - @gutter) );
                 max-width: ceil(@col-x - @gutter);
                 width: ceil(@col-x - @gutter);
+            }
+        }
+    }
+
+    TD.content-wrapper.full-gutter-hor {
+        border:blue;
+        padding: 0 @column-gutter 0 @column-gutter;
+        TABLE.content {
+            TD.image IMG {
+                -attr-width: unit( ceil(@col-x - 2 * @column-gutter) );
+                max-width: ceil(@col-x - 2 * @column-gutter);
+                width: ceil(@col-x - 2 * @column-gutter);
             }
         }
     }
