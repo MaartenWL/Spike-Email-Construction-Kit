@@ -54,56 +54,98 @@ TABLE {
         mso-table-lspace: 0;
         mso-table-rspace: 0;
         padding:0;
-        &.gutter {
+
+
+        &.content-box {
+            &.padding {padding: 0.5 * @column-gutter!important;}
+
+            &.padding-top {padding-top: 0.5 * @column-gutter!important;}
+            &.padding-right {padding-right: 0.5 * @column-gutter!important;}
+            &.padding-bottom {padding-bottom: 0.5 * @column-gutter!important;}
+            &.padding-left {padding-left: 0.5 * @column-gutter!important;}
+
+            &.h-padding {padding-left: (0.5 * @column-gutter)!important; padding-right: (0.5 * @column-gutter)!important;}
+            &.v-padding {padding-top: (0.5 * @column-gutter)!important; padding-bottom: (0.5 * @column-gutter)!important;}
+
+            /* --- */
+
+            &.double-padding {padding: @column-gutter!important;}
+
+            &.double-padding-top {padding-top: @column-gutter!important;}
+            &.double-padding-right {padding-right: @column-gutter!important;}
+            &.double-padding-bottom {padding-bottom: @column-gutter!important;}
+            &.double-padding-left {padding-left: @column-gutter!important;}
+
+            &.double-h-padding {padding-left: @column-gutter!important; padding-right: @column-gutter!important;}
+            &.double-v-padding {padding-top: @column-gutter!important; padding-bottom: @column-gutter!important;}
+        }
+
+
+        &.gutter,
+        &.col-padding {
             padding: 0.5 * @column-gutter!important;
         }
 
-        &.gutter-top {
+        &.gutter-top,
+        &.col-padding-top {
             padding-top: 0.5 * @column-gutter!important;
         }
-        &.full-gutter-top {
+        &.full-gutter-top,
+        &.col-padding-t-double {
             padding-top: @column-gutter!important;
         }
 
-        &.gutter-right {
+        &.gutter-right,
+        &.col-padding-r {
             padding-right: 0.5 * @column-gutter!important;
         }
-        &.full-gutter-right {
+        &.full-gutter-right,
+        &.col-padding-r-double {
             padding-right: @column-gutter!important;
         }
 
-        &.gutter-bottom {
+        &.gutter-bottom,
+        &.col-padding-b {
             padding-bottom: 0.5 * @column-gutter!important;
         }
-        &.full-gutter-bottom {
+        &.full-gutter-bottom,
+        &.col-padding-b-double {
             padding-bottom: @column-gutter!important;
         }
 
-        &.gutter-left {
+        &.gutter-left,
+        &.col-padding-l {
             padding-left: 0.5 * @column-gutter!important;
         }
-        &.full-gutter-left {
+        &.full-gutter-left,
+        &.col-padding-l-double {
             padding-left: @column-gutter!important;
         }
 
-        &.full-gutter-hor{
+        &.full-gutter-hor,
+        &.col-padding-h {
             padding: 0 @column-gutter!important;
         }
-        &.full-grid-row-gutter-hor{
+        &.full-grid-row-gutter-hor,
+        &.col-padding-h-double {
             padding: 0 @surrounding-gutter!important;
         }
 
-        &.full-gutter-ver{
+        &.full-gutter-ver,
+        &.col-padding-v {
             padding: @column-gutter 0!important;
         }
-        &.full-grid-row-gutter-ver{
+        &.full-grid-row-gutter-ver,
+        &.col-padding-v-double {
             padding: @surrounding-gutter 0!important;
         }
 
-        &.grid-row-gutter {
+        &.grid-row-gutter,
+        &.row-padding {
             padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
         }
-        &.full-grid-row-gutter {
+        &.full-grid-row-gutter,
+        &.row-padding-double {
             padding: (.5 *  @surrounding-gutter) @surrounding-gutter!important;
         }
 
@@ -625,7 +667,22 @@ ul, ol, li {
     width:@col-x;
     TD.content-wrapper {
         -attr-width: unit(@col-x);
-        padding: 0 ceil(0.5 * @gutter) 0 floor(0.5 * @gutter);
+
+        &.padding {
+            padding: 0 ceil(0.5 * @gutter) 0 floor(0.5 * @gutter);
+        }
+
+        &.h-padding {padding-left:ceil(0.5 * @gutter); padding-right:floor(0.5 * @gutter);}
+        &.v-padding {padding-left:ceil(0.5 * @gutter); padding-right:floor(0.5 * @gutter);}
+
+        &.double-padding {
+             padding: 0 @gutter 0 @gutter;
+        }
+
+
+        &.double-h-padding {padding-left:@gutter; padding-right:@gutter;}
+        &.double-v-padding {padding-top:@gutter; padding-bottom:@gutter;}
+
         TABLE.content {
             width: 100%;
             TD.content {
