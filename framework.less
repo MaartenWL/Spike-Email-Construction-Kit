@@ -80,79 +80,27 @@ TABLE {
             &.double-v-padding {padding-top: @column-gutter!important; padding-bottom: @column-gutter!important;}
         }
 
+        &.grid-row{
+            &.padding {padding: (0.5 * @column-gutter) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @column-gutter) floor(@surrounding-gutter - (0.5 * @column-gutter))!important;}
+            &.h-padding {padding-left:ceil(@surrounding-gutter - (0.5 * @column-gutter)); padding-right:floor(@surrounding-gutter - (0.5 * @column-gutter));}
+            &.v-padding {padding-top:(0.5 * @column-gutter); padding-bottom:(0.5 * @column-gutter);}
 
-        &.gutter,
-        &.col-padding {
-            padding: 0.5 * @column-gutter!important;
+            &.full-padding {padding:  (0.5 * @column-gutter) @surrounding-gutter!important;}
+            &.full-h-padding {padding-left: @surrounding-gutter; padding-right: @surrounding-gutter;}
+            &.full-v-padding {padding-top:  (0.5 * @column-gutter); padding-bottom: (0.5 * @column-gutter);}
         }
-
-        &.gutter-top,
-        &.col-padding-top {
-            padding-top: 0.5 * @column-gutter!important;
-        }
-        &.full-gutter-top,
-        &.col-padding-t-double {
-            padding-top: @column-gutter!important;
-        }
-
-        &.gutter-right,
-        &.col-padding-r {
-            padding-right: 0.5 * @column-gutter!important;
-        }
-        &.full-gutter-right,
-        &.col-padding-r-double {
-            padding-right: @column-gutter!important;
-        }
-
-        &.gutter-bottom,
-        &.col-padding-b {
-            padding-bottom: 0.5 * @column-gutter!important;
-        }
-        &.full-gutter-bottom,
-        &.col-padding-b-double {
-            padding-bottom: @column-gutter!important;
-        }
-
-        &.gutter-left,
-        &.col-padding-l {
-            padding-left: 0.5 * @column-gutter!important;
-        }
-        &.full-gutter-left,
-        &.col-padding-l-double {
-            padding-left: @column-gutter!important;
-        }
-
-        &.full-gutter-hor,
-        &.col-padding-h {
-            padding: 0 @column-gutter!important;
-        }
-        &.full-grid-row-gutter-hor,
-        &.col-padding-h-double {
-            padding: 0 @surrounding-gutter!important;
-        }
-
-        &.full-gutter-ver,
-        &.col-padding-v {
-            padding: @column-gutter 0!important;
-        }
-        &.full-grid-row-gutter-ver,
-        &.col-padding-v-double {
-            padding: @surrounding-gutter 0!important;
-        }
-
-        &.grid-row-gutter,
-        &.row-padding {
+        /*
+        &.grid-row-gutter {
             padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
         }
-        &.full-grid-row-gutter,
-        &.row-padding-double {
+        &.full-grid-row-gutter {
             padding: (.5 *  @surrounding-gutter) @surrounding-gutter!important;
         }
 
 
         &.double-grid-row-gutter {
             padding: @base-whitespace ceil(@surrounding-gutter - (0.5 * @column-gutter)) @base-whitespace floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
-        }
+        }*/
     }
 }
 
@@ -679,7 +627,6 @@ ul, ol, li {
              padding: 0 @gutter 0 @gutter;
         }
 
-
         &.double-h-padding {padding-left:@gutter; padding-right:@gutter;}
         &.double-v-padding {padding-top:@gutter; padding-bottom:@gutter;}
 
@@ -742,10 +689,6 @@ ul, ol, li {
     TABLE.content-wrapper {
         max-width:100%!important;
         width:100%!important;
-        TD.content-wrapper {
-           // padding-top: 0.25 * @column-gutter!important;
-           // padding-bottom: 0.25 * @column-gutter!important;
-        }
     }
 
     .image {
