@@ -1,9 +1,4 @@
 # Email-template
-work in progress for a new email boilertemplate
-- responsive/liquid grid layout
-- Helper classes to refine responsive behavior
-- (easy) stylable
-- Template is broken down in snippets
 
 What is this template
 
@@ -17,6 +12,7 @@ It offers:
 - A hybrid / responsive layout system
 - Bootstrap like gridcollumn framework
 - Easely adjustable dimensioning 
+- Helper classes to adjust visual design and responsive behavior
 - Works in all conventional emailclients 
 
 
