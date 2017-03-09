@@ -2137,27 +2137,27 @@ TABLE.body TD.body-band TABLE.grid TD.grid TABLE.grid-row TD.grid-row DIV.grid-c
   margin: 0 0 25px 0;
   Margin: 0 0 25px 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.52;
 }
 H1,
 H1 A {
-  font-size: 42px;
-  line-height: 44.1px;
+  font-size: 48px;
+  line-height: 50.4px;
   margin: 0;
   padding: 0;
 }
 H2,
 H2 A {
-  font-size: 31.5px;
-  line-height: 39.375px;
+  font-size: 36px;
+  line-height: 45px;
   margin: 0;
   padding: 0;
 }
 H3,
 H3 A {
-  font-size: 24.5px;
-  line-height: 30.625px;
+  font-size: 28px;
+  line-height: 35px;
   margin: 0;
   padding: 0;
 }
@@ -2165,8 +2165,8 @@ H4,
 H4 A,
 H5,
 H5 A {
-  font-size: 15.75px;
-  line-height: 19.249965px;
+  font-size: 18px;
+  line-height: 21.99996px;
   margin: 0 ;
   padding: 0;
 }
@@ -2180,103 +2180,103 @@ li {
 @media (max-width: 550px) {
   H1,
   H1 A {
-    font-size: 35px !important;
-    line-height: 39.375px !important;
+    font-size: 40px !important;
+    line-height: 45px !important;
   }
   H2,
   H2 A {
-    font-size: 28px !important;
-    line-height: 35px !important;
+    font-size: 32px !important;
+    line-height: 40px !important;
   }
   H3,
   H3 A {
-    font-size: 21px !important;
-    line-height: 26.25px !important;
+    font-size: 24px !important;
+    line-height: 30px !important;
   }
   H4,
   H4 A {
-    font-size: 15.75px !important;
-    line-height: 17.4999825px !important;
+    font-size: 18px !important;
+    line-height: 19.99998px !important;
   }
   H5,
   H5 A {
-    font-size: 15.75px !important;
-    line-height: 17.4999825px !important;
+    font-size: 18px !important;
+    line-height: 19.99998px !important;
   }
   .text p,
   .text em,
   .text {
     Margin: 0 0 25px 0 !important;
-    font-size: 14px !important;
-    line-height: 21.28px !important;
+    font-size: 16px !important;
+    line-height: 24.32px !important;
   }
 }
 @media (max-width: 480px) {
   H1,
   H1 A {
-    font-size: 28px !important;
-    line-height: 35px !important;
+    font-size: 32px !important;
+    line-height: 40px !important;
   }
   H2,
   H2 A {
-    font-size: 22.75px !important;
-    line-height: 26.24999991px !important;
+    font-size: 26px !important;
+    line-height: 29.9999999px !important;
   }
   H3,
   H3 A {
-    font-size: 19.25px !important;
-    line-height: 21.87500007px !important;
+    font-size: 22px !important;
+    line-height: 25.00000008px !important;
   }
   H4,
   H4 A {
-    font-size: 15.75px !important;
-    line-height: 17.4999825px !important;
+    font-size: 18px !important;
+    line-height: 19.99998px !important;
   }
   H5,
   H5 A {
-    font-size: 15.75px !important;
-    line-height: 17.4999825px !important;
+    font-size: 18px !important;
+    line-height: 19.99998px !important;
   }
   .text p,
   .text em,
   .text {
-    Margin: 0 0 17.5px 0;
-    font-size: 14px !important;
-    line-height: 17.5px !important;
+    Margin: 0 0 20px 0;
+    font-size: 16px !important;
+    line-height: 20px !important;
   }
 }
 @media (max-width: 320px) {
   H1,
   H1 A {
-    font-size: 28px !important;
-    line-height: 35px !important;
+    font-size: 32px !important;
+    line-height: 40px !important;
   }
   H2,
   H2 A {
-    font-size: 22.75px !important;
-    line-height: 26.24999991px !important;
+    font-size: 26px !important;
+    line-height: 29.9999999px !important;
   }
   H3,
   H3 A {
-    font-size: 19.25px !important;
-    line-height: 21.87500007px !important;
+    font-size: 22px !important;
+    line-height: 25.00000008px !important;
   }
   H4,
   H4 A {
-    font-size: 15.75px !important;
-    line-height: 19.249965px !important;
+    font-size: 18px !important;
+    line-height: 21.99996px !important;
   }
   H5,
   H5 A {
-    font-size: 15.75px !important;
-    line-height: 19.249965px !important;
+    font-size: 18px !important;
+    line-height: 21.99996px !important;
   }
   .text p,
   .text em,
   .text {
-    Margin: 0 0 21px 0;
-    font-size: 15.4px !important;
-    line-height: 19.25px !important;
+    Margin: 0 0 24px 0;
+    font-size: 17.6px !important;
+    line-height: 22px !important;
   }
 }
 /** Responsive Helper classes **/
