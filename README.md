@@ -1,6 +1,7 @@
 # Email-template
 
-The template is a framework for building hybvrid and responsive email newsletters. 
+The template is a framework for building hybrid and responsive email newsletters. 
+It is designed to work best when used in The Measuremail Spike application. (http://www.measuremail.com)
 It consist of 3 files:
 
 - HTML file containing the HTML markup and content
