@@ -1,13 +1,19 @@
 // Below the simplified structure for the boilertemplate
 
 <body>
-    <body-band description="full-screen-width band">
-        <grid description="width is equal to @grid-width">
+    <body-band>
+    <!-- full-screen-width band -->
 
-            <grid-row description="each row must contain 1 to 12 collumns. Combined col-units should always be 12">
+        <grid>
+        <!-- the grid is centered and its width is equal to @grid-width -->
 
-                <grid-col description="col-unit should be 1 to 12. ">
-                    <content-wrapper>
+            <grid-row required-HTML-classes="padding, h-padding, v-padding, full-padding, full-h-padding or full-v-padding">
+            <!-- each row must contain 1 to 12 collumns. Combined col-units should always be 12 -->
+
+                <grid-col>
+                <!-- col-unit should be 1 to 12 -->
+
+                    <content-wrapper required-classes="padding">
                         <content>
                             <text />
                             <image />
@@ -26,7 +32,9 @@
             </grid-row>
 
             <grid-row>
-                <content-box optional description="used for box (background-color and/or border) around all columns in this row" >
+                <content-box>
+                <!-- the content-box used to draw a box (background-color and/or border) around all columns in this row -->
+
                     <grid-col>
                         <content-wrapper>
                             <content>
