@@ -166,215 +166,217 @@ TABLE.body {
     width: 100%;
     TD.body-band {
         -attr-align: center;
-        TABLE.grid {
+    }
+}
+
+TABLE.grid {
+    -attr-align: center;
+    -attr-border: 0;
+    border:0;
+
+    TD.grid {
+        -attr-align: center;
+        -attr-width: 100%;
+    }
+}
+
+TABLE.grid-row {
+    -attr-width: 100%;
+    TD.grid-row {
+        text-align: center;
+        vertical-align: top;
+        font-size: 0;
+
+        TABLE.content-box {
+            -att-width:100%;
+            width:100%;
+        }
+    }
+}
+
+TABLE.mso-col-container {
+    -attr-width:unit(@col-12 + 2);
+
+    TD.mso-col {
+        font-size: 0;
+        -attr-valign:top;
+        &.col {
+
+            &-1 {
+                .mixin-grid-mso-column(@col-1);}
+            &-2 {
+                .mixin-grid-mso-column(@col-2);}
+            &-3 {
+                .mixin-grid-mso-column(@col-3);}
+            &-4 {
+                .mixin-grid-mso-column(@col-4);}
+            &-5 {
+                .mixin-grid-mso-column(@col-5);}
+            &-6 {
+                .mixin-grid-mso-column(@col-6);}
+            &-7 {
+                .mixin-grid-mso-column(@col-7);}
+            &-8 {
+                .mixin-grid-mso-column(@col-8);}
+            &-9 {
+                .mixin-grid-mso-column(@col-9);}
+            &-10 {
+                .mixin-grid-mso-column(@col-10);}
+            &-11 {
+                .mixin-grid-mso-column(@col-11);}
+            &-12 {
+                .mixin-grid-mso-column(@col-12);}
+        }
+    }
+}
+
+TABLE.mso-boxed-col-container {
+    -attr-width:unit(@col-12-boxed + 2);
+
+    TD.mso-boxed-col {
+        font-size: 0;
+        -attr-valign:top;
+        &.boxed-col {
+
+            &-1 {
+                .mixin-grid-mso-column(@col-1-boxed);}
+            &-2 {
+                .mixin-grid-mso-column(@col-2-boxed);}
+            &-3 {
+                .mixin-grid-mso-column(@col-3-boxed);}
+            &-4 {
+                .mixin-grid-mso-column(@col-4-boxed);}
+            &-5 {
+                .mixin-grid-mso-column(@col-5-boxed);}
+            &-6 {
+                .mixin-grid-mso-column(@col-6-boxed);}
+            &-7 {
+                .mixin-grid-mso-column(@col-7-boxed);}
+            &-8 {
+                .mixin-grid-mso-column(@col-8-boxed);}
+            &-9 {
+                .mixin-grid-mso-column(@col-9-boxed);}
+            &-10 {
+                .mixin-grid-mso-column(@col-10-boxed);}
+            &-11 {
+                .mixin-grid-mso-column(@col-11-boxed);}
+            &-12 {
+                .mixin-grid-mso-column(@col-12-boxed);}
+        }
+    }
+}
+
+TABLE.mso-hero-container {
+    -attr-width:unit(@grid-width + 2);
+     TD.mso-col {
+        font-size: 0;
+        -attr-valign:top;
+         &.col-hero {.mixin-grid-mso-column(@col-hero);}
+    }
+}
+
+DIV.grid-col {
+    display: inline-block;
+    vertical-align: top;
+    @media screen and (-webkit-min-device-pixel-ratio:0) { float:left; }
+    &.col {
+
+        &-1 {
+            .mixin-grid-column(@col-1,@column-gutter);}
+        &-2 {
+            .mixin-grid-column(@col-2,@column-gutter);}
+        &-3 {
+            .mixin-grid-column(@col-3,@column-gutter);}
+        &-4 {
+            .mixin-grid-column(@col-4,@column-gutter);}
+        &-5 {
+            .mixin-grid-column(@col-5,@column-gutter);}
+        &-6 {
+            .mixin-grid-column(@col-6,@column-gutter);}
+        &-7 {
+            .mixin-grid-column(@col-7,@column-gutter);}
+        &-8 {
+            .mixin-grid-column(@col-8,@column-gutter);}
+        &-9 {
+            .mixin-grid-column(@col-9,@column-gutter);}
+        &-10 {
+            .mixin-grid-column(@col-10,@column-gutter);}
+        &-11 {
+            .mixin-grid-column(@col-11,@column-gutter);}
+        &-12 {
+            .mixin-grid-column(@col-12,@column-gutter);}
+
+        &-hero {
+            .mixin-hero-image(@col-hero,0);}
+    }
+
+    &.boxed-col {
+
+        &-1 {
+            .mixin-grid-column(@col-1-boxed,@column-gutter);}
+        &-2 {
+            .mixin-grid-column(@col-2-boxed,@column-gutter);}
+        &-3 {
+            .mixin-grid-column(@col-3-boxed,@column-gutter);}
+        &-4 {
+            .mixin-grid-column(@col-4-boxed,@column-gutter);}
+        &-5 {
+            .mixin-grid-column(@col-5-boxed,@column-gutter);}
+        &-6 {
+            .mixin-grid-column(@col-6-boxed,@column-gutter);}
+        &-7 {
+            .mixin-grid-column(@col-7-boxed,@column-gutter);}
+        &-8 {
+            .mixin-grid-column(@col-8-boxed,@column-gutter);}
+        &-9 {
+            .mixin-grid-column(@col-9-boxed,@column-gutter);}
+        &-10 {
+            .mixin-grid-column(@col-10-boxed,@column-gutter);}
+        &-11 {
+            .mixin-grid-column(@col-11-boxed,@column-gutter);}
+        &-12 {
+            .mixin-grid-column(@col-12-boxed,@column-gutter);}
+
+        &-hero {
+            .mixin-hero-image(@col-hero,0);}
+    }
+
+
+    TABLE.content-wrapper {
+        -attr-align: center;
+        TD.content-wrapper {
             -attr-align: center;
-            -attr-border: 0;
-            border:0;
+        }
+        TD.mso-col {
+            -attr-align: center;
+            text-align: center;
+            vertical-align: top;
+            font-size: 0;
+        }
+    }
 
-            TD.grid {
-                -attr-align: center;
-                -attr-width: 100%;
-                TABLE.grid-row {
-                    -attr-width: 100%;
-                    TD.grid-row {
-                        text-align: center;
-                        vertical-align: top;
-                        font-size: 0;
-
-                        TABLE.content-box {
-                            -att-width:100%;
-                            width:100%;
-                        }
-
-                        TABLE.mso-col-container {
-                            -attr-width:unit(@col-12 + 2);
-
-                            TD.mso-col {
-                                font-size: 0;
-                                -attr-valign:top;
-                                &.col {
-
-                                    &-1 {
-                                        .mixin-grid-mso-column(@col-1);}
-                                    &-2 {
-                                        .mixin-grid-mso-column(@col-2);}
-                                    &-3 {
-                                        .mixin-grid-mso-column(@col-3);}
-                                    &-4 {
-                                        .mixin-grid-mso-column(@col-4);}
-                                    &-5 {
-                                        .mixin-grid-mso-column(@col-5);}
-                                    &-6 {
-                                        .mixin-grid-mso-column(@col-6);}
-                                    &-7 {
-                                        .mixin-grid-mso-column(@col-7);}
-                                    &-8 {
-                                        .mixin-grid-mso-column(@col-8);}
-                                    &-9 {
-                                        .mixin-grid-mso-column(@col-9);}
-                                    &-10 {
-                                        .mixin-grid-mso-column(@col-10);}
-                                    &-11 {
-                                        .mixin-grid-mso-column(@col-11);}
-                                    &-12 {
-                                        .mixin-grid-mso-column(@col-12);}
-                                }
-                            }
-                        }
-
-                        TABLE.mso-boxed-col-container {
-                            -attr-width:unit(@col-12-boxed + 2);
-
-                            TD.mso-boxed-col {
-                                font-size: 0;
-                                -attr-valign:top;
-                                &.boxed-col {
-
-                                    &-1 {
-                                        .mixin-grid-mso-column(@col-1-boxed);}
-                                    &-2 {
-                                        .mixin-grid-mso-column(@col-2-boxed);}
-                                    &-3 {
-                                        .mixin-grid-mso-column(@col-3-boxed);}
-                                    &-4 {
-                                        .mixin-grid-mso-column(@col-4-boxed);}
-                                    &-5 {
-                                        .mixin-grid-mso-column(@col-5-boxed);}
-                                    &-6 {
-                                        .mixin-grid-mso-column(@col-6-boxed);}
-                                    &-7 {
-                                        .mixin-grid-mso-column(@col-7-boxed);}
-                                    &-8 {
-                                        .mixin-grid-mso-column(@col-8-boxed);}
-                                    &-9 {
-                                        .mixin-grid-mso-column(@col-9-boxed);}
-                                    &-10 {
-                                        .mixin-grid-mso-column(@col-10-boxed);}
-                                    &-11 {
-                                        .mixin-grid-mso-column(@col-11-boxed);}
-                                    &-12 {
-                                        .mixin-grid-mso-column(@col-12-boxed);}
-                                }
-                            }
-                        }
-
-                        TABLE.mso-hero-container {
-                            -attr-width:unit(@grid-width + 2);
-                             TD.mso-col {
-                                font-size: 0;
-                                -attr-valign:top;
-                                 &.col-hero {.mixin-grid-mso-column(@col-hero);}
-                            }
-                        }
-
-                        DIV.grid-col {
-                            display: inline-block;
-                            vertical-align: top;
-                            @media screen and (-webkit-min-device-pixel-ratio:0) { float:left; }
-                            &.col {
-
-                                &-1 {
-                                    .mixin-grid-column(@col-1,@column-gutter);}
-                                &-2 {
-                                    .mixin-grid-column(@col-2,@column-gutter);}
-                                &-3 {
-                                    .mixin-grid-column(@col-3,@column-gutter);}
-                                &-4 {
-                                    .mixin-grid-column(@col-4,@column-gutter);}
-                                &-5 {
-                                    .mixin-grid-column(@col-5,@column-gutter);}
-                                &-6 {
-                                    .mixin-grid-column(@col-6,@column-gutter);}
-                                &-7 {
-                                    .mixin-grid-column(@col-7,@column-gutter);}
-                                &-8 {
-                                    .mixin-grid-column(@col-8,@column-gutter);}
-                                &-9 {
-                                    .mixin-grid-column(@col-9,@column-gutter);}
-                                &-10 {
-                                    .mixin-grid-column(@col-10,@column-gutter);}
-                                &-11 {
-                                    .mixin-grid-column(@col-11,@column-gutter);}
-                                &-12 {
-                                    .mixin-grid-column(@col-12,@column-gutter);}
-
-                                &-hero {
-                                    .mixin-hero-image(@col-hero,0);}
-                            }
-
-                            &.boxed-col {
-
-                                &-1 {
-                                    .mixin-grid-column(@col-1-boxed,@column-gutter);}
-                                &-2 {
-                                    .mixin-grid-column(@col-2-boxed,@column-gutter);}
-                                &-3 {
-                                    .mixin-grid-column(@col-3-boxed,@column-gutter);}
-                                &-4 {
-                                    .mixin-grid-column(@col-4-boxed,@column-gutter);}
-                                &-5 {
-                                    .mixin-grid-column(@col-5-boxed,@column-gutter);}
-                                &-6 {
-                                    .mixin-grid-column(@col-6-boxed,@column-gutter);}
-                                &-7 {
-                                    .mixin-grid-column(@col-7-boxed,@column-gutter);}
-                                &-8 {
-                                    .mixin-grid-column(@col-8-boxed,@column-gutter);}
-                                &-9 {
-                                    .mixin-grid-column(@col-9-boxed,@column-gutter);}
-                                &-10 {
-                                    .mixin-grid-column(@col-10-boxed,@column-gutter);}
-                                &-11 {
-                                    .mixin-grid-column(@col-11-boxed,@column-gutter);}
-                                &-12 {
-                                    .mixin-grid-column(@col-12-boxed,@column-gutter);}
-
-                                &-hero {
-                                    .mixin-hero-image(@col-hero,0);}
-                            }
-
-
-                            TABLE.content-wrapper {
-                                -attr-align: center;
-                                TD.content-wrapper {
-                                    -attr-align: center;
-                                }
-                                TD.mso-col {
-                                    -attr-align: center;
-                                    text-align: center;
-                                    vertical-align: top;
-                                    font-size: 0;
-                                }
-                            }
-
-                            TABLE.content {
-                                TD.image {
-                                    -attr-align: center;
-                                    //padding-bottom:@base-whitespace;
-                                    IMG {
-                                        width:100%;
-                                        height: auto;
-                                    }
-                                }
-                                TD.text {
-                                    -attr-width: 100%;
-                                    -attr-align: center;
-                                    mso-line-height-rule: exactly;
-                                    padding-top: 0;
-                                    //padding-bottom: ( 0.5 * @base-whitespace);
-                                }
-                                TD.preheader {
-                                    -attr-width: 100%;
-                                    -attr-align: center;
-                                    mso-line-height-rule: exactly;
-                                    padding-top: (0.25 * @base-whitespace);
-                                    padding-bottom: ( 0.25 * @base-whitespace);
-                                }
-                            }
-                        }
-                    }
-                }
+    TABLE.content {
+        TD.image {
+            -attr-align: center;
+            //padding-bottom:@base-whitespace;
+            IMG {
+                width:100%;
+                height: auto;
             }
+        }
+        TD.text {
+            -attr-width: 100%;
+            -attr-align: center;
+            mso-line-height-rule: exactly;
+            padding-top: 0;
+            //padding-bottom: ( 0.5 * @base-whitespace);
+        }
+        TD.preheader {
+            -attr-width: 100%;
+            -attr-align: center;
+            mso-line-height-rule: exactly;
+            padding-top: (0.25 * @base-whitespace);
+            padding-bottom: ( 0.25 * @base-whitespace);
         }
     }
 }
