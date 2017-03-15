@@ -1,26 +1,26 @@
 /////////////////////////////////////////////////////////////
 
-/** Config **/
+// Config
 
 /////////////////////////////////////////////////////////////
 
-/** Set width of content;*/
+// Set width of content
 
 @grid-width: 550px; // Sets the width of your content area on desktop devices
 
 
-/** Set column gutter between columns */
+// Set column gutter between columns
 
 @surrounding-gutter: 25px; // Sets the whitespace around your content
 @column-gutter: 25px; // Sets the whitespace between collumns
 
-/** Setting breakpoints */
+// Setting breakpoints
 
 @breakpoint-md: @grid-width; // Sets the first breakpoint, normally equals the desktop width of your content area
 @breakpoint-sm: 480px; // Sets the breakpoint to target small devices
 @breakpoint-xs: 320px; // Sets the breakpoint to target the smallest devices
 
-/* Set base font-size*/
+// Set base font-size
 
 @base-font-size: 16px; // Sets the base font size. All other font sizes are calculated from this size
 @base-font-line-height: 1.52;
@@ -29,7 +29,7 @@
 
 /////////////////////////////////////////////////////////////
 
-/** Reset styling **/
+// Reset styling
 
 /////////////////////////////////////////////////////////////
 
@@ -108,8 +108,8 @@ TABLE {
     width: device-width;
 }
 
-/* Remove margin on email wrapper in Android 4.4 KitKat */
-/* See more at: https://blog.jmwhite.co.uk/2015/09/19/revealing-why-emails-appear-off-centre-in-android-4-4-kitkat/ */
+// Remove margin on email wrapper in Android 4.4 KitKat
+// See more at: https://blog.jmwhite.co.uk/2015/09/19/revealing-why-emails-appear-off-centre-in-android-4-4-kitkat
 div[style*="margin: 16px 0"] {margin:0 !important; font-size:100% !important;}
 
 #outlook a { padding: 0; }
@@ -118,11 +118,11 @@ div[style*="margin: 16px 0"] {margin:0 !important; font-size:100% !important;}
 
 /////////////////////////////////////////////////////////////
 
-/** Calculated **/
+// Calculated
 
 /////////////////////////////////////////////////////////////
 
-/* Calculate column widths (content-box-sizing)*/
+// Calculate column widths (content-box-sizing)
 
 @col-1: floor((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12);
 @col-2: (((@grid-width - (( 2 * @surrounding-gutter ) - @column-gutter)) / 12) * 2);
@@ -140,7 +140,7 @@ div[style*="margin: 16px 0"] {margin:0 !important; font-size:100% !important;}
 @col-gutter: @column-gutter;
 
 
-/* Calculate column widths (border-box-sizing)*/
+// Calculate column widths (border-box-sizing)
 
 @col-1-boxed: floor(@grid-width - ( 2 * @surrounding-gutter + @column-gutter) / 12);
 @col-2-boxed: (((@grid-width - ( 2 * @surrounding-gutter + @column-gutter)) / 12) * 2 );
@@ -157,7 +157,7 @@ div[style*="margin: 16px 0"] {margin:0 !important; font-size:100% !important;}
 
 /////////////////////////////////////////////////////////////
 
-/** Grid **/
+// Grid
 
 /////////////////////////////////////////////////////////////
 
@@ -433,7 +433,7 @@ TABLE.body {
 }
 /////////////////////////////////////////////////////////////
 
-/** Typography **/
+// Typography
 
 /////////////////////////////////////////////////////////////
 
@@ -509,7 +509,7 @@ ul, ol, li {
 
 /////////////////////////////////////////////////////////////
 
-/** Responsive Helper classes **/
+// Responsive Helper classes
 
 /////////////////////////////////////////////////////////////
 // These helper classes can be used to responsive behavior of content
@@ -573,7 +573,7 @@ ul, ol, li {
 
 /////////////////////////////////////////////////////////////
 
-/** Mixins **/
+// Mixins
 
 /////////////////////////////////////////////////////////////
 // These mixin functions are meant simplify the code in this LESS file. Do not use them directly in your HTML.
