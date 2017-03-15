@@ -89,18 +89,6 @@ TABLE {
             &.full-h-padding {padding-left: @surrounding-gutter; padding-right: @surrounding-gutter;}
             &.full-v-padding {padding-top:  (0.5 * @column-gutter); padding-bottom: (0.5 * @column-gutter);}
         }
-        /*
-        &.grid-row-gutter {
-            padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
-        }
-        &.full-grid-row-gutter {
-            padding: (.5 *  @surrounding-gutter) @surrounding-gutter!important;
-        }
-
-
-        &.double-grid-row-gutter {
-            padding: @base-whitespace ceil(@surrounding-gutter - (0.5 * @column-gutter)) @base-whitespace floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
-        }*/
     }
 }
 
@@ -170,18 +158,6 @@ TABLE.body {
 }
 
 TABLE.grid {
-    -attr-align: center;
-    -attr-border: 0;
-    border:0;
-
-    TD.grid {
-        -attr-align: center;
-        -attr-width: 100%;
-    }
-}
-
-TABLE.grid-row {
-   // -attr-width: 100%;
     -attr-align: center;
     -attr-border: 0;
     border:0;

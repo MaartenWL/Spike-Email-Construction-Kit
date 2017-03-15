@@ -5,7 +5,7 @@ TABLE.body {
   background-color: #eeeeee;
   -attr-bgcolor: #eeeeee;
 }
-table.grid-row,
+table.grid,
 td.grid-row {
   background-color: #ffffff;
   -attr-bgcolor: #ffffff;

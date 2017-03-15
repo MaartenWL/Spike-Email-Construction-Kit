@@ -24,18 +24,6 @@ TABLE TD {
   mso-table-lspace: 0;
   mso-table-rspace: 0;
   padding: 0;
-  /*
-        &.grid-row-gutter {
-            padding: (0.5 * @base-whitespace) ceil(@surrounding-gutter - (0.5 * @column-gutter)) (0.5 * @base-whitespace) floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
-        }
-        &.full-grid-row-gutter {
-            padding: (.5 *  @surrounding-gutter) @surrounding-gutter!important;
-        }
-
-
-        &.double-grid-row-gutter {
-            padding: @base-whitespace ceil(@surrounding-gutter - (0.5 * @column-gutter)) @base-whitespace floor(@surrounding-gutter - (0.5 * @column-gutter))!important;
-        }*/
 }
 TABLE TD.content-box {
   /* --- */
@@ -145,21 +133,12 @@ TABLE.grid {
   -attr-border: 0;
   border: 0;
 }
-TABLE.grid TD.grid {
-  -attr-align: center;
-  -attr-width: 100%;
-}
-TABLE.grid-row {
-  -attr-align: center;
-  -attr-border: 0;
-  border: 0;
-}
-TABLE.grid-row TD.grid-row {
+TABLE.grid TD.grid-row {
   text-align: center;
   vertical-align: top;
   font-size: 0;
 }
-TABLE.grid-row TD.grid-row TABLE.content-box {
+TABLE.grid TD.grid-row TABLE.content-box {
   -att-width: 100%;
   width: 100%;
 }
