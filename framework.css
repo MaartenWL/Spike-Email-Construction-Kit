@@ -150,7 +150,9 @@ TABLE.grid TD.grid {
   -attr-width: 100%;
 }
 TABLE.grid-row {
-  -attr-width: 100%;
+  -attr-align: center;
+  -attr-border: 0;
+  border: 0;
 }
 TABLE.grid-row TD.grid-row {
   text-align: center;
