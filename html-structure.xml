@@ -1,0 +1,70 @@
+// Below the simplified structure for the boilertemplate
+
+<body>
+    <body-band description="full-screen-width band">
+        <grid description="width is equal to @grid-width">
+
+            <grid-row description="each row must contain 1 to 12 collumns. Combined col-units should always be 12">
+
+                <grid-col description="col-unit should be 1 to 12. ">
+                    <content-wrapper>
+                        <content>
+                            <text />
+                            <image />
+                        </content>
+                    </content-wrapper>
+                </grid-col>
+
+                <grid-col>
+                    <content-wrapper>
+                        <content>
+                            <text />
+                            <image />
+                        </content>
+                    </content-wrapper>
+                </grid-col>
+            </grid-row>
+
+            <grid-row>
+                <content-box optional description="used for box (background-color and/or border) around all columns in this row" >
+                    <grid-col>
+                        <content-wrapper>
+                            <content>
+                                <text />
+                                <image />
+                            </content>
+                        </content-wrapper>
+                    </grid-col>
+                </content-box>
+            </grid-row>
+
+            <grid-row>
+                <grid-col>
+                    <content-wrapper>
+                        <content>
+                            <text />
+                            <image />
+                        </content>
+                    </content-wrapper>
+                </grid-col>
+            </grid-row>
+
+        </grid>
+    </body-band>
+
+    <body-band>
+        <grid>
+
+            <grid-row>
+                <content-wrapper>
+                    <content>
+                        <text/>
+                        <image/>
+                    </content>
+                </content-wrapper>
+            </grid-row>
+
+        </grid>
+    </body-band>
+
+</body>
