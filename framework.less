@@ -26,6 +26,8 @@
 @base-font-line-height: 1.52;
 @base-whitespace: @column-gutter;
 
+// Optional width for all content-wrappers
+@content-full: auto; // Set to 100% to disable dynamic scaling to content. Otherwise, keep auto.
 
 /////////////////////////////////////////////////////////////
 
@@ -323,6 +325,7 @@ DIV.grid-col {
 
     TABLE.content-wrapper {
         -attr-align: center;
+        width: @content-full;
         TD.content-wrapper {
             -attr-align: center;
         }

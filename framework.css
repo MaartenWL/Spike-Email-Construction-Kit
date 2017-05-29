@@ -1487,6 +1487,7 @@ DIV.grid-col.boxed-col-hero TD.content-wrapper TABLE.content TD.image IMG {
 }
 DIV.grid-col TABLE.content-wrapper {
   -attr-align: center;
+  width: auto;
 }
 DIV.grid-col TABLE.content-wrapper TD.content-wrapper {
   -attr-align: center;
